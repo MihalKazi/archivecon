@@ -1,0 +1,572 @@
+/*
+Theme Name: Archive Resist Theme
+Author: Subinoy Mustofi Eron
+Version: 23.0 (Final: Blue Footer + Mobile Stacking Fixes)
+*/
+
+/* --- 1. GLOBAL VARIABLES --- */
+:root {
+    --black: #0a0a0a;
+    --white: #ffffff;
+    --beige: #f4f1ea; 
+    --dark-charcoal: #222222;
+    --green-overlay: rgba(15, 146, 90, 0.7);
+    
+    /* CUSTOM COLORS */
+    --c-archive: #0E78EA;  /* Blue */
+    --c-resist: #F62E2E;   /* Red */
+    --c-conclave: #0F925A; /* Green */
+    
+    /* FONTS */
+    --font-display: 'Barlow Semi Condensed', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+/* --- 2. GLOBAL RESET (CRITICAL) --- */
+* {
+    box-sizing: border-box; 
+}
+
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Stops horizontal scrolling */
+    background-color: var(--beige);
+    color: var(--black);
+    font-family: var(--font-body);
+    font-weight: 400;
+}
+
+/* --- 3. UTILITIES --- */
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.text-blue { color: var(--c-archive); }
+.text-red { color: var(--c-resist); }
+.text-green { color: var(--c-conclave); }
+
+/* --- 4. HEADER / NAV --- */
+.site-header {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    padding: 30px 0;
+}
+
+.main-nav {
+    display: flex;
+    gap: 30px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--black);
+    font-family: var(--font-body);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: var(--c-conclave);
+}
+
+/* --- 5. HERO SECTION --- */
+.hero {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start; 
+    padding: 20px 0 60px 0; 
+}
+
+.hero-left h1 {
+    font-family: var(--font-display);
+    font-weight: 900; 
+    font-size: 12rem;
+    line-height: 0.82;
+    text-transform: uppercase;
+    margin: 0;
+    letter-spacing: -3px;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-right {
+    width: 350px; 
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 25px; 
+    padding-top: 15px; 
+    text-align: left;
+}
+
+.hero-desc {
+    color: var(--c-resist);
+    font-family: var(--font-body);
+    font-size: 1.15rem;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+.hero-graphic {
+    width: 140px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 15px 0;
+}
+
+.date-divider {
+    border-top: 2px solid var(--black);
+    width: 100%;
+}
+
+.hero-date {
+    color: var(--c-resist);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.btn-ticket {
+    background: var(--c-resist);
+    color: var(--white);
+    padding: 18px 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.4rem;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-ticket:hover {
+    background: var(--c-conclave);
+}
+
+/* --- 6. FEATURE IMAGES --- */
+.feature-image-wrapper {
+    width: 100%;  
+    max-width: 1000px;
+    margin: 0 auto; 
+    padding: 0;
+    line-height: 0;
+    font-size: 0;
+}
+
+.feature-img {
+    width: 100%;       
+    display: block; 
+}
+
+/* --- 7. HISTORY DARK SECTION --- */
+.history-block {
+    background-color: var(--dark-charcoal);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 5%;
+    gap: 60px;
+}
+
+.history-text {
+    flex: 1;
+    max-width: 500px;
+    font-family: var(--font-body);
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+
+.history-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.history-visual img {
+    box-shadow: -20px 20px 0px rgba(255, 255, 255, 0.05);
+}
+
+/* --- 8. GOALS SPLIT SECTION --- */
+.goals-split-container {
+    display: flex;
+    flex-wrap: wrap; 
+    width: 100%;
+    min-height: 600px;
+    background-color: var(--beige);
+    border-top: 2px solid var(--black);
+    border-bottom: 2px solid var(--black);
+}
+
+.goals-visual {
+    flex: 1;
+    min-width: 300px; 
+    position: relative;
+    background-image: url('images/prison-bg.jpg'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.goals-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: var(--green-overlay);
+    z-index: 1;
+}
+
+.goals-visual-title {
+    position: relative;
+    z-index: 2;
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 8rem;
+    line-height: 0.85;
+    color: var(--white);
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: -3px;
+}
+
+.goals-accordion {
+    flex: 1;
+    min-width: 300px;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--beige);
+}
+
+.accordion-item {
+    border-bottom: 3px solid var(--black);
+    margin-bottom: 20px;
+}
+
+.accordion-header {
+    width: 100%;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    padding: 20px 0;
+    cursor: pointer;
+}
+
+.acc-title {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 3rem;
+    line-height: 0.9;
+    color: var(--c-conclave); 
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.accordion-item:hover .acc-title {
+    color: var(--black);
+}
+
+.acc-icon {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: 3rem;
+    color: var(--black);
+    margin-left: 20px;
+    line-height: 0.8;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+}
+
+.accordion-content p {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: var(--black);
+    padding-bottom: 30px;
+    margin: 0;
+    max-width: 90%;
+}
+
+/* --- 9. RESISTANCE BANNER (DESKTOP: SCATTERED) --- */
+.resistance-banner {
+    background: var(--white);
+    padding: 100px 0;
+    position: relative;
+    width: 100%;
+    overflow: hidden; 
+}
+
+.resistance-content {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    height: 600px; /* Fixed height for scattering */
+}
+
+.resistance-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 10rem;
+    line-height: 0.8;
+    color: var(--c-resist);
+    text-transform: uppercase;
+    z-index: 10;
+    margin: 0;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+}
+
+.collage-img {
+    position: absolute;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    filter: grayscale(100%) contrast(1.1);
+    z-index: 1;
+    display: block;
+}
+
+/* Scattering Positions */
+.pos-1 { top: 10px; left: 14%; width: 250px; height: 180px; transform: rotate(8deg); }
+.pos-2 { top: -20px; right: 15%; width: 280px; height: 200px; transform: rotate(5deg); }
+.pos-3 { top: 40%; left: 1%; width: 220px; height: 220px; transform: rotate(2deg); }
+.pos-4 { bottom: -45px; right: 5%; width: 300px; height: 220px; transform: rotate(-5deg); }
+.pos-5 { bottom: -75px; left: 18%; width: 260px; height: 190px; transform: rotate(-5deg); }
+
+/* --- 10. NEW FOOTER STYLING --- */
+/* Top Section (Blue) */
+.footer-top {
+    background-color: var(--c-archive);
+    color: var(--beige);
+    text-align: center;
+    padding: 120px 20px;
+    position: relative;
+    z-index: 20; 
+}
+
+.footer-top h2 {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 5rem;
+    line-height: 0.9;
+    margin: 0 0 30px 0;
+    text-transform: uppercase;
+}
+
+.footer-top p {
+    font-family: var(--font-body);
+    font-size: 1.15rem;
+    max-width: 700px;
+    margin: 0 auto;
+    font-weight: 500;
+}
+
+/* Bottom Section (Beige) */
+.footer-bottom {
+    background-color: var(--beige);
+    padding: 40px 0 60px 0;
+    position: relative;
+    z-index: 20;
+}
+
+.footer-line {
+    width: 100%;
+    height: 2px;
+    background-color: var(--c-archive); /* Blue Line */
+    margin-bottom: 30px;
+}
+
+.footer-content-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; 
+}
+
+.footer-logo {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 2rem;
+    line-height: 0.85;
+    text-transform: uppercase;
+}
+
+.footer-contact {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--black);
+    text-align: right;
+    font-weight: 500;
+}
+
+.footer-contact a {
+    color: var(--c-archive);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+/* =========================================
+   11. UNIVERSAL RESPONSIVENESS (Mobile/Tablet)
+   ========================================= */
+@media (max-width: 1100px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .site-header {
+        justify-content: center;
+        padding: 20px 0;
+    }
+    
+    .main-nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    /* Hero */
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .hero-left h1 {
+        font-size: 14vw; 
+        width: 100%;
+        line-height: 0.9;
+    }
+
+    .hero-right {
+        width: 100%;
+        max-width: 400px;
+        align-items: center;
+    }
+    
+    .hero-right .hero-desc {
+        text-align: center;
+    }
+    
+    /* History */
+    .history-block {
+        flex-direction: column; 
+        padding: 60px 20px;
+        text-align: left;
+    }
+    
+    /* Goals */
+    .goals-visual-title {
+        font-size: 15vw;
+    }
+
+    .goals-accordion {
+        padding: 40px 20px;
+    }
+    
+    .acc-title {
+        font-size: 2rem;
+    }
+
+    /* Resistance Banner: Stacked Strip Mode (No Gaps) */
+    .resistance-banner {
+        padding: 60px 0;
+        height: auto;
+    }
+
+    .resistance-content {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0; /* NO GAPS */
+        padding-bottom: 20px;
+    }
+
+    .resistance-text {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        font-size: 15vw;
+        margin-bottom: 40px;
+        z-index: 2;
+        line-height: 0.9;
+    }
+
+    .collage-img {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        transform: none !important; /* Force straight */
+        
+        width: 100%; 
+        max-width: 100%;
+        height: auto;
+        min-height: 200px;
+        object-fit: cover;
+        
+        display: block;
+        margin: 0; /* Pictures touch */
+        border: none;
+    }
+
+    /* Footer Mobile */
+    .footer-top {
+        padding: 80px 20px;
+    }
+
+    .footer-top h2 {
+        font-size: 13vw;
+    }
+
+    .footer-content-row {
+        flex-direction: column; /* Stack logo and email */
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .footer-contact {
+        text-align: left;
+    }
+}
