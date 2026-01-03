@@ -2,8 +2,8 @@
 Theme Name: Archive Resist Conclave
 Theme URI: http://activaterights.org
 Author: Kazi Rohanuzzaman Mehal
-Description: Custom theme for Conclave 2025
-Version: 4.1
+Description: Custom theme for Conclave 2026
+Version: 6.1 (2026 Update)
 */
 
 /* --- 1. GLOBAL VARIABLES --- */
@@ -38,7 +38,6 @@ html, body {
 
 html { scroll-behavior: smooth; }
 
-/* Reset Buttons */
 button {
     appearance: none; -webkit-appearance: none;
     border-radius: 0; background: transparent;
@@ -59,7 +58,10 @@ img { max-width: 100%; height: auto; display: block; }
 .text-red { color: var(--c-resist); }
 .text-green { color: var(--c-conclave); }
 
-/* --- 4. HEADER (UPDATED: 3 LINKS ONLY) --- */
+.footer-logo-link { text-decoration: none; display: inline-block; }
+.footer-logo-link:hover { opacity: 0.8; }
+
+/* --- 4. HEADER --- */
 .site-header {
     display: flex; align-items: flex-end;
     padding: 40px 0;
@@ -84,17 +86,7 @@ img { max-width: 100%; height: auto; display: block; }
     padding: 10px 0;
 }
 
-/* Hover Colors for the 3 Theme Links */
-.main-nav a:nth-child(1):hover { color: var(--c-archive); }
-.main-nav a:nth-child(2):hover { color: var(--c-resist); }
-.main-nav a:nth-child(3):hover { color: var(--c-conclave); }
-
-/* Add this near your other hover rules: */
-.main-nav a:nth-child(4):hover { color: var(--c-archive); }
-
-.main-nav a:first-child { text-align: left; }
-.main-nav a:last-child { text-align: right; }
-/* Middle link automatically centers in flex space-between */
+.main-nav a:hover { color: var(--c-archive); }
 
 /* --- 5. HERO SECTION --- */
 .hero {
@@ -107,7 +99,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .hero-left {
-    flex: 1; /* Fills the empty space */
+    flex: 1; 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -171,7 +163,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .btn-ticket:hover { background: var(--c-conclave); }
 
-/* --- 6. BREAKOUT SECTIONS --- */
+/* --- 6. BREAKOUT & HISTORY SECTIONS --- */
 .feature-image-wrapper,
 .quote-breakout-wrapper {
     width: 100vw; 
@@ -209,7 +201,6 @@ img { max-width: 100%; height: auto; display: block; }
     margin: 0; letter-spacing: 0.05em;
 }
 
-/* --- 7. HISTORY DARK SECTION --- */
 .history-block {
     background-color: var(--dark-charcoal);
     color: #F1EADA;
@@ -248,7 +239,7 @@ img { max-width: 100%; height: auto; display: block; }
     object-fit: cover; z-index: 2;
 }
 
-/* --- 8. GOALS / ACCORDION --- */
+/* --- 7. GOALS / ACCORDION --- */
 .goals-split-container {
     display: grid; grid-template-columns: 5fr 7fr;
     gap: 100px; padding: 0;
@@ -320,14 +311,15 @@ img { max-width: 100%; height: auto; display: block; }
     padding-bottom: 30px; margin: 0; max-width: 95%;
 }
 
-/* --- 9. RESISTANCE BANNER --- */
+/* --- 8. RESISTANCE BANNER --- */
 .resistance-banner {
     background: var(--beige);
     height: 800px;
     width: 100%;
     position: relative;
     overflow: hidden;
-    display: flex; align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .marquee-track {
@@ -375,29 +367,220 @@ img { max-width: 100%; height: auto; display: block; }
 .pos-4 { bottom: 5%; right: 5%; width: 27vw; }
 .pos-5 { bottom: 5%; left: 20%; width: 28vw; }
 
-/* --- 10. COMING SOON & FOOTER --- */
-.coming-soon-section {
-    background-color: var(--c-archive);
-    color: #F1EADA;
-    text-align: center;
-    padding: 100px 20px;
-}
-.coming-soon-section h2 {
-    font-family: var(--font-display);
-    font-weight: 900;
-    font-size: clamp(3rem, 7vw, 6rem);
-    line-height: 0.9;
-    margin: 0 0 30px 0;
-    text-transform: uppercase;
-}
-.coming-soon-section p {
-    font-family: var(--font-body);
-    font-size: 1.3rem;
-    max-width: 800px;
-    margin: 0 auto;
-    font-weight: 500;
+
+/* --- 9. SESSIONS SECTION --- */
+.sessions-section {
+    background: linear-gradient(135deg, #e6f6f2 0%, #fff1f2 100%);
+    padding: 100px 0; 
+    position: relative;
+    overflow: hidden;
 }
 
+.sessions-container {
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.sessions-header {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 0 20px;
+}
+
+.sessions-tag {
+    color: var(--c-archive);
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 10px;
+    font-family: var(--font-body);
+}
+
+.sessions-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 900;
+    color: var(--c-resist);
+    margin: 0 0 15px 0;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.sessions-desc {
+    color: var(--c-conclave);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: var(--font-body);
+    line-height: 1.5;
+}
+
+/* SLIDER WRAPPER */
+.sessions-slider-wrapper {
+    position: relative; 
+    width: 100%; 
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sessions-track {
+    display: flex; 
+    gap: 30px; 
+    overflow-x: auto; 
+    scroll-behavior: smooth; 
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    width: 100%;
+    padding: 20px 40px; 
+}
+.sessions-track::-webkit-scrollbar { display: none; }
+
+.slider-nav-btn {
+    width: 50px; height: 50px;
+    border-radius: 50%;
+    background: var(--c-archive);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    z-index: 10;
+    transition: all 0.2s ease;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.slider-nav-btn:hover { background: var(--c-resist); transform: scale(1.1); }
+.prev-btn { margin-right: 15px; }
+.next-btn { margin-left: 15px; }
+
+/* CARD DESIGN & LAYOUT */
+.session-card {
+    width: clamp(280px, 85vw, 380px);
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.05);
+    display: flex; flex-direction: column;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+    position: relative;
+}
+
+.session-card:hover, .session-card.open {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    background: #fff;
+    z-index: 10;
+}
+
+/* --- FIXED CARD HEADER: BADGE + DAY STACKING --- */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    gap: 10px;
+}
+
+.header-content {
+    flex: 1; /* Takes left side */
+}
+
+.header-meta {
+    display: flex;
+    flex-direction: column; /* Stack badge on day */
+    align-items: flex-end;  /* Right align */
+    gap: 5px;
+    flex-shrink: 0;
+}
+
+.card-title {
+    font-size: 1.35rem; font-weight: 800; color: #111827; margin: 0 0 5px 0;
+    font-family: var(--font-body); letter-spacing: -0.02em; line-height: 1.2;
+}
+
+.card-subtitle {
+    color: #374151; font-size: 0.95rem; line-height: 1.4;
+    font-family: var(--font-body); margin-bottom: 20px;
+}
+
+/* Badge Style */
+.card-badge {
+    font-size: 0.75rem; 
+    padding: 4px 12px; 
+    border-radius: 99px;
+    font-weight: 700; 
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+}
+.badge-tech { background-color: #DBEAFE; color: #2563EB; }
+.badge-theory { background-color: #F3E8FF; color: #9333EA; }
+
+/* Day Label Style (The Fix) */
+.day-label {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 4px;
+}
+.day-one { color: var(--c-resist); } /* Red */
+.day-two { color: var(--c-conclave); } /* Green */
+
+.card-details {
+    border-top: 1px solid #E5E7EB;
+    padding-top: 15px; margin-bottom: 15px;
+}
+
+.detail-row {
+    display: flex; align-items: center; color: #4B5563; margin-bottom: 8px;
+    font-family: var(--font-body); font-size: 0.9rem; font-weight: 500;
+}
+.detail-icon { margin-right: 10px; width: 18px; text-align: center; }
+.icon-time { color: #D97706; } /* Amber color for Time */
+.icon-room { color: #9333EA; } /* Purple color for Location */
+.icon-cal { color: #EF4444; } .icon-user { color: #0EA5E9; }
+
+.session-hidden-content {
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.3s ease;
+    opacity: 0;
+    border-top: 1px dashed #E5E7EB;
+}
+
+.session-card.open .session-hidden-content {
+    max-height: 600px; opacity: 1; padding-top: 1.5rem; margin-bottom: 1.5rem;
+}
+
+.hidden-section { margin-bottom: 10px; }
+.hidden-title { color: var(--c-archive); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 4px; }
+.hidden-text { font-size: 0.9rem; line-height: 1.4; color: #374151; margin: 0; }
+
+.btn-toggle-details {
+    width: 100%; padding: 10px; border-radius: 6px; font-weight: 600;
+    cursor: pointer; border: 1px solid #9CA3AF; background: transparent;
+    color: #374151; transition: all 0.2s; font-family: var(--font-body); font-size: 0.9rem;
+}
+.btn-toggle-details:hover { background: #F3F4F6; }
+
+.btn-final-register {
+    display: block; width: 100%; padding: 12px; background: #2563EB;
+    color: white; text-align: center; border-radius: 6px; text-decoration: none;
+    font-weight: 600; margin-top: 10px; font-size: 0.95rem; font-family: var(--font-body);
+}
+.btn-final-register:hover { background: #1D4ED8; }
+
+
+/* --- 10. FOOTER --- */
 .footer-bottom {
     background-color: var(--beige);
     padding: 60px 0 80px 0;
@@ -432,70 +615,7 @@ img { max-width: 100%; height: auto; display: block; }
 .footer-contact a { color: var(--c-archive); text-decoration: none; font-weight: 700; }
 .footer-contact a:hover { text-decoration: underline; }
 
-/* --- 11. FAQ --- */
-.faq-section { padding: 100px 0; background-color: var(--beige); }
-.faq-header { margin-bottom: 60px; }
-.faq-main-title {
-    font-family: var(--font-display);
-    font-weight: 900;
-    font-size: clamp(3.5rem, 8vw, 7rem);
-    line-height: 0.85;
-    text-transform: uppercase;
-    margin: 0;
-}
-.faq-subtext {
-    margin-top: 10px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 500; font-size: 1.2rem;
-    color: var(--black); line-height: 1.4;
-}
-.faq-wrapper { border-top: 3px solid var(--black); display: flex; flex-direction: column; }
-.faq-item { border-bottom: 2px solid var(--black); }
-
-.faq-question {
-    width: 100%;
-    background: transparent !important;
-    border: none !important;
-    padding: 30px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    text-align: left;
-    appearance: none;
-    -webkit-appearance: none;
-    border-radius: 0;
-}
-
-.faq-q-text {
-    font-family: var(--font-display);
-    font-weight: 800;
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    color: var(--c-conclave);
-    line-height: 1;
-    padding-right: 15px;
-    transition: color 0.3s ease;
-}
-.faq-icon {
-    font-family: var(--font-display);
-    font-size: 3rem;
-    font-weight: 400;
-    color: var(--black);
-    padding-left: 10px;
-    flex-shrink: 0;
-}
-.faq-item:hover .faq-q-text { color: var(--c-resist); }
-.faq-item.active .faq-q-text { color: var(--c-archive); }
-
-.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; }
-.faq-answer p {
-    font-family: var(--font-body); font-size: 1.2rem;
-    line-height: 1.5; color: var(--black);
-    padding-bottom: 40px; max-width: 90%; margin: 0;
-}
-
-/* --- 12. BACK TO TOP --- */
+/* --- 11. BACK TO TOP --- */
 #backToTop {
     display: none; 
     position: fixed;
@@ -513,63 +633,42 @@ img { max-width: 100%; height: auto; display: block; }
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     appearance: none; -webkit-appearance: none;
+    font-size: 1.5rem; line-height: 1;
 }
-#backToTop svg { width: 24px; height: 24px; stroke-width: 3; transition: transform 0.3s ease; }
 #backToTop:hover {
     background-color: var(--c-conclave);
     transform: translateY(-7px) scale(1.05);
     box-shadow: 0 12px 25px rgba(16, 147, 91, 0.4);
 }
 
-/* ================================================================= */
-/* ----------------  RESPONSIVE: LAPTOPS & TABLETS ---------------- */
-/* ================================================================= */
-@media (max-width: 1200px) {
-    .container { padding: 0 30px; }
-    .hero { gap: 20px; }
-    .goals-split-container { 
-        gap: 40px; 
-        grid-template-columns: 1fr 1fr;
-    }
-    .acc-title { font-size: 2.8rem; }
-    .history-text { font-size: 1.25rem; }
-    .history-block { padding: 100px 30px; gap: 40px; }
-}
-
-/* ================================================================= */
-/* ----------------  RESPONSIVE: MOBILE DEVICES ------------------ */
-/* ================================================================= */
+/* --- 12. MOBILE RESPONSIVE --- */
 @media (max-width: 900px) {
-    /* 1. Global Spacing */
     .container { padding: 0 20px; }
-
-    /* 2. Header & Nav (NEW STACK LAYOUT) */
+    
     .site-header { 
-        padding: 20px 0; 
-        justify-content: center; 
+        padding: 15px 0; 
         flex-direction: column; 
         align-items: center;
+        gap: 15px;
     }
     
-  /* Find this inside @media (max-width: 1100px) */
+    .main-nav {
+        display: grid; 
+        grid-template-columns: 1fr 1fr; /* 2x2 Grid */
+        width: 100%;
+        gap: 10px;
+        text-align: center;
+        margin-top: 10px;
+    }
 
-.main-nav {
-    display: flex;
-    justify-content: space-between; /* Keeps them spread out like desktop */
-    flex-wrap: nowrap !important;   /* STOP wrapping to next line */
-    align-items: center;
-    width: 100%;
-    gap: 10px; /* Minimal space between items */
-}
+    .main-nav a {
+        font-size: 0.95rem;
+        padding: 10px;
+        background: rgba(255,255,255,0.5);
+        border-radius: 4px;
+        border: 1px solid rgba(0,0,0,0.05);
+    }
 
-/* Add this to ensure text shrinks slightly so it fits on small phones */
-.main-nav a {
-    font-size: clamp(0.9rem, 4vw, 1.1rem); /* Responsive font size */
-    white-space: nowrap; /* Prevents individual words like "Registration" from breaking */
-}
-    .main-nav a:last-child { border-bottom: none; }
-
-    /* 3. Hero Section Stack */
     .hero { 
         flex-direction: column; 
         align-items: center; 
@@ -577,99 +676,46 @@ img { max-width: 100%; height: auto; display: block; }
         gap: 30px; 
         padding-bottom: 60px; 
     }
-    .hero-left { width: 100%; align-items: center; }
     .hero-left h1 { 
         font-size: 16vw; 
-        width: 100%; 
-        line-height: 0.85; 
+        line-height: 0.9;
         text-align: center; 
     }
-    .hero-right { 
-        width: 100%; 
-        max-width: 100%; 
-        align-items: center; 
-        min-width: 0; 
-    }
+    .hero-right { width: 100%; max-width: 100%; }
     
     .btn-ticket { margin-top: 20px; font-size: 1.4rem; padding: 18px 0; }
 
-    /* 4. Disable "Breakout" Effects */
-    .feature-image-wrapper,
-    .quote-breakout-wrapper {
-        width: 100%;
-        left: auto; right: auto;
-        margin-left: 0; margin-right: 0;
-        position: static;
-        max-width: 100%;
+    .feature-image-wrapper, .quote-breakout-wrapper {
+        width: 100%; left: auto; right: auto; margin: 0; max-width: 100%;
     }
-
     .quote-breakout-wrapper { padding: 60px 0; }
     .quote-author { font-size: 1.4rem; padding: 0 10px; }
 
-    /* 5. History Section */
     .history-block { flex-direction: column; padding: 60px 20px; gap: 40px; }
     .history-text { max-width: 100%; text-align: left; order: 1; font-size: 1.15rem; }
     .history-visual { width: 100%; order: 2; display: block; }
     .history-stack-wrapper { height: 320px; width: 100%; max-width: 400px; margin: 0 auto; }
 
-    /* 6. Goals & Accordion */
     .goals-split-container { grid-template-columns: 1fr; gap: 0; }
     .goals-visual { aspect-ratio: 4/3; }
     .goals-accordion { padding: 60px 20px 20px 20px; }
     .acc-title { font-size: 2rem; }
     .acc-icon { font-size: 2rem; }
 
-    /* 7. Mobile Marquee */
-    .resistance-banner {
-        height: auto;
-        padding: 60px 0;
-        display: flex; flex-direction: column;
-        align-items: center;
-        gap: 30px;
-        overflow: hidden;
-        width: 100%;
-    }
-
-    .marquee-track {
-        position: relative;
-        top: auto;
-        transform: none;
-        animation: scroll-left-mobile 10s linear infinite;
-        margin-bottom: 10px;
-        order: -1;
-        width: max-content;
-        max-width: none;
-    }
-
+    .resistance-banner { height: auto; padding: 60px 0; flex-direction: column; gap: 30px; }
+    .marquee-track { position: relative; top: auto; transform: none; animation: scroll-left-mobile 10s linear infinite; margin-bottom: 20px; width: max-content; }
     .resistance-text-item { font-size: 14vw; }
-
-    .collage-img {
-        display: block !important;
-        position: relative !important;
-        top: auto !important; left: auto !important; right: auto !important; bottom: auto !important;
-        width: 100%; max-width: 90%;
-        height: auto; margin: 0 auto 20px auto;
-        box-shadow: 5px 5px 0px rgba(0,0,0,0.1);
-    }
-
-    /* 8. Footer & FAQ */
-    .coming-soon-section { padding: 60px 20px; }
-    .faq-section { padding: 60px 0; }
-    .faq-main-title { font-size: 14vw; line-height: 0.9; }
-
-    .faq-q-text { font-size: 1.6rem !important; }
-    .faq-icon { font-size: 2rem; }
-    .faq-answer p { font-size: 1.1rem; }
-
+    .collage-img { position: relative; top: auto !important; left: auto !important; right: auto !important; bottom: auto !important; width: 90%; max-width: 400px; margin: 0 auto 20px auto; transform: none !important; }
+    
+    .slider-nav-btn { display: none; }
+    .sessions-track { padding: 20px; }
+    
     .footer-content-row { flex-direction: column; align-items: flex-start; gap: 30px; padding: 30px 0; }
     .footer-contact { text-align: left; margin-top: 15px; }
-
     #backToTop { width: 45px; height: 45px; right: 20px; bottom: 30px; }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 400px) {
     .hero-left h1 { font-size: 15vw; }
     .acc-title { font-size: 1.6rem; }
-    .btn-ticket { font-size: 1.2rem; }
-    .main-nav a { font-size: 0.9rem; }
 }
