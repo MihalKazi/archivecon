@@ -18,12 +18,37 @@ Template Name: FAQ Page
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
 
     <style>
-        html { scroll-behavior: smooth; }
-        .footer-logo-link { text-decoration: none; display: inline-block; }
-        .footer-logo-link:hover { opacity: 0.8; }
-        .faq-link { color: var(--c-resist); text-decoration: underline; font-weight: 700; }
-        .faq-link:hover { color: var(--c-archive); }
-        .faq-subtext { margin-top: 10px; font-family: 'Inter', sans-serif; font-weight: 500; font-size: 1.2rem; color: var(--black); line-height: 1.4; }
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .footer-logo-link {
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .footer-logo-link:hover {
+            opacity: 0.8;
+        }
+
+        .faq-link {
+            color: var(--c-resist);
+            text-decoration: underline;
+            font-weight: 700;
+        }
+
+        .faq-link:hover {
+            color: var(--c-archive);
+        }
+
+        .faq-subtext {
+            margin-top: 10px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 1.2rem;
+            color: var(--black);
+            line-height: 1.4;
+        }
     </style>
 
     <?php wp_head(); ?>
@@ -41,7 +66,8 @@ Template Name: FAQ Page
 
         <header class="site-header">
             <nav class="main-nav">
-                <a href="<?php echo site_url('/#about'); ?>">About</a>
+                <a href="<?php echo site_url(); ?>">Home</a>
+
                 <a href="<?php echo site_url('/#sessions'); ?>">Sessions</a>
                 <a href="https://forms.gle/5znCihw4n17QiQnN8" target="_blank" rel="noopener noreferrer">Registration</a>
                 <a href="<?php echo site_url('/faq'); ?>" class="active">FAQ</a>
@@ -193,7 +219,7 @@ Template Name: FAQ Page
                     </div>
                 </div>
 
-                 <div class="faq-item">
+                <div class="faq-item">
                     <button class="faq-question">
                         <span class="faq-q-text">Who do I contact for partnerships or sponsorships?</span>
                         <span class="faq-icon">+</span>
@@ -287,6 +313,7 @@ Template Name: FAQ Page
                 item.querySelector('.' + contentClass).style.maxHeight = 0;
                 item.querySelector('.' + iconClass).textContent = '+';
             }
+
             function openItem(item, contentClass, iconClass) {
                 item.classList.add('active');
                 const content = item.querySelector('.' + contentClass);
@@ -335,10 +362,14 @@ Template Name: FAQ Page
                 }
             };
             mybutton.addEventListener('click', function() {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
             });
         });
     </script>
     <?php wp_footer(); ?>
 </body>
+
 </html>
