@@ -156,12 +156,12 @@
 
     <section class="resistance-banner">
         <div class="marquee-track">
-            <span class="resistance-text-item">JOIN THE RESISTANCE</span>
-            <span class="resistance-text-item">JOIN THE RESISTANCE</span>
-            <span class="resistance-text-item">JOIN THE RESISTANCE</span>
-            <span class="resistance-text-item">JOIN THE RESISTANCE</span>
-            <span class="resistance-text-item">JOIN THE RESISTANCE</span>
-            <span class="resistance-text-item">JOIN THE RESISTANCE</span>
+            <span class="resistance-text-item">JOIN THE CRITICAL DISCUSSION ON EVIDENCE-READY DOCUMENTATION, TRANSITIONAL JUSTICE, AND RECONCILIATION.</span>
+            <span class="resistance-text-item">JOIN THE CRITICAL DISCUSSION ON EVIDENCE-READY DOCUMENTATION, TRANSITIONAL JUSTICE, AND RECONCILIATION.</span>
+            <span class="resistance-text-item">JOIN THE CRITICAL DISCUSSION ON EVIDENCE-READY DOCUMENTATION, TRANSITIONAL JUSTICE, AND RECONCILIATION.</span>
+            <span class="resistance-text-item">JOIN THE CRITICAL DISCUSSION ON EVIDENCE-READY DOCUMENTATION, TRANSITIONAL JUSTICE, AND RECONCILIATION.</span>
+            <span class="resistance-text-item">JOIN THE CRITICAL DISCUSSION ON EVIDENCE-READY DOCUMENTATION, TRANSITIONAL JUSTICE, AND RECONCILIATION.</span>
+            <span class="resistance-text-item">JOIN THE CRITICAL DISCUSSION ON EVIDENCE-READY DOCUMENTATION, TRANSITIONAL JUSTICE, AND RECONCILIATION.</span>
         </div>
         <img src="<?php echo get_template_directory_uri(); ?>/images/1.jpg" class="collage-img pos-1" alt="Collage 1">
         <img src="<?php echo get_template_directory_uri(); ?>/images/3.jpg" class="collage-img pos-2" alt="Collage 2">
@@ -173,145 +173,223 @@
     <div class="container">
         <h2 class="speakers-title">Speakers</h2>
         
-        <div class="speakers-grid">
+        <div class="speakers-grid" id="speakersGrid">
             
             <div class="speaker-card">
-                <div class="speaker-img-wrapper">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/avatar/kartika.jpg" alt="Kartika Pratiwi" class="speaker-img">
-                </div>
+                <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/Group 21 1.png" alt="Kartika Pratiwi" class="speaker-img"></div>
                 <h3 class="speaker-name">Kartika Pratiwi</h3>
                 <p class="speaker-role">Program Lead (Asia-Pacific)</p>
                 <p class="speaker-org">WITNESS</p>
             </div>
 
             <div class="speaker-card">
-                <div class="speaker-img-wrapper">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/avatar/georgia.png" alt="Georgia Edwards" class="speaker-img">
-                </div>
+                <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/georgia.png" alt="Georgia Edwards" class="speaker-img"></div>
                 <h3 class="speaker-name">Georgia Edwards</h3>
                 <p class="speaker-role">Coordinator, Evidence & Investigation</p>
                 <p class="speaker-org">WITNESS</p>
             </div>
 
             <div class="speaker-card">
-                <div class="speaker-img-wrapper">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/avatar/yovonne.png" alt="Yvonne Ng" class="speaker-img">
-                </div>
+                <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/yovonne.png" alt="Yvonne Ng" class="speaker-img"></div>
                 <h3 class="speaker-name">Yvonne Ng</h3>
-                <p class="speaker-role">Senior Program Manager of the 
-Archives Program</p>
+                <p class="speaker-role">Senior Program Manager</p>
                 <p class="speaker-org">WITNESS</p>
             </div>
 
             <div class="speaker-card">
-                <div class="speaker-img-wrapper">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/avatar/huey.jpg" alt="Huey Shin Choo" class="speaker-img">
-                </div>
+                <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/Group 21 1.png" alt="Huey Shin Choo" class="speaker-img"></div>
                 <h3 class="speaker-name">Huey Shin Choo</h3>
                 <p class="speaker-role">Program Coordinator</p>
                 <p class="speaker-org">WITNESS</p>
             </div>
 
             <div class="speaker-card">
-                <div class="speaker-img-wrapper">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/avatar/speaker5.jpg" alt="Speaker Name" class="speaker-img">
-                </div>
-                <h3 class="speaker-name">Speaker Name 5</h3>
-                <p class="speaker-role">Role Title Here</p>
-                <p class="speaker-org">Organization</p>
+                <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/nilafdeen.png" alt="Ammaarah Nilafdeen" class="speaker-img"></div>
+                <h3 class="speaker-name">Ammaarah Nilafdeen</h3>
+                <p class="speaker-role">Researcher</p>
+                <p class="speaker-org">CSOH</p>
             </div>
 
             <div class="speaker-card">
-                <div class="speaker-img-wrapper">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/avatar/speaker6.jpg" alt="Speaker Name" class="speaker-img">
-                </div>
-                <h3 class="speaker-name">Speaker Name 6</h3>
-                <p class="speaker-role">Role Title Here</p>
-                <p class="speaker-org">Organization</p>
+                <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/tasneem khalil.png" alt="Tasneem Khalil" class="speaker-img"></div>
+                <h3 class="speaker-name">Tasneem Khalil</h3>
+                <p class="speaker-role">Editor in Chief</p>
+                <p class="speaker-org">Netra News</p>
             </div>
 
             <div class="speaker-card">
-                <div class="speaker-img-wrapper">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/avatar/speaker7.jpg" alt="Speaker Name" class="speaker-img">
-                </div>
-                <h3 class="speaker-name">Speaker Name 7</h3>
-                <p class="speaker-role">Role Title Here</p>
-                <p class="speaker-org">Organization</p>
+                <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/iktisad.png" alt="Ikhtishad Ahmed" class="speaker-img"></div>
+                <h3 class="speaker-name">Ikhtishad Ahmed</h3>
+                <p class="speaker-role">Managing Editor</p>
+                <p class="speaker-org">Netra News</p>
             </div>
 
             <div class="speaker-card">
-                <div class="speaker-img-wrapper">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/avatar/speaker8.jpg" alt="Speaker Name" class="speaker-img">
-                </div>
-                <h3 class="speaker-name">Speaker Name 8</h3>
-                <p class="speaker-role">Role Title Here</p>
-                <p class="speaker-org">Organization</p>
+                <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/mazed.png" alt="Mohammad Ali Mazed" class="speaker-img"></div>
+                <h3 class="speaker-name">Mohammad Ali Mazed</h3>
+                <p class="speaker-role">Member Secretary</p>
+                <p class="speaker-org">BJIM</p>
             </div>
 
             <div class="speaker-card">
-                <div class="speaker-img-wrapper">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/avatar/speaker9.jpg" alt="Speaker Name" class="speaker-img">
-                </div>
-                <h3 class="speaker-name">Speaker Name 9</h3>
-                <p class="speaker-role">Role Title Here</p>
-                <p class="speaker-org">Organization</p>
+                <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/sam jahan.png" alt="Sam Jahan" class="speaker-img"></div>
+                <h3 class="speaker-name">Sam Jahan</h3>
+                <p class="speaker-role">Convener</p>
+                <p class="speaker-org">BJIM</p>
             </div>
 
             <div class="speaker-card">
-                <div class="speaker-img-wrapper">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/avatar/speaker10.jpg" alt="Speaker Name" class="speaker-img">
-                </div>
-                <h3 class="speaker-name">Speaker Name 10</h3>
-                <p class="speaker-role">Role Title Here</p>
-                <p class="speaker-org">Organization</p>
+                <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/shoeb dp.png" alt="Shoeb Abdullah" class="speaker-img"></div>
+                <h3 class="speaker-name">Shoeb Abdullah</h3>
+                <p class="speaker-role">Co-Founder</p>
+                <p class="speaker-org">Activate Rights</p>
             </div>
 
             <div class="speaker-card">
-                <div class="speaker-img-wrapper">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/avatar/speaker11.jpg" alt="Speaker Name" class="speaker-img">
-                </div>
-                <h3 class="speaker-name">Speaker Name 11</h3>
-                <p class="speaker-role">Role Title Here</p>
-                <p class="speaker-org">Organization</p>
+                <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/minhaj.jpg" alt="Minhaj Aman" class="speaker-img"></div>
+                <h3 class="speaker-name">Minhaj Aman</h3>
+                <p class="speaker-role">Research and Policy Lead</p>
+                <p class="speaker-org">Activate Rights</p>
             </div>
 
             <div class="speaker-card">
-                <div class="speaker-img-wrapper">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/avatar/speaker12.jpg" alt="Speaker Name" class="speaker-img">
-                </div>
-                <h3 class="speaker-name">Speaker Name 12</h3>
-                <p class="speaker-role">Role Title Here</p>
-                <p class="speaker-org">Organization</p>
+                <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/majid.png" alt="Faisal Bin Majid" class="speaker-img"></div>
+                <h3 class="speaker-name">Faisal Bin Majid</h3>
+                <p class="speaker-role">Project Manager</p>
+                <p class="speaker-org">UNDP</p>
             </div>
 
             <div class="speaker-card">
-                <div class="speaker-img-wrapper">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/avatar/speaker13.jpg" alt="Speaker Name" class="speaker-img">
-                </div>
-                <h3 class="speaker-name">Speaker Name 13</h3>
-                <p class="speaker-role">Role Title Here</p>
-                <p class="speaker-org">Organization</p>
+                <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/arul.png" alt="Arul Prakkash Sinappan" class="speaker-img"></div>
+                <h3 class="speaker-name">Arul Prakkash</h3>
+                <p class="speaker-role">Tech Expert</p>
+                <p class="speaker-org">Independent</p>
+            </div>
+
+            <div class="speaker-card">
+                <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/placeholder.png" alt="Raqib Hameed Naik" class="speaker-img"></div>
+                <h3 class="speaker-name">Raqib Hameed Naik</h3>
+                <p class="speaker-role">Researcher</p>
+                <p class="speaker-org">CSOH</p>
+            </div>
+
+            <div class="speaker-card">
+                <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/placeholder.png" alt="Subinoy Mustofi Eron" class="speaker-img"></div>
+                <h3 class="speaker-name">Subinoy Mustofi Eron</h3>
+                <p class="speaker-role">Archivist</p>
+                <p class="speaker-org">Netra News</p>
+            </div>
+
+            <div class="speaker-card">
+                <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/placeholder.png" alt="Aaqib Shatil" class="speaker-img"></div>
+                <h3 class="speaker-name">Aaqib Shatil</h3>
+                <p class="speaker-role">Researcher</p>
+                <p class="speaker-org">BD Protest Archive</p>
+            </div>
+
+            <div class="speaker-card">
+                <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/placeholder.png" alt="Iffat Joye" class="speaker-img"></div>
+                <h3 class="speaker-name">Iffat Joye</h3>
+                <p class="speaker-role">Coordinator</p>
+                <p class="speaker-org">Netra News</p>
+            </div>
+
+            <div class="speaker-card">
+                <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/placeholder.png" alt="M. Rafiul Bahar Rafi" class="speaker-img"></div>
+                <h3 class="speaker-name">M. Rafiul Bahar Rafi</h3>
+                <p class="speaker-role">Founder</p>
+                <p class="speaker-org">Korikath Knowledge</p>
+            </div>
+
+            <div class="speaker-card">
+                <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/placeholder.png" alt="Zarif Rahman" class="speaker-img"></div>
+                <h3 class="speaker-name">Zarif Rahman</h3>
+                <p class="speaker-role">Researcher</p>
+                <p class="speaker-org">Independent</p>
+            </div>
+
+            <div class="speaker-card">
+                <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/placeholder.png" alt="Chowdhury Isfatul Karim" class="speaker-img"></div>
+                <h3 class="speaker-name">Chowdhury Isfatul Karim</h3>
+                <p class="speaker-role">Tech Lead</p>
+                <p class="speaker-org">Jogajog</p>
             </div>
 
         </div>
+
+        <button id="toggleSpeakers" class="btn-view-speakers">
+            View Full Speaker List ↓
+        </button>
+        
     </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const speakers = document.querySelectorAll('.speaker-card');
+        const btn = document.getElementById('toggleSpeakers');
+        const limit = 16;
+        let isExpanded = false; // Track state
+
+        // 1. Initially hide speakers > 16
+        if(speakers.length > limit) {
+            for(let i = limit; i < speakers.length; i++) {
+                speakers[i].style.display = 'none';
+            }
+        } else {
+            if(btn) btn.style.display = 'none';
+        }
+
+        // 2. Handle Click (Toggle Logic)
+        if(btn) {
+            btn.addEventListener('click', function() {
+                if (!isExpanded) {
+                    // EXPAND: Show all
+                    for(let i = limit; i < speakers.length; i++) {
+                        speakers[i].style.display = 'flex'; // Reset to flex
+                        // Animation
+                        speakers[i].style.opacity = '0';
+                        speakers[i].style.transform = 'translateY(20px)';
+                        speakers[i].style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                        setTimeout(() => {
+                            speakers[i].style.opacity = '1';
+                            speakers[i].style.transform = 'translateY(0)';
+                        }, 50);
+                    }
+                    this.textContent = "Show Less ↑"; 
+                    isExpanded = true;
+                } else {
+                    // COLLAPSE: Hide extras
+                    for(let i = limit; i < speakers.length; i++) {
+                        speakers[i].style.display = 'none';
+                    }
+                    this.textContent = "View Full Speaker List ↓"; 
+                    
+                    // Smooth scroll back to button area
+                    this.scrollIntoView({behavior: "smooth", block: "center"});
+                    
+                    isExpanded = false;
+                }
+            });
+        }
+    });
+    </script>
 </section>
     <section id="sessions" class="sessions-section">
 
     <div class="sessions-container">
         <div class="sessions-header">
-                <span class="sessions-tag">JOIN US LIVE</span>
-                <h2 class="sessions-title">The Schedule</h2>
-                
-                <p class="sessions-desc">
-                    Glides automatically.<br>
-                    <strong>Desktop:</strong> Hover to pause. <strong>Mobile:</strong> Swipe to navigate.
-                </p>
+            <span class="sessions-tag">JOIN US LIVE</span>
+            <h2 class="sessions-title">The Schedule</h2>
+            
+            <p class="sessions-desc">
+                Glides automatically.<br>
+                <strong>Desktop:</strong> Hover to pause. <strong>Mobile:</strong> Swipe to navigate.
+            </p>
 
-                <a href="<?php echo site_url('/sessions'); ?>" class="link-full-schedule">
-                    View Full Schedule &rarr;
-                </a>
-            </div>
+            <a href="<?php echo site_url('/sessions'); ?>" class="link-full-schedule">
+                View Full Schedule &rarr;
+            </a>
+        </div>
 
         <div class="sessions-slider-wrapper">
 
@@ -320,16 +398,16 @@ Archives Program</p>
             <div class="sessions-track" id="sessionsTrack">
 
                 <?php
-                // UPDATED SESSION DATA FOR 2026 (15 Items Total)
+                // UPDATED SESSION DATA FOR 2026 (Organization & Lead separated)
                 $sessions = [
-                    // --- REAL DATA FROM DOCUMENT ---
                     [
                         'title' => 'Collaborative Future for Community-Led Human Rights Documentation',
                         'desc'  => 'A foundational session exploring future frameworks for community-driven justice and documentation standards.',
                         'type'  => 'Plenary',
                         'date'  => 'Jan 26, 2026',
                         'time'  => '10:00 AM - 11:30 AM',
-                        'lead'  => 'Community Leaders'
+                        'lead'  => 'Community Leaders',
+                        'org'   => 'Community Leaders'
                     ],
                     [
                         'title' => 'From Hindutva Watch to CSOH: Countering Organized Hate',
@@ -337,7 +415,8 @@ Archives Program</p>
                         'type'  => 'Workshop',
                         'date'  => 'Jan 26, 2026',
                         'time'  => '12:00 PM - 01:30 PM',
-                        'lead'  => 'Ammaarah Nilafdeen, Raqib Hameed Naik'
+                        'lead'  => 'Ammaarah Nilafdeen, Raqib Hameed Naik',
+                        'org'   => 'Center for the Study of Organized Hate'
                     ],
                     [
                         'title' => 'July Persist: Building Community-Led Archiving & OSINT',
@@ -345,7 +424,8 @@ Archives Program</p>
                         'type'  => 'Ideation',
                         'date'  => 'Jan 26, 2026',
                         'time'  => '02:30 PM - 04:00 PM',
-                        'lead'  => 'Subinoy Mustofi Eron, Aaqib Shatil, Shoeb Abdullah, Iffat Joye'
+                        'lead'  => 'Subinoy Mustofi Eron, Aaqib Shatil, Shoeb Abdullah, Iffat Joye',
+                        'org'   => 'Netra News, BD Protest Archive'
                     ],
                     [
                         'title' => 'Protect the Messenger: Digital & Physical Safety',
@@ -353,7 +433,8 @@ Archives Program</p>
                         'type'  => 'Workshop',
                         'date'  => 'Jan 26, 2026',
                         'time'  => '04:30 PM - 06:00 PM',
-                        'lead'  => 'BJIM'
+                        'lead'  => 'M A Mazed, Sam Jahan',
+                        'org'   => 'BJIM'
                     ],
                     [
                         'title' => 'Documenting Tech-Facilitated Gender-Based Violence',
@@ -361,7 +442,8 @@ Archives Program</p>
                         'type'  => 'Workshop',
                         'date'  => 'Jan 26, 2026',
                         'time'  => '11:00 AM - 12:30 PM',
-                        'lead'  => 'Activate Rights'
+                        'lead'  => 'Minhaj Aman',
+                        'org'   => 'Activate Rights'
                     ],
                     [
                         'title' => 'Let Knowledge Be Free: Open-Source Principles',
@@ -369,7 +451,8 @@ Archives Program</p>
                         'type'  => 'Workshop',
                         'date'  => 'Jan 27, 2026',
                         'time'  => '10:00 AM - 11:30 AM',
-                        'lead'  => 'Korikath Knowledge'
+                        'lead'  => 'M. Rafiul Bahar Rafi',
+                        'org'   => 'Korikath Knowledge'
                     ],
                     [
                         'title' => 'Deadly in Disguise: The Hidden Lethality of Pellet Guns',
@@ -377,7 +460,8 @@ Archives Program</p>
                         'type'  => 'Dialogue',
                         'date'  => 'Jan 27, 2026',
                         'time'  => '12:00 PM - 01:30 PM',
-                        'lead'  => 'Zarif Rahman, Opsora Islam'
+                        'lead'  => 'Zarif Rahman, Opsora Islam, Sapran',
+                        'org'   => 'Independent Researchers'
                     ],
                     [
                         'title' => 'Crisis Response Tech: Emerging Civic Technologies',
@@ -385,7 +469,8 @@ Archives Program</p>
                         'type'  => 'Roundtable',
                         'date'  => 'Jan 27, 2026',
                         'time'  => '02:30 PM - 04:00 PM',
-                        'lead'  => 'Jogajog'
+                        'lead'  => 'Chowdhury Isfatul Karim, Rafid Khan',
+                        'org'   => 'Jogajog'
                     ],
                     [
                         'title' => 'Beyond Disinformation: Countering Info Warfare',
@@ -393,7 +478,8 @@ Archives Program</p>
                         'type'  => 'Roundtable',
                         'date'  => 'Jan 27, 2026',
                         'time'  => '04:30 PM - 06:00 PM',
-                        'lead'  => 'Fact Checkers Alliance'
+                        'lead'  => 'Fact Checkers, Media',
+                        'org'   => 'Fact Checkers Alliance'
                     ],
                     [
                         'title' => 'Posters of Resistance: Visual Solidarity and Artivism',
@@ -401,7 +487,8 @@ Archives Program</p>
                         'type'  => 'Parallel',
                         'date'  => 'Jan 26-27, 2026',
                         'time'  => 'All Day Exhibition',
-                        'lead'  => 'Artivism Studio'
+                        'lead'  => 'Artivism Studio',
+                        'org'   => 'Artivism Studio, Kashful Foundation'
                     ],
                     [
                         'title' => 'Truth and Reconciliation: Healing and Accountability',
@@ -409,17 +496,17 @@ Archives Program</p>
                         'type'  => 'Dialogue',
                         'date'  => 'Jan 27, 2026',
                         'time'  => '09:00 AM - 10:30 AM',
-                        'lead'  => 'Open Forum'
+                        'lead'  => 'Open Forum',
+                        'org'   => 'Open Forum'
                     ],
-
-                    // --- SAMPLES TO REACH 15 ---
                     [
                         'title' => 'The Ethics of Archiving Trauma',
                         'desc'  => 'When does documentation become exploitation? A critical look at the ethics of collecting traumatic history.',
                         'type'  => 'Plenary',
                         'date'  => 'Jan 27, 2026',
                         'time'  => '01:00 PM - 02:30 PM',
-                        'lead'  => 'Academic Panel'
+                        'lead'  => 'Academic Panel',
+                        'org'   => 'Academic Panel'
                     ],
                     [
                         'title' => 'Digital Security Clinic for Activists',
@@ -427,7 +514,8 @@ Archives Program</p>
                         'type'  => 'Workshop',
                         'date'  => 'Jan 26, 2026',
                         'time'  => '01:00 PM - 03:00 PM',
-                        'lead'  => 'SecDev Team'
+                        'lead'  => 'SecDev Team',
+                        'org'   => 'SecDev Team'
                     ],
                     [
                         'title' => 'Art as Evidence: Legal Admissibility',
@@ -435,7 +523,8 @@ Archives Program</p>
                         'type'  => 'Roundtable',
                         'date'  => 'Jan 27, 2026',
                         'time'  => '11:00 AM - 12:30 PM',
-                        'lead'  => 'Legal Aid Network'
+                        'lead'  => 'Lawyers & Artists',
+                        'org'   => 'Legal Aid Network'
                     ],
                     [
                         'title' => 'Closing Ceremony: The Way Forward',
@@ -443,7 +532,8 @@ Archives Program</p>
                         'type'  => 'Plenary',
                         'date'  => 'Jan 27, 2026',
                         'time'  => '06:30 PM - 08:00 PM',
-                        'lead'  => 'Organizing Committee'
+                        'lead'  => 'Organizing Committee',
+                        'org'   => 'Organizing Committee'
                     ]
                 ];
 
@@ -481,7 +571,7 @@ Archives Program</p>
                             <div class="card-header">
                                 <div class="header-content">
                                     <h3 class="card-title"><?php echo $session['title']; ?></h3>
-                                    <p class="card-subtitle"><?php echo $session['lead']; ?></p>
+                                    <p class="card-subtitle"><?php echo $session['org']; ?></p>
                                 </div>
                                 <div class="header-meta">
                                     <span class="card-badge <?php echo $badgeClass; ?>"><?php echo $session['type']; ?></span>
@@ -501,8 +591,13 @@ Archives Program</p>
                                 </div>
 
                                 <div class="detail-row">
+                                    <span class="detail-icon icon-user">👤</span>
+                                    <?php echo $session['lead']; ?>
+                                </div>
+
+                                <div class="detail-row">
                                     <span class="detail-icon icon-room">📍</span>
-                                    <span style="font-style: italic; opacity: 0.8;">Venue TBA</span>
+                                    <span style="font-style: italic; opacity: 0.8;">Room TBA</span>
                                 </div>
                             </div>
 
@@ -554,7 +649,7 @@ Archives Program</p>
             <div class="partner-label">Collaboration with</div>
             <div class="partner-logos-wrapper">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/partner/BJIM Logo.svg" alt="BJIM" class="partner-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/partner/shokol-praner-logo.png" alt="Shokol Praner Nirapotta" class="partner-logo">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/partner/HURIDOCS.png" alt="HURIDOCS" class="partner-logo">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/partner/Surge.webp" alt="Surge Bangladesh" class="partner-logo">
             </div>
         </div>
@@ -569,8 +664,8 @@ Archives Program</p>
         <div class="partner-row no-border">
             <div class="partner-label">With Support from</div>
             <div class="partner-logos-wrapper">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/partner/undp-logo.png" alt="UNDP" class="partner-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/partner/netra-news-logo.png" alt="Netra News" class="partner-logo">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/partner/undp logo.svg" alt="UNDP" class="partner-logo">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/partner/netra logos.svg" alt="Netra News" class="partner-logo">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/partner/archive-resist-fund-logo.png" alt="Archive & Resist Fund" class="partner-logo">
             </div>
         </div>
