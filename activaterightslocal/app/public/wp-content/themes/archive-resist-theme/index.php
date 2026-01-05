@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>?v=2">
+   <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>?v=<?php echo time(); ?>">
 
     <?php wp_head(); ?>
 
@@ -74,10 +74,10 @@
                 <a href="#about">About</a>
                 <a href="#sessions">Sessions</a>
                 <a href="https://forms.gle/5znCihw4n17QiQnN8" target="_blank">Registration</a>
-
                 <a href="<?php echo site_url('/faq'); ?>" target="_blank" rel="noopener noreferrer">FAQ</a>
             </nav>
         </header>
+
         <section class="hero">
             <div class="hero-left">
                 <h1>
@@ -107,8 +107,16 @@
 
     <div class="quote-breakout-wrapper">
         <div class="quote-container">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/quote.png" alt="Quote" class="quote-graphic">
+
+            <h2 class="masked-headline">
+                THE STRUGGLE OF MAN<br>
+                AGAINST POWER IS<br>
+                THE STRUGGLE OF MEMORY<br>
+                AGAINST FORGETTING
+            </h2>
+
             <p class="quote-author">Milan Kundera</p>
+
         </div>
     </div>
 
@@ -134,21 +142,32 @@
         </div>
         <div class="goals-accordion">
             <div class="accordion-item">
-                <button class="accordion-header"><span class="acc-title">LEARNING SPACE</span><span class="acc-icon">+</span></button>
+                <button class="accordion-header">
+                    <span class="acc-title">CO- LEARNING SPACE</span>
+                    <span class="acc-icon">+</span>
+                </button>
                 <div class="accordion-content">
-                    <p>We provide a dedicated space for young defenders to learn digital security.</p>
+                    <p>Create a shared learning space for young people, practitioners, and human rights defenders to explore, practice, and reflect on human rights documentation and community-led investigation and more, while building a shared vision for protecting human rights and strengthening democratic space.</p>
                 </div>
             </div>
+
             <div class="accordion-item">
-                <button class="accordion-header"><span class="acc-title">CRITICAL DISCUSSIONS</span><span class="acc-icon">+</span></button>
+                <button class="accordion-header">
+                    <span class="acc-title">CRITICAL DISCUSSIONS</span>
+                    <span class="acc-icon">+</span>
+                </button>
                 <div class="accordion-content">
-                    <p>Facilitating hard conversations about state power and censorship.</p>
+                    <p>Facilitate critical discussions at the intersection of transitional justice and human rights documentation, grounded in trauma-informed and care-based approaches. These conversations will also engage with digital rights, shared standards for community-led archiving and ethical OSINT, and emerging technologies, including both the threats and opportunities that AI presents for evidence-ready human rights documentation.</p>
                 </div>
             </div>
+
             <div class="accordion-item">
-                <button class="accordion-header"><span class="acc-title">REGIONAL SOLIDARITY</span><span class="acc-icon">+</span></button>
+                <button class="accordion-header">
+                    <span class="acc-title">REGIONAL SOLIDARITY</span>
+                    <span class="acc-icon">+</span>
+                </button>
                 <div class="accordion-content">
-                    <p>Building a network of solidarity across borders.</p>
+                    <p>Strengthen cross-border regional solidarity and exchange by bringing together practitioners and human rights defenders from across the Asia-Pacific region to share strategies, tools, and resources. The goal is to build an ecosystem of resistance, memory work, and survivor-centric, justice-focused documentation, particularly within digital spaces. This includes creating an intergenerational space for dialogue between experienced practitioners and emerging defenders.</p>
                 </div>
             </div>
         </div>
@@ -169,542 +188,603 @@
         <img src="<?php echo get_template_directory_uri(); ?>/images/5.jpg" class="collage-img pos-4" alt="Collage 4">
         <img src="<?php echo get_template_directory_uri(); ?>/images/4.jpg" class="collage-img pos-5" alt="Collage 5">
     </section>
-<section class="speakers-section">
-    <div class="container">
-        <h2 class="speakers-title">Speakers</h2>
-        
-        <div class="speakers-grid" id="speakersGrid">
-            
-            <div class="speaker-card">
-                <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/Group 21 1.png" alt="Kartika Pratiwi" class="speaker-img"></div>
-                <h3 class="speaker-name">Kartika Pratiwi</h3>
-                <p class="speaker-role">Program Lead (Asia-Pacific)</p>
-                <p class="speaker-org">WITNESS</p>
+    <section class="speakers-section">
+        <div class="container">
+            <h2 class="speakers-title">Speakers</h2>
+
+            <div class="speakers-grid" id="speakersGrid">
+
+                <div class="speaker-card">
+                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/Group 21 1.png" alt="Kartika Pratiwi" class="speaker-img"></div>
+                    <h3 class="speaker-name">Kartika Pratiwi</h3>
+                    <p class="speaker-role">Program Lead (Asia-Pacific)</p>
+                    <p class="speaker-org">WITNESS</p>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/georgia.png" alt="Georgia Edwards" class="speaker-img"></div>
+                    <h3 class="speaker-name">Georgia Edwards</h3>
+                    <p class="speaker-role">Coordinator, Evidence & Investigation</p>
+                    <p class="speaker-org">WITNESS</p>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/yovonne.png" alt="Yvonne Ng" class="speaker-img"></div>
+                    <h3 class="speaker-name">Yvonne Ng</h3>
+                    <p class="speaker-role">Senior Program Manager</p>
+                    <p class="speaker-org">WITNESS</p>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/Group 21 1.png" alt="Huey Shin Choo" class="speaker-img"></div>
+                    <h3 class="speaker-name">Huey Shin Choo</h3>
+                    <p class="speaker-role">Program Coordinator</p>
+                    <p class="speaker-org">WITNESS</p>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/nilafdeen.png" alt="Ammaarah Nilafdeen" class="speaker-img"></div>
+                    <h3 class="speaker-name">Ammaarah Nilafdeen</h3>
+                    <p class="speaker-role">Researcher</p>
+                    <p class="speaker-org">CSOH</p>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/tasneem khalil.png" alt="Tasneem Khalil" class="speaker-img"></div>
+                    <h3 class="speaker-name">Tasneem Khalil</h3>
+                    <p class="speaker-role">Editor in Chief</p>
+                    <p class="speaker-org">Netra News</p>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/iktisad.png" alt="Ikhtishad Ahmed" class="speaker-img"></div>
+                    <h3 class="speaker-name">Ikhtishad Ahmed</h3>
+                    <p class="speaker-role">Managing Editor</p>
+                    <p class="speaker-org">Netra News</p>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/mazed.png" alt="Mohammad Ali Mazed" class="speaker-img"></div>
+                    <h3 class="speaker-name">Mohammad Ali Mazed</h3>
+                    <p class="speaker-role">Member Secretary</p>
+                    <p class="speaker-org">BJIM</p>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/sam jahan.png" alt="Sam Jahan" class="speaker-img"></div>
+                    <h3 class="speaker-name">Sam Jahan</h3>
+                    <p class="speaker-role">Convener</p>
+                    <p class="speaker-org">BJIM</p>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/shoeb dp.png" alt="Shoeb Abdullah" class="speaker-img"></div>
+                    <h3 class="speaker-name">Shoeb Abdullah</h3>
+                    <p class="speaker-role">Co-Founder</p>
+                    <p class="speaker-org">Activate Rights</p>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/minhaj.jpg" alt="Minhaj Aman" class="speaker-img"></div>
+                    <h3 class="speaker-name">Minhaj Aman</h3>
+                    <p class="speaker-role">Research and Policy Lead</p>
+                    <p class="speaker-org">Activate Rights</p>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/majid.png" alt="Faisal Bin Majid" class="speaker-img"></div>
+                    <h3 class="speaker-name">Faisal Bin Majid</h3>
+                    <p class="speaker-role">Project Manager</p>
+                    <p class="speaker-org">UNDP</p>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/arul.png" alt="Arul Prakkash Sinappan" class="speaker-img"></div>
+                    <h3 class="speaker-name">Arul Prakkash</h3>
+                    <p class="speaker-role">Tech Expert</p>
+                    <p class="speaker-org">Independent</p>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/placeholder.png" alt="Raqib Hameed Naik" class="speaker-img"></div>
+                    <h3 class="speaker-name">Raqib Hameed Naik</h3>
+                    <p class="speaker-role">Researcher</p>
+                    <p class="speaker-org">CSOH</p>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/placeholder.png" alt="Subinoy Mustofi Eron" class="speaker-img"></div>
+                    <h3 class="speaker-name">Subinoy Mustofi Eron</h3>
+                    <p class="speaker-role">Archivist</p>
+                    <p class="speaker-org">Netra News</p>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/placeholder.png" alt="Aaqib Shatil" class="speaker-img"></div>
+                    <h3 class="speaker-name">Aaqib Shatil</h3>
+                    <p class="speaker-role">Researcher</p>
+                    <p class="speaker-org">BD Protest Archive</p>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/placeholder.png" alt="Iffat Joye" class="speaker-img"></div>
+                    <h3 class="speaker-name">Iffat Joye</h3>
+                    <p class="speaker-role">Coordinator</p>
+                    <p class="speaker-org">Netra News</p>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/placeholder.png" alt="M. Rafiul Bahar Rafi" class="speaker-img"></div>
+                    <h3 class="speaker-name">M. Rafiul Bahar Rafi</h3>
+                    <p class="speaker-role">Founder</p>
+                    <p class="speaker-org">Korikath Knowledge</p>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/placeholder.png" alt="Zarif Rahman" class="speaker-img"></div>
+                    <h3 class="speaker-name">Zarif Rahman</h3>
+                    <p class="speaker-role">Researcher</p>
+                    <p class="speaker-org">Independent</p>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/placeholder.png" alt="Chowdhury Isfatul Karim" class="speaker-img"></div>
+                    <h3 class="speaker-name">Chowdhury Isfatul Karim</h3>
+                    <p class="speaker-role">Tech Lead</p>
+                    <p class="speaker-org">Jogajog</p>
+                </div>
+
             </div>
 
-            <div class="speaker-card">
-                <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/georgia.png" alt="Georgia Edwards" class="speaker-img"></div>
-                <h3 class="speaker-name">Georgia Edwards</h3>
-                <p class="speaker-role">Coordinator, Evidence & Investigation</p>
-                <p class="speaker-org">WITNESS</p>
-            </div>
-
-            <div class="speaker-card">
-                <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/yovonne.png" alt="Yvonne Ng" class="speaker-img"></div>
-                <h3 class="speaker-name">Yvonne Ng</h3>
-                <p class="speaker-role">Senior Program Manager</p>
-                <p class="speaker-org">WITNESS</p>
-            </div>
-
-            <div class="speaker-card">
-                <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/Group 21 1.png" alt="Huey Shin Choo" class="speaker-img"></div>
-                <h3 class="speaker-name">Huey Shin Choo</h3>
-                <p class="speaker-role">Program Coordinator</p>
-                <p class="speaker-org">WITNESS</p>
-            </div>
-
-            <div class="speaker-card">
-                <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/nilafdeen.png" alt="Ammaarah Nilafdeen" class="speaker-img"></div>
-                <h3 class="speaker-name">Ammaarah Nilafdeen</h3>
-                <p class="speaker-role">Researcher</p>
-                <p class="speaker-org">CSOH</p>
-            </div>
-
-            <div class="speaker-card">
-                <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/tasneem khalil.png" alt="Tasneem Khalil" class="speaker-img"></div>
-                <h3 class="speaker-name">Tasneem Khalil</h3>
-                <p class="speaker-role">Editor in Chief</p>
-                <p class="speaker-org">Netra News</p>
-            </div>
-
-            <div class="speaker-card">
-                <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/iktisad.png" alt="Ikhtishad Ahmed" class="speaker-img"></div>
-                <h3 class="speaker-name">Ikhtishad Ahmed</h3>
-                <p class="speaker-role">Managing Editor</p>
-                <p class="speaker-org">Netra News</p>
-            </div>
-
-            <div class="speaker-card">
-                <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/mazed.png" alt="Mohammad Ali Mazed" class="speaker-img"></div>
-                <h3 class="speaker-name">Mohammad Ali Mazed</h3>
-                <p class="speaker-role">Member Secretary</p>
-                <p class="speaker-org">BJIM</p>
-            </div>
-
-            <div class="speaker-card">
-                <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/sam jahan.png" alt="Sam Jahan" class="speaker-img"></div>
-                <h3 class="speaker-name">Sam Jahan</h3>
-                <p class="speaker-role">Convener</p>
-                <p class="speaker-org">BJIM</p>
-            </div>
-
-            <div class="speaker-card">
-                <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/shoeb dp.png" alt="Shoeb Abdullah" class="speaker-img"></div>
-                <h3 class="speaker-name">Shoeb Abdullah</h3>
-                <p class="speaker-role">Co-Founder</p>
-                <p class="speaker-org">Activate Rights</p>
-            </div>
-
-            <div class="speaker-card">
-                <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/minhaj.jpg" alt="Minhaj Aman" class="speaker-img"></div>
-                <h3 class="speaker-name">Minhaj Aman</h3>
-                <p class="speaker-role">Research and Policy Lead</p>
-                <p class="speaker-org">Activate Rights</p>
-            </div>
-
-            <div class="speaker-card">
-                <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/majid.png" alt="Faisal Bin Majid" class="speaker-img"></div>
-                <h3 class="speaker-name">Faisal Bin Majid</h3>
-                <p class="speaker-role">Project Manager</p>
-                <p class="speaker-org">UNDP</p>
-            </div>
-
-            <div class="speaker-card">
-                <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/arul.png" alt="Arul Prakkash Sinappan" class="speaker-img"></div>
-                <h3 class="speaker-name">Arul Prakkash</h3>
-                <p class="speaker-role">Tech Expert</p>
-                <p class="speaker-org">Independent</p>
-            </div>
-
-            <div class="speaker-card">
-                <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/placeholder.png" alt="Raqib Hameed Naik" class="speaker-img"></div>
-                <h3 class="speaker-name">Raqib Hameed Naik</h3>
-                <p class="speaker-role">Researcher</p>
-                <p class="speaker-org">CSOH</p>
-            </div>
-
-            <div class="speaker-card">
-                <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/placeholder.png" alt="Subinoy Mustofi Eron" class="speaker-img"></div>
-                <h3 class="speaker-name">Subinoy Mustofi Eron</h3>
-                <p class="speaker-role">Archivist</p>
-                <p class="speaker-org">Netra News</p>
-            </div>
-
-            <div class="speaker-card">
-                <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/placeholder.png" alt="Aaqib Shatil" class="speaker-img"></div>
-                <h3 class="speaker-name">Aaqib Shatil</h3>
-                <p class="speaker-role">Researcher</p>
-                <p class="speaker-org">BD Protest Archive</p>
-            </div>
-
-            <div class="speaker-card">
-                <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/placeholder.png" alt="Iffat Joye" class="speaker-img"></div>
-                <h3 class="speaker-name">Iffat Joye</h3>
-                <p class="speaker-role">Coordinator</p>
-                <p class="speaker-org">Netra News</p>
-            </div>
-
-            <div class="speaker-card">
-                <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/placeholder.png" alt="M. Rafiul Bahar Rafi" class="speaker-img"></div>
-                <h3 class="speaker-name">M. Rafiul Bahar Rafi</h3>
-                <p class="speaker-role">Founder</p>
-                <p class="speaker-org">Korikath Knowledge</p>
-            </div>
-
-            <div class="speaker-card">
-                <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/placeholder.png" alt="Zarif Rahman" class="speaker-img"></div>
-                <h3 class="speaker-name">Zarif Rahman</h3>
-                <p class="speaker-role">Researcher</p>
-                <p class="speaker-org">Independent</p>
-            </div>
-
-            <div class="speaker-card">
-                <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/placeholder.png" alt="Chowdhury Isfatul Karim" class="speaker-img"></div>
-                <h3 class="speaker-name">Chowdhury Isfatul Karim</h3>
-                <p class="speaker-role">Tech Lead</p>
-                <p class="speaker-org">Jogajog</p>
-            </div>
+            <button id="toggleSpeakers" class="btn-view-speakers">
+                View Full Speaker List ↓
+            </button>
 
         </div>
 
-        <button id="toggleSpeakers" class="btn-view-speakers">
-            View Full Speaker List ↓
-        </button>
-        
-    </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const speakers = document.querySelectorAll('.speaker-card');
+                const btn = document.getElementById('toggleSpeakers');
+                const limit = 16;
+                let isExpanded = false; // Track state
 
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const speakers = document.querySelectorAll('.speaker-card');
-        const btn = document.getElementById('toggleSpeakers');
-        const limit = 16;
-        let isExpanded = false; // Track state
-
-        // 1. Initially hide speakers > 16
-        if(speakers.length > limit) {
-            for(let i = limit; i < speakers.length; i++) {
-                speakers[i].style.display = 'none';
-            }
-        } else {
-            if(btn) btn.style.display = 'none';
-        }
-
-        // 2. Handle Click (Toggle Logic)
-        if(btn) {
-            btn.addEventListener('click', function() {
-                if (!isExpanded) {
-                    // EXPAND: Show all
-                    for(let i = limit; i < speakers.length; i++) {
-                        speakers[i].style.display = 'flex'; // Reset to flex
-                        // Animation
-                        speakers[i].style.opacity = '0';
-                        speakers[i].style.transform = 'translateY(20px)';
-                        speakers[i].style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-                        setTimeout(() => {
-                            speakers[i].style.opacity = '1';
-                            speakers[i].style.transform = 'translateY(0)';
-                        }, 50);
-                    }
-                    this.textContent = "Show Less ↑"; 
-                    isExpanded = true;
-                } else {
-                    // COLLAPSE: Hide extras
-                    for(let i = limit; i < speakers.length; i++) {
+                // 1. Initially hide speakers > 16
+                if (speakers.length > limit) {
+                    for (let i = limit; i < speakers.length; i++) {
                         speakers[i].style.display = 'none';
                     }
-                    this.textContent = "View Full Speaker List ↓"; 
-                    
-                    // Smooth scroll back to button area
-                    this.scrollIntoView({behavior: "smooth", block: "center"});
-                    
-                    isExpanded = false;
+                } else {
+                    if (btn) btn.style.display = 'none';
+                }
+
+                // 2. Handle Click (Toggle Logic)
+                if (btn) {
+                    btn.addEventListener('click', function() {
+                        if (!isExpanded) {
+                            // EXPAND: Show all
+                            for (let i = limit; i < speakers.length; i++) {
+                                speakers[i].style.display = 'flex'; // Reset to flex
+                                // Animation
+                                speakers[i].style.opacity = '0';
+                                speakers[i].style.transform = 'translateY(20px)';
+                                speakers[i].style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                                setTimeout(() => {
+                                    speakers[i].style.opacity = '1';
+                                    speakers[i].style.transform = 'translateY(0)';
+                                }, 50);
+                            }
+                            this.textContent = "Show Less ↑";
+                            isExpanded = true;
+                        } else {
+                            // COLLAPSE: Hide extras
+                            for (let i = limit; i < speakers.length; i++) {
+                                speakers[i].style.display = 'none';
+                            }
+                            this.textContent = "View Full Speaker List ↓";
+
+                            // Smooth scroll back to button area
+                            this.scrollIntoView({
+                                behavior: "smooth",
+                                block: "center"
+                            });
+
+                            isExpanded = false;
+                        }
+                    });
                 }
             });
-        }
-    });
-    </script>
-</section>
+        </script>
+    </section>
     <section id="sessions" class="sessions-section">
 
-    <div class="sessions-container">
-        <div class="sessions-header">
-            <span class="sessions-tag">JOIN US LIVE</span>
-            <h2 class="sessions-title">The Schedule</h2>
-            
-            <p class="sessions-desc">
-                Glides automatically.<br>
-                <strong>Desktop:</strong> Hover to pause. <strong>Mobile:</strong> Swipe to navigate.
-            </p>
+        <div class="sessions-container">
+            <div class="sessions-header">
+                <span class="sessions-tag">JOIN US LIVE</span>
+                <h2 class="sessions-title">The Schedule</h2>
 
-            <a href="<?php echo site_url('/sessions'); ?>" class="link-full-schedule">
-                View Full Schedule &rarr;
-            </a>
-        </div>
-
-        <div class="sessions-slider-wrapper">
-
-            <button id="slidePrev" class="slider-nav-btn prev-btn" aria-label="Previous">←</button>
-
-            <div class="sessions-track" id="sessionsTrack">
-
-                <?php
-                // UPDATED SESSION DATA FOR 2026 (Organization & Lead separated)
-                $sessions = [
-                    [
-                        'title' => 'Collaborative Future for Community-Led Human Rights Documentation',
-                        'desc'  => 'A foundational session exploring future frameworks for community-driven justice and documentation standards.',
-                        'type'  => 'Plenary',
-                        'date'  => 'Jan 26, 2026',
-                        'time'  => '10:00 AM - 11:30 AM',
-                        'lead'  => 'Community Leaders',
-                        'org'   => 'Community Leaders'
-                    ],
-                    [
-                        'title' => 'From Hindutva Watch to CSOH: Countering Organized Hate',
-                        'desc'  => 'Interactive workshop on researching and documenting organized hate speech using CSOH methodologies.',
-                        'type'  => 'Workshop',
-                        'date'  => 'Jan 26, 2026',
-                        'time'  => '12:00 PM - 01:30 PM',
-                        'lead'  => 'Ammaarah Nilafdeen, Raqib Hameed Naik',
-                        'org'   => 'Center for the Study of Organized Hate'
-                    ],
-                    [
-                        'title' => 'July Persist: Building Community-Led Archiving & OSINT',
-                        'desc'  => 'Strategies for sustainable community archives and investigating protest history using open source intel.',
-                        'type'  => 'Ideation',
-                        'date'  => 'Jan 26, 2026',
-                        'time'  => '02:30 PM - 04:00 PM',
-                        'lead'  => 'Subinoy Mustofi Eron, Aaqib Shatil, Shoeb Abdullah, Iffat Joye',
-                        'org'   => 'Netra News, BD Protest Archive'
-                    ],
-                    [
-                        'title' => 'Protect the Messenger: Digital & Physical Safety',
-                        'desc'  => 'Essential digital hygiene and physical security protocols for journalists covering protests.',
-                        'type'  => 'Workshop',
-                        'date'  => 'Jan 26, 2026',
-                        'time'  => '04:30 PM - 06:00 PM',
-                        'lead'  => 'M A Mazed, Sam Jahan',
-                        'org'   => 'BJIM'
-                    ],
-                    [
-                        'title' => 'Documenting Tech-Facilitated Gender-Based Violence',
-                        'desc'  => '10 things you need to know about identifying and combating gender-based violence in digital spaces.',
-                        'type'  => 'Workshop',
-                        'date'  => 'Jan 26, 2026',
-                        'time'  => '11:00 AM - 12:30 PM',
-                        'lead'  => 'Minhaj Aman',
-                        'org'   => 'Activate Rights'
-                    ],
-                    [
-                        'title' => 'Let Knowledge Be Free: Open-Source Principles',
-                        'desc'  => 'How open-source principles can support modern journalistic practice and collaborative information sharing.',
-                        'type'  => 'Workshop',
-                        'date'  => 'Jan 27, 2026',
-                        'time'  => '10:00 AM - 11:30 AM',
-                        'lead'  => 'M. Rafiul Bahar Rafi',
-                        'org'   => 'Korikath Knowledge'
-                    ],
-                    [
-                        'title' => 'Deadly in Disguise: The Hidden Lethality of Pellet Guns',
-                        'desc'  => 'Analyzing the medical and social impact of "non-lethal" crowd control weapons like chhorra guli.',
-                        'type'  => 'Dialogue',
-                        'date'  => 'Jan 27, 2026',
-                        'time'  => '12:00 PM - 01:30 PM',
-                        'lead'  => 'Zarif Rahman, Opsora Islam, Sapran',
-                        'org'   => 'Independent Researchers'
-                    ],
-                    [
-                        'title' => 'Crisis Response Tech: Emerging Civic Technologies',
-                        'desc'  => 'Exploring challenges and opportunities for civic technologies in crisis response and coordination.',
-                        'type'  => 'Roundtable',
-                        'date'  => 'Jan 27, 2026',
-                        'time'  => '02:30 PM - 04:00 PM',
-                        'lead'  => 'Chowdhury Isfatul Karim, Rafid Khan',
-                        'org'   => 'Jogajog'
-                    ],
-                    [
-                        'title' => 'Beyond Disinformation: Countering Info Warfare',
-                        'desc'  => 'Understanding and countering industrial-scale information warfare targeting Bangladesh.',
-                        'type'  => 'Roundtable',
-                        'date'  => 'Jan 27, 2026',
-                        'time'  => '04:30 PM - 06:00 PM',
-                        'lead'  => 'Fact Checkers, Media',
-                        'org'   => 'Fact Checkers Alliance'
-                    ],
-                    [
-                        'title' => 'Posters of Resistance: Visual Solidarity and Artivism',
-                        'desc'  => 'Interactive journey through the visual language of the movement. Engaging with archive posters.',
-                        'type'  => 'Parallel',
-                        'date'  => 'Jan 26-27, 2026',
-                        'time'  => 'All Day Exhibition',
-                        'lead'  => 'Artivism Studio',
-                        'org'   => 'Artivism Studio, Kashful Foundation'
-                    ],
-                    [
-                        'title' => 'Truth and Reconciliation: Healing and Accountability',
-                        'desc'  => 'Conversations on balancing the need for healing with the demand for accountability in post-conflict contexts.',
-                        'type'  => 'Dialogue',
-                        'date'  => 'Jan 27, 2026',
-                        'time'  => '09:00 AM - 10:30 AM',
-                        'lead'  => 'Open Forum',
-                        'org'   => 'Open Forum'
-                    ],
-                    [
-                        'title' => 'The Ethics of Archiving Trauma',
-                        'desc'  => 'When does documentation become exploitation? A critical look at the ethics of collecting traumatic history.',
-                        'type'  => 'Plenary',
-                        'date'  => 'Jan 27, 2026',
-                        'time'  => '01:00 PM - 02:30 PM',
-                        'lead'  => 'Academic Panel',
-                        'org'   => 'Academic Panel'
-                    ],
-                    [
-                        'title' => 'Digital Security Clinic for Activists',
-                        'desc'  => 'Bring your devices. A hands-on clinic to help activists secure their phones and accounts.',
-                        'type'  => 'Workshop',
-                        'date'  => 'Jan 26, 2026',
-                        'time'  => '01:00 PM - 03:00 PM',
-                        'lead'  => 'SecDev Team',
-                        'org'   => 'SecDev Team'
-                    ],
-                    [
-                        'title' => 'Art as Evidence: Legal Admissibility',
-                        'desc'  => 'Can a song, a poem, or a mural be used as evidence in court? Lawyers and artists discuss.',
-                        'type'  => 'Roundtable',
-                        'date'  => 'Jan 27, 2026',
-                        'time'  => '11:00 AM - 12:30 PM',
-                        'lead'  => 'Lawyers & Artists',
-                        'org'   => 'Legal Aid Network'
-                    ],
-                    [
-                        'title' => 'Closing Ceremony: The Way Forward',
-                        'desc'  => 'Reflecting on the two days of work and setting the agenda for the coming year.',
-                        'type'  => 'Plenary',
-                        'date'  => 'Jan 27, 2026',
-                        'time'  => '06:30 PM - 08:00 PM',
-                        'lead'  => 'Organizing Committee',
-                        'org'   => 'Organizing Committee'
-                    ]
-                ];
-
-                // Loop TWICE for Infinite Scroll Effect
-                for ($i = 0; $i < 2; $i++) {
-                    foreach ($sessions as $session):
-                        
-                        // BADGE COLOR LOGIC
-                        $type = strtolower($session['type']);
-                        if (strpos($type, 'plenary') !== false) {
-                            $badgeClass = 'badge-plenary';
-                        } elseif (strpos($type, 'workshop') !== false) {
-                            $badgeClass = 'badge-workshop';
-                        } elseif (strpos($type, 'ideation') !== false) {
-                            $badgeClass = 'badge-ideation';
-                        } elseif (strpos($type, 'dialogue') !== false) {
-                            $badgeClass = 'badge-dialogue';
-                        } elseif (strpos($type, 'roundtable') !== false) {
-                            $badgeClass = 'badge-roundtable';
-                        } elseif (strpos($type, 'parallel') !== false) {
-                            $badgeClass = 'badge-parallel';
-                        } else {
-                            $badgeClass = 'badge-workshop'; // Default
-                        }
-
-                        // DAY COLOR LOGIC
-                        $dayLabel = (strpos($session['date'], 'Jan 26') !== false) ? 'DAY 01' : 'DAY 02';
-                        if (strpos($session['date'], 'Jan 26-27') !== false) $dayLabel = 'BOTH';
-                        
-                        $dayClass = 'day-two';
-                        if ($dayLabel === 'DAY 01') $dayClass = 'day-one';
-                    ?>
-
-                        <div class="session-card">
-                            <div class="card-header">
-                                <div class="header-content">
-                                    <h3 class="card-title"><?php echo $session['title']; ?></h3>
-                                    <p class="card-subtitle"><?php echo $session['org']; ?></p>
-                                </div>
-                                <div class="header-meta">
-                                    <span class="card-badge <?php echo $badgeClass; ?>"><?php echo $session['type']; ?></span>
-                                    <span class="day-label <?php echo $dayClass; ?>"><?php echo $dayLabel; ?></span>
-                                </div>
-                            </div>
-
-                            <div class="card-details">
-                                <div class="detail-row">
-                                    <span class="detail-icon icon-cal">📅</span>
-                                    <?php echo $session['date']; ?>
-                                </div>
-
-                                <div class="detail-row">
-                                    <span class="detail-icon icon-time">⏰</span>
-                                    <?php echo $session['time']; ?>
-                                </div>
-
-                                <div class="detail-row">
-                                    <span class="detail-icon icon-user">👤</span>
-                                    <?php echo $session['lead']; ?>
-                                </div>
-
-                                <div class="detail-row">
-                                    <span class="detail-icon icon-room">📍</span>
-                                    <span style="font-style: italic; opacity: 0.8;">Room TBA</span>
-                                </div>
-                            </div>
-
-                            <div class="session-hidden-content">
-                                <div class="hidden-section">
-                                    <span class="hidden-title">About This Session</span>
-                                    <p class="hidden-text"><?php echo $session['desc']; ?></p>
-                                </div>
-                                <div class="hidden-section">
-                                    <span class="hidden-title">Info</span>
-                                    <p class="hidden-text">Open to all registered participants.</p>
-                                </div>
-                               <a href="<?php echo site_url('/sessions'); ?>" class="btn-toggle-details" style="text-decoration: none; display: flex; justify-content: center; align-items: center;">View Details</a>
-                            </div>
-
-                            <button class="btn-toggle-details">View Details</button>
-                        </div>
-
-                <?php
-                    endforeach;
-                }
-                ?>
-
-            </div>
-            
-            <button id="slideNext" class="slider-nav-btn next-btn" aria-label="Next">→</button>
-
-        </div>
-    </div>
-</section>
-<section class="partners-section">
-    <div class="container">
-        <h2 class="partners-title">Organizers & Partners</h2>
-        
-        <div class="partner-row">
-            <div class="partner-label">Conveyed by</div>
-            <div class="partner-logos-wrapper">
-                <div class="logo-group">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/partner/activate.svg" alt="Activate Rights" class="partner-logo">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/partner/bpa logo.svg" alt="Bangladesh Protest Archive" class="partner-logo">
-                </div>
-                <div class="logo-group full-width">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/partner/witness logo new.png" alt="WITNESS" class="partner-logo large-logo">
-                </div>
-            </div>
-        </div>
-
-        <div class="partner-row">
-            <div class="partner-label">Collaboration with</div>
-            <div class="partner-logos-wrapper">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/partner/BJIM Logo.svg" alt="BJIM" class="partner-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/partner/HURIDOCS.png" alt="HURIDOCS" class="partner-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/partner/Surge.webp" alt="Surge Bangladesh" class="partner-logo">
-            </div>
-        </div>
-
-        <div class="partner-row">
-            <div class="partner-label">In Partnership with</div>
-            <div class="partner-logos-wrapper">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/partner/brac logo.svg" alt="BRAC University" class="partner-logo medium-logo">
-            </div>
-        </div>
-
-        <div class="partner-row no-border">
-            <div class="partner-label">With Support from</div>
-            <div class="partner-logos-wrapper">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/partner/undp logo.svg" alt="UNDP" class="partner-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/partner/netra logos.svg" alt="Netra News" class="partner-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/partner/archive-resist-fund-logo.png" alt="Archive & Resist Fund" class="partner-logo">
-            </div>
-        </div>
-
-    </div>
-</section>
-<section class="venue-section">
-    <div class="container">
-        <div class="venue-grid">
-            
-            <div class="venue-info">
-                <h2 class="venue-title">Save The Date</h2>
-                <p class="venue-desc">
-                    A convening for individuals and organizations engaged in human rights, digital rights, social justice, and documentation practices.
+                <p class="sessions-desc">
+                    Glides automatically.<br>
+                    <strong>Desktop:</strong> Hover to pause. <strong>Mobile:</strong> Swipe to navigate.
                 </p>
 
-                <div class="venue-details-block">
-                    <div class="venue-item">
-                        <span class="venue-label">Venue:</span>
-                        <h3 class="venue-highlight">BRAC University</h3>
+                <a href="<?php echo site_url('/sessions'); ?>" class="link-full-schedule">
+                    View Full Schedule &rarr;
+                </a>
+            </div>
+
+            <div class="sessions-slider-wrapper">
+
+                <button id="slidePrev" class="slider-nav-btn prev-btn" aria-label="Previous">←</button>
+
+                <div class="sessions-track" id="sessionsTrack">
+
+                    <?php
+                    // DATA: Cinema First, Posters Last
+                    $sessions = [
+                        [
+                            'title' => 'Resistance Cinema Fest',
+                            'desc'  => 'Screening of documentaries and short films capturing the spirit of resistance.',
+                            'type'  => 'Parallel',
+                            'date' => 'Jan 26-27',
+                            'time' => 'Ongoing',
+                            'lead'  => 'Bangladesh Protest Archive',
+                            'org' => 'Bangladesh Protest Archive'
+                        ],
+                        [
+                            'title' => 'Collaborative Future for Community-Led Documentation',
+                            'desc'  => 'A foundational session exploring future frameworks for community-driven justice.',
+                            'type'  => 'Plenary',
+                            'date' => 'Jan 26',
+                            'time' => '10:00 AM',
+                            'lead'  => 'Community Leaders',
+                            'org' => 'Community Leaders'
+                        ],
+                        [
+                            'title' => 'Documenting Tech-Facilitated Gender-Based Violence',
+                            'desc'  => '10 Things You Need to Know: Identifying and combating gender-based violence in digital spaces.',
+                            'type'  => 'Workshop',
+                            'date' => 'Jan 26',
+                            'time' => '11:00 AM',
+                            'lead'  => 'Minhaj Aman',
+                            'org' => 'Activate Rights'
+                        ],
+                        [
+                            'title' => 'From Hindutva Watch to CSOH: Countering Organized Hate',
+                            'desc'  => 'Interactive workshop on researching and documenting organized hate speech using CSOH methodologies.',
+                            'type'  => 'Workshop',
+                            'date' => 'Jan 26',
+                            'time' => '12:00 PM',
+                            'lead'  => 'Ammaarah N., Raqib H.',
+                            'org' => 'CSOH'
+                        ],
+                        [
+                            'title' => 'July Persist: Building Community-Led Archiving & OSINT',
+                            'desc'  => 'Strategies for sustainable community archives and investigating protest history.',
+                            'type'  => 'Ideation',
+                            'date' => 'Jan 26',
+                            'time' => '02:30 PM',
+                            'lead'  => 'Netra News Team',
+                            'org' => 'Netra News, BDPA'
+                        ],
+                        [
+                            'title' => 'Protect the Messenger: Digital & Physical Safety',
+                            'desc'  => 'Essential digital hygiene and physical security protocols for journalists covering protests.',
+                            'type'  => 'Workshop',
+                            'date' => 'Jan 26',
+                            'time' => '04:30 PM',
+                            'lead'  => 'M A Mazed, Sam Jahan',
+                            'org' => 'BJIM'
+                        ],
+                        [
+                            'title' => 'Let Knowledge Be Free: Open-Source Principles',
+                            'desc'  => 'How open-source principles can support modern journalistic practice.',
+                            'type'  => 'Workshop',
+                            'date' => 'Jan 27',
+                            'time' => '10:00 AM',
+                            'lead'  => 'M. Rafiul Bahar Rafi',
+                            'org' => 'Korikath Knowledge'
+                        ],
+                        [
+                            'title' => 'Art as Evidence: Legal Admissibility',
+                            'desc'  => 'Can a song, a poem, or a mural be used as evidence in court? Lawyers and artists discuss.',
+                            'type'  => 'Roundtable',
+                            'date' => 'Jan 27',
+                            'time' => '11:00 AM',
+                            'lead'  => 'Lawyers & Artists',
+                            'org' => 'Legal Aid Network'
+                        ],
+                        [
+                            'title' => 'Deadly in Disguise: Hidden Lethality of Pellet Guns',
+                            'desc'  => 'Analyzing the medical and social impact of "non-lethal" crowd control weapons.',
+                            'type'  => 'Dialogue',
+                            'date' => 'Jan 27',
+                            'time' => '12:00 PM',
+                            'lead'  => 'Zarif Rahman, Opsora Islam',
+                            'org' => 'Independent Researchers'
+                        ],
+                        [
+                            'title' => 'The Ethics of Archiving Trauma',
+                            'desc'  => 'When does documentation become exploitation? A critical look at the ethics of collecting traumatic history.',
+                            'type'  => 'Plenary',
+                            'date' => 'Jan 27',
+                            'time' => '01:00 PM',
+                            'lead'  => 'Academic Panel',
+                            'org' => 'Academic Panel'
+                        ],
+                        [
+                            'title' => 'Crisis Response Tech: Emerging Civic Technologies',
+                            'desc'  => 'Exploring challenges and opportunities for civic technologies in crisis response.',
+                            'type'  => 'Roundtable',
+                            'date' => 'Jan 27',
+                            'time' => '02:30 PM',
+                            'lead'  => 'Jogajog Team',
+                            'org' => 'Jogajog'
+                        ],
+                        [
+                            'title' => 'Beyond Disinformation: Countering Info Warfare',
+                            'desc'  => 'Understanding and countering industrial-scale information warfare.',
+                            'type'  => 'Roundtable',
+                            'date' => 'Jan 27',
+                            'time' => '04:30 PM',
+                            'lead'  => 'Fact Checkers',
+                            'org' => 'Fact Checkers Alliance'
+                        ],
+                        [
+                            'title' => 'Truth and Reconciliation: Healing and Accountability',
+                            'desc'  => 'Conversations on balancing the need for healing with the demand for accountability.',
+                            'type'  => 'Dialogue',
+                            'date' => 'Jan 27',
+                            'time' => '09:00 AM',
+                            'lead'  => 'Open Forum',
+                            'org' => 'Open Forum'
+                        ],
+                        [
+                            'title' => 'Digital Security Clinic for Activists',
+                            'desc'  => 'Bring your devices. A hands-on clinic to help activists secure their phones and accounts.',
+                            'type'  => 'Workshop',
+                            'date' => 'Jan 26',
+                            'time' => '01:00 PM',
+                            'lead'  => 'SecDev Team',
+                            'org' => 'SecDev Team'
+                        ],
+                        [
+                            'title' => 'Closing Ceremony: The Way Forward',
+                            'desc'  => 'Reflecting on the two days of work and setting the agenda.',
+                            'type'  => 'Plenary',
+                            'date' => 'Jan 27',
+                            'time' => '06:30 PM',
+                            'lead'  => 'Organizing Committee',
+                            'org' => 'Organizing Committee'
+                        ],
+                        // LAST: Posters
+                        [
+                            'title' => 'Posters of Resistance: Visual Solidarity',
+                            'desc'  => 'Interactive journey through the visual language of the movement.',
+                            'type'  => 'Parallel',
+                            'date' => 'Jan 26-27',
+                            'time' => 'Ongoing',
+                            'lead'  => 'Artivism Studio',
+                            'org' => 'Artivism Studio'
+                        ]
+                    ];
+
+                    // LOOP TWICE
+                    for ($i = 0; $i < 2; $i++) {
+                        foreach ($sessions as $session):
+                            $badgeClass = 'badge-workshop';
+                            $t = strtolower($session['type']);
+                            if (strpos($t, 'plenary') !== false) $badgeClass = 'badge-plenary';
+                            elseif (strpos($t, 'parallel') !== false) $badgeClass = 'badge-parallel';
+                            elseif (strpos($t, 'ideation') !== false) $badgeClass = 'badge-ideation';
+                            elseif (strpos($t, 'dialogue') !== false) $badgeClass = 'badge-dialogue';
+                            elseif (strpos($t, 'roundtable') !== false) $badgeClass = 'badge-roundtable';
+
+                            $dayLabel = (strpos($session['date'], 'Jan 26') !== false) ? 'DAY 01' : 'DAY 02';
+                            if (strpos($session['date'], 'Jan 26-27') !== false) $dayLabel = 'BOTH';
+                            $dayClass = ($dayLabel === 'DAY 01') ? 'day-one' : 'day-two';
+                    ?>
+
+                            <div class="session-card">
+                                <div class="card-header">
+                                    <div class="header-content">
+                                        <h3 class="card-title"><?php echo $session['title']; ?></h3>
+                                        <p class="card-subtitle" style="color: #ff4d4d; font-weight: 700; text-transform: uppercase; margin-bottom: 5px;"><?php echo $session['org']; ?></p>
+                                    </div>
+                                    <div class="header-meta">
+                                        <span class="card-badge <?php echo $badgeClass; ?>"><?php echo $session['type']; ?></span>
+                                        <span class="day-label <?php echo $dayClass; ?>"><?php echo $dayLabel; ?></span>
+                                    </div>
+                                </div>
+
+                                <div class="card-details">
+                                    <div class="detail-row"><span class="detail-icon icon-cal">📅</span> <?php echo $session['date']; ?></div>
+                                    <div class="detail-row"><span class="detail-icon icon-time">⏰</span> <?php echo $session['time']; ?></div>
+                                    <div class="detail-row"><span class="detail-icon icon-room">📍</span> Venue TBA</div>
+                                    <div class="detail-row"><span class="detail-icon icon-user">👤</span> <?php echo $session['lead']; ?></div>
+                                </div>
+
+                                <div class="session-hidden-content">
+                                    <div class="hidden-section">
+                                        <span class="hidden-title">About This Session</span>
+                                        <p class="hidden-text"><?php echo $session['desc']; ?></p>
+                                    </div>
+                                    <div class="hidden-section">
+                                        <span class="hidden-title">Info</span>
+                                        <p class="hidden-text">Open to all registered participants.</p>
+                                    </div>
+
+                                    <a href="<?php echo site_url('/sessions'); ?>" class="btn-visit-page">
+                                        GO TO SESSIONS PAGE &rarr;
+                                    </a>
+                                </div>
+
+                                <button class="btn-toggle-details">View Details</button>
+                            </div>
+
+                    <?php
+                        endforeach;
+                    }
+                    ?>
+
+                </div>
+
+                <button id="slideNext" class="slider-nav-btn next-btn" aria-label="Next">→</button>
+
+            </div>
+        </div>
+    </section>
+    <section class="partners-section">
+        <div class="container">
+            <h2 class="partners-title">Organizers & Partners</h2>
+
+            <div class="partner-row">
+                <div class="partner-label">Conveyed by</div>
+
+                <div class="partner-logos-wrapper is-stacked">
+                    <div class="logo-line">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/partner/activate.svg"
+                            alt="Activate Rights"
+                            class="partner-logo"
+                            style="height: 45px;">
+
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/partner/bpa logo.svg"
+                            alt="Bangladesh Protest Archive"
+                            class="partner-logo"
+                            style="height: 45px;">
                     </div>
-                    
-                    <div class="venue-item">
-                        <span class="venue-label">Date:</span>
-                        <h3 class="venue-highlight">26-27 Jan 2026</h3>
+
+                    <div class="logo-line">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/partner/witness logo new.png"
+                            alt="WITNESS"
+                            class="partner-logo"
+                            style="height: 65px;">
                     </div>
                 </div>
             </div>
 
-            <div class="venue-map-wrapper">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.275386498738!2d90.42224537600622!3d23.773205978654918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7715a40c603%3A0xec01cd75f33139f5!2sBRAC%20University!5e0!3m2!1sen!2sbd!4v1767476666024!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </iframe>
+            <div class="partner-row">
+                <div class="partner-label">Collaboration with</div>
+
+                <div class="partner-logos-wrapper is-stacked">
+                    <div class="logo-line">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/partner/BJIM Logo.svg"
+                            alt="BJIM"
+                            class="partner-logo"
+                            style="height: 48px;">
+
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/partner/HURIDOCS.png"
+                            alt="HURIDOCS"
+                            class="partner-logo"
+                            style="height: 42px;">
+                    </div>
+
+                    <div class="logo-line">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/partner/Surge.webp"
+                            alt="Surge Bangladesh"
+                            class="partner-logo"
+                            style="height: 50px;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="partner-row">
+                <div class="partner-label">In Partnership with</div>
+                <div class="partner-logos-wrapper">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/partner/brac logo.svg"
+                        alt="BRAC University"
+                        class="partner-logo"
+                        style="height: 55px;">
+                </div>
+            </div>
+
+            <div class="partner-row no-border">
+                <div class="partner-label">With Support from</div>
+                <div class="partner-logos-wrapper">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/partner/undp logo.svg"
+                        alt="UNDP"
+                        class="partner-logo"
+                        style="height: 52px;">
+
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/partner/netra logos.svg"
+                        alt="Netra News"
+                        class="partner-logo"
+                        style="height: 45px;">
+
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/partner/archive-resist-fund-logo.png"
+                        alt="Archive & Resist Fund"
+                        class="partner-logo"
+                        style="height: 48px;">
+                </div>
             </div>
 
         </div>
-        
-        <div class="venue-divider"></div>
-    </div>
-</section>
+    </section>
+    <section class="venue-section">
+        <div class="container">
+            <div class="venue-grid">
+
+                <div class="venue-info">
+                    <h2 class="venue-title">Save The Date</h2>
+                    <p class="venue-desc">
+                        A convening for individuals and organizations engaged in human rights, digital rights, social justice, and documentation practices.
+                    </p>
+
+                    <div class="venue-details-block">
+                        <div class="venue-item">
+                            <span class="venue-label">Venue:</span>
+                            <h3 class="venue-highlight">BRAC University</h3>
+                        </div>
+
+                        <div class="venue-item">
+                            <span class="venue-label">Date:</span>
+                            <h3 class="venue-highlight">26-27 Jan 2026</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="venue-map-wrapper">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.275386498738!2d90.42224537600622!3d23.773205978654918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7715a40c603%3A0xec01cd75f33139f5!2sBRAC%20University!5e0!3m2!1sen!2sbd!4v1767476666024!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </iframe>
+                </div>
+
+            </div>
+
+            <div class="venue-divider"></div>
+        </div>
+    </section>
+    <section class="infinite-partners-section">
+        <div class="container">
+            <h2 class="partners-slider-title">SESSION CO-HOSTS</h2>
+
+            <div class="partners-slider-wrapper">
+                <div class="partners-track" id="partnerTickerTrack">
+                    <?php
+                    // 1. Define Logos
+                    $logos = [
+                        ['src' => '/images/copartner/Kashful Foundation.png', 'alt' => 'Kashful Foundation'],
+                        ['src' => '/images/copartner/sapran logo.png', 'alt' => 'Sapran'],
+                        ['src' => '/images/copartner/jogajog.png', 'alt' => 'Jogajog'],
+                        ['src' => '/images/copartner/Kashful Foundation.png', 'alt' => 'Kashful Foundation'],
+                        ['src' => '/images/copartner/sapran logo.png', 'alt' => 'Sapran'],
+                        ['src' => '/images/copartner/jogajog.png', 'alt' => 'Jogajog'],
+                    ];
+
+                    // 2. Loop 6 times to ensure the track is very long
+                    for ($i = 0; $i < 6; $i++) {
+                        foreach ($logos as $logo): ?>
+                            <div class="partner-slide-item">
+                                <img src="<?php echo get_template_directory_uri() . $logo['src']; ?>"
+                                    alt="<?php echo $logo['alt']; ?>"
+                                    class="partner-slide-img">
+                            </div>
+                    <?php endforeach;
+                    }
+                    ?>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer>
         <div class="footer-bottom">
             <div class="container">
@@ -728,7 +808,9 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
 
-            // --- 1. GENERAL HELPERS (Accordion, etc.) ---
+            // ==========================================
+            // 1. GENERAL UI (Accordion, etc.)
+            // ==========================================
             function closeItem(item, contentClass, iconClass) {
                 item.classList.remove('active');
                 if (contentClass) item.querySelector('.' + contentClass).style.maxHeight = 0;
@@ -742,7 +824,6 @@
                 if (iconClass) item.querySelector('.' + iconClass).textContent = '−';
             }
 
-            // Accordion Logic
             document.querySelectorAll('.accordion-header').forEach(header => {
                 header.addEventListener('click', (e) => {
                     e.stopPropagation();
@@ -755,34 +836,21 @@
                 });
             });
 
-            // Card Details Logic
+            // Toggle Details Button
             document.querySelectorAll('.btn-toggle-details').forEach(btn => {
                 btn.addEventListener('click', function(e) {
+                    e.preventDefault();
                     e.stopPropagation();
                     const card = this.closest('.session-card');
                     const isOpen = card.classList.contains('open');
-                    document.querySelectorAll('.session-card').forEach(c => {
-                        c.classList.remove('open');
-                        c.querySelector('.btn-toggle-details').textContent = 'View Details';
-                    });
                     if (!isOpen) {
                         card.classList.add('open');
-                        this.textContent = 'Close';
+                        if (this.tagName === 'BUTTON') this.textContent = 'Close';
+                    } else {
+                        card.classList.remove('open');
+                        if (this.tagName === 'BUTTON') this.textContent = 'View Details';
                     }
                 });
-            });
-
-            // Global Click (Close dropdowns)
-            document.addEventListener('click', (e) => {
-                if (!e.target.closest('.accordion-item')) {
-                    document.querySelectorAll('.accordion-item').forEach(item => closeItem(item, 'accordion-content', 'acc-icon'));
-                }
-                if (!e.target.closest('.session-card')) {
-                    document.querySelectorAll('.session-card.open').forEach(c => {
-                        c.classList.remove('open');
-                        c.querySelector('.btn-toggle-details').textContent = 'View Details';
-                    });
-                }
             });
 
             // Back To Top
@@ -798,63 +866,80 @@
             }
 
 
-            // --- 2. THE SESSIONS SLIDER (FIXED) ---
+            // ==========================================
+            // 2. MAIN SESSIONS SLIDER (The Big One)
+            // ==========================================
             const track = document.getElementById('sessionsTrack');
             const prevBtn = document.getElementById('slidePrev');
             const nextBtn = document.getElementById('slideNext');
 
             if (track) {
+                let animId;
                 let isPaused = false;
-                let speed = 1.0; // The speed of the slider
+                let speed = 1.0;
 
-                // THE LOOP: Keeps it moving
-                function animate() {
+                function sessionScroll() {
                     if (!isPaused) {
                         track.scrollLeft += speed;
-                        // Infinite Scroll Reset
                         if (track.scrollLeft >= (track.scrollWidth / 2)) {
                             track.scrollLeft = 0;
                         }
                     }
-                    requestAnimationFrame(animate);
+                    animId = requestAnimationFrame(sessionScroll);
                 }
-                // Start the movement
-                animate();
+                animId = requestAnimationFrame(sessionScroll);
 
-                // DESKTOP INTERACTION (Mouse Only)
-                // Checks if the user has a mouse (PC/Laptop)
-                const hasMouse = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+                track.addEventListener('mouseenter', () => isPaused = true);
+                track.addEventListener('mouseleave', () => isPaused = false);
+                track.addEventListener('touchstart', () => isPaused = true);
+                track.addEventListener('touchend', () => isPaused = false);
 
-                if (hasMouse) {
-                    // Pause when hovering over the track
-                    track.addEventListener('mouseenter', () => {
-                        isPaused = true;
-                    });
-                    track.addEventListener('mouseleave', () => {
-                        isPaused = false;
-                    });
-
-                    // Pause when hovering over buttons
-                    if (prevBtn && nextBtn) {
-                        [prevBtn, nextBtn].forEach(btn => {
-                            btn.addEventListener('mouseenter', () => isPaused = true);
-                            btn.addEventListener('mouseleave', () => isPaused = false);
-                        });
-                    }
-                }
-
-                // BUTTON CLICKS (Works on Mobile & Desktop)
                 if (prevBtn && nextBtn) {
-                    const jump = 350;
+                    [prevBtn, nextBtn].forEach(btn => {
+                        btn.addEventListener('mouseenter', () => isPaused = true);
+                        btn.addEventListener('mouseleave', () => isPaused = false);
+                    });
                     prevBtn.addEventListener('click', () => track.scrollBy({
-                        left: -jump,
+                        left: -380,
                         behavior: 'smooth'
                     }));
                     nextBtn.addEventListener('click', () => track.scrollBy({
-                        left: jump,
+                        left: 380,
                         behavior: 'smooth'
                     }));
                 }
+            }
+
+
+            // ==========================================
+            // 3. PARTNER LOGO SLIDER (The New One)
+            // ==========================================
+            const partnerTrack = document.getElementById('partnerTickerTrack');
+
+            if (partnerTrack) {
+                let pAnimId;
+                let pPaused = false;
+                let pSpeed = 0.8; // Speed of logos
+
+                function partnerScroll() {
+                    if (!pPaused) {
+                        partnerTrack.scrollLeft += pSpeed;
+
+                        // Reset Logic
+                        if (partnerTrack.scrollLeft >= (partnerTrack.scrollWidth / 2)) {
+                            partnerTrack.scrollLeft = 0;
+                        }
+                    }
+                    pAnimId = requestAnimationFrame(partnerScroll);
+                }
+                // Start
+                pAnimId = requestAnimationFrame(partnerScroll);
+
+                // Pause on Hover
+                partnerTrack.addEventListener('mouseenter', () => pPaused = true);
+                partnerTrack.addEventListener('mouseleave', () => pPaused = false);
+                partnerTrack.addEventListener('touchstart', () => pPaused = true);
+                partnerTrack.addEventListener('touchend', () => pPaused = false);
             }
 
         });

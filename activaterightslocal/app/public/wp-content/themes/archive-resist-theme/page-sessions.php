@@ -62,8 +62,8 @@ Template Name: Sessions Page
         .card-header { border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 15px; }
         .card-title { font-family: var(--font-display, sans-serif); font-size: 1.4rem; line-height: 1.2; margin-bottom: 8px; text-transform: uppercase; }
         
-        /* ORG STYLE (Subtitle Position) */
-        .session-org { font-family: var(--font-body, sans-serif); color: #009945; font-weight: 700; font-size: 0.9rem; margin-bottom: 0; text-transform: uppercase; }
+        /* ORG STYLE (UPDATED TO RED) */
+        .session-org { font-family: var(--font-body, sans-serif); color: #ff4d4d; font-weight: 700; font-size: 0.9rem; margin-bottom: 0; text-transform: uppercase; }
 
         .header-meta { margin-top: 10px; }
         .card-badge { padding: 4px 10px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; border: 1px solid #000; display: inline-block; }
@@ -314,7 +314,7 @@ Template Name: Sessions Page
                 <div class="card-header">
                     <div class="header-content">
                         <h3 class="card-title"><?php echo $session['title']; ?></h3>
-                        <p class="session-org" style="color:#009945; font-weight:700; font-size:0.95rem; margin-bottom:5px; text-transform:uppercase;"><?php echo $session['org']; ?></p>
+                        <p class="session-org" style="color:#ff4d4d; font-weight:700; font-size:0.95rem; margin-bottom:5px; text-transform:uppercase;"><?php echo $session['org']; ?></p>
                     </div>
                     <div class="header-meta"><span class="card-badge <?php echo $badgeClass; ?>"><?php echo $session['type']; ?></span></div>
                 </div>
@@ -349,7 +349,7 @@ Template Name: Sessions Page
                         <div class="card-header">
                             <div class="header-content">
                                 <h3 class="card-title"><?php echo $session['title']; ?></h3>
-                                <p class="session-org" style="color:#009945; font-weight:700; font-size:0.9rem; margin-bottom:5px; text-transform:uppercase;"><?php echo $session['org']; ?></p>
+                                <p class="session-org" style="color:#ff4d4d; font-weight:700; font-size:0.9rem; margin-bottom:5px; text-transform:uppercase;"><?php echo $session['org']; ?></p>
                             </div>
                             <div class="header-meta"><span class="card-badge <?php echo $badgeClass; ?>"><?php echo $session['type']; ?></span></div>
                         </div>
@@ -385,7 +385,7 @@ Template Name: Sessions Page
                         <div class="card-header">
                             <div class="header-content">
                                 <h3 class="card-title"><?php echo $session['title']; ?></h3>
-                                <p class="session-org" style="color:#009945; font-weight:700; font-size:0.9rem; margin-bottom:5px; text-transform:uppercase;"><?php echo $session['org']; ?></p>
+                                <p class="session-org" style="color:#ff4d4d; font-weight:700; font-size:0.9rem; margin-bottom:5px; text-transform:uppercase;"><?php echo $session['org']; ?></p>
                             </div>
                             <div class="header-meta"><span class="card-badge <?php echo $badgeClass; ?>"><?php echo $session['type']; ?></span></div>
                         </div>
@@ -410,7 +410,7 @@ Template Name: Sessions Page
                 <div class="card-header">
                     <div class="header-content">
                         <h3 class="card-title"><?php echo $session['title']; ?></h3>
-                        <p class="session-org" style="color:#009945; font-weight:700; font-size:0.95rem; margin-bottom:5px; text-transform:uppercase;"><?php echo $session['org']; ?></p>
+                        <p class="session-org" style="color:#ff4d4d; font-weight:700; font-size:0.95rem; margin-bottom:5px; text-transform:uppercase;"><?php echo $session['org']; ?></p>
                     </div>
                     <div class="header-meta"><span class="card-badge <?php echo $badgeClass; ?>"><?php echo $session['type']; ?></span></div>
                 </div>
