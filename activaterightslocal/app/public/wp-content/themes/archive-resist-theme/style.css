@@ -1391,10 +1391,7 @@ img {
     width: 100%;
     gap: 10px;
   }
-  .main-nav a {
-    font-size: 0.85rem;
-    padding: 10px 5px;
-  }
+  .main-nav a { font-size: 0.85rem; padding: 10px 5px; }
 
   /* --- HERO (CENTERED) --- */
   .hero { 
@@ -1404,21 +1401,17 @@ img {
     align-items: center;
     text-align: center;
   }
-
   .hero-left {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-
   .hero-left h1 { 
     font-size: 16vw; 
     width: 100%;
     text-align: center;
   }
-
-  /* Center the Graphic and ensure it doesn't jump */
   .hero-graphic { 
     margin: 20px auto; 
     display: flex;
@@ -1426,7 +1419,6 @@ img {
     transform: scale(0.8); 
     transform-origin: center center; 
   }
-
   .hero-right { 
     width: 100%; 
     max-width: none; 
@@ -1434,7 +1426,6 @@ img {
     align-items: center;
     text-align: center;
   }
-
   .hero-desc { font-size: 1.1rem; }
   .btn-ticket { font-size: 1.2rem; padding: 18px 0; }
 
@@ -1448,26 +1439,13 @@ img {
   .history-text { font-size: 1.1rem; max-width: 100%; }
   .history-stack-wrapper { height: 350px; }
 
-  /* --- GOALS FIX (Stacking) --- */
-  .goals-split-container { 
-    display: flex; 
-    flex-direction: column; 
-    gap: 0; 
-  }
-  .goals-visual { 
-    aspect-ratio: 16/9; 
-    width: 100%; 
-  }
-  .goals-visual-title { 
-    font-size: 3.5rem;  
-    transform: translate(-50%, -50%); 
-  }
-  .goals-accordion { 
-    padding: 40px 20px; 
-    width: 100%; 
-  }
+  /* --- GOALS FIX --- */
+  .goals-split-container { display: flex; flex-direction: column; gap: 0; }
+  .goals-visual { aspect-ratio: 16/9; width: 100%; }
+  .goals-visual-title { font-size: 3.5rem; top: 15%; transform: translate(-50%, -50%); }
+  .goals-accordion { padding: 40px 20px; width: 100%; }
   .acc-title { font-size: 2rem; }
-  .acc-icon { font-size: 2rem; 
+  .acc-icon { font-size: 2rem; }
 
   /* --- RESISTANCE BANNER FIX --- */
   .resistance-banner {
@@ -1491,8 +1469,6 @@ img {
     max-width: none;
   }
   .resistance-text-item { font-size: 3rem !important; }
-  
-  /* Fix Scattered Images */
   .collage-img {
     display: block !important;
     position: relative !important;
@@ -1508,13 +1484,12 @@ img {
     transform: none !important;
   }
 
-  /* --- SESSIONS FIXES (Swipe, No Arrows, Square) --- */
+  /* --- SESSIONS FIXES --- */
   .sessions-slider-wrapper {
     width: 100% !important;
     overflow: visible !important;
     padding: 0 !important;
   }
-  
   .sessions-track {
     display: flex !important;
     flex-wrap: nowrap !important;
@@ -1527,43 +1502,82 @@ img {
     pointer-events: auto !important;
     animation: none !important;
   }
-
   .session-card {
     flex-shrink: 0 !important;
     width: 85vw !important;
     max-width: 320px !important;
     margin: 0 !important;
     transform: none !important;
-    
-    /* Remove Shapes */
     clip-path: none !important;
     mask: none !important;
     -webkit-mask: none !important;
-    
-    /* Square Corners */
     border-radius: 0 !important;
-    
     background: #ffffff !important;
     border: 1px solid rgba(0, 0, 0, 0.1) !important;
   }
-
-  /* Remove Triangles */
-  .session-card::before,
-  .session-card::after,
-  .card-header::before,
-  .card-header::after {
-    content: none !important;
-    display: none !important;
-    width: 0 !important;
-    height: 0 !important;
-    opacity: 0 !important;
+  .session-card::before, .session-card::after,
+  .card-header::before, .card-header::after {
+    content: none !important; display: none !important;
   }
   .slider-nav-btn { display: none !important; }
 
-  /* --- PARTNERS STACK --- */
-  .partner-row { flex-direction: column; gap: 15px; }
-  .partner-label { width: 100%; border-bottom: 1px solid #eee; padding-bottom: 5px; margin-bottom: 10px; }
-  .partner-logo { max-height: 40px !important; height: auto !important; }
+  /* --- 1. PARTNERS SECTION (CO-HOSTS) -> MANUAL SWIPE --- */
+  .partner-row { 
+    flex-direction: column !important; 
+    gap: 15px !important; 
+    align-items: flex-start !important;
+  }
+  .partner-label { 
+    width: 100%; 
+    border-bottom: 1px solid #eee; 
+    padding-bottom: 5px; 
+    margin-bottom: 10px; 
+  }
+
+  /* Force Manual Scroll, Disable Animation */
+  .partner-logos-wrapper {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important; /* Enable Swipe */
+    -webkit-overflow-scrolling: touch;
+    width: 100% !important;
+    gap: 30px !important;
+    padding-bottom: 15px !important;
+    justify-content: flex-start !important;
+    animation: none !important; /* STOP AUTO SCROLL HERE */
+  }
+
+  .partner-logo { 
+    max-height: 45px !important; 
+    width: auto !important; 
+    flex-shrink: 0 !important; 
+  }
+
+  /* --- 2. INFINITE PARTNERS SECTION (BOTTOM SLIDER) -> AUTO SCROLL --- */
+  .infinite-partners-section .partners-slider-wrapper {
+    width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  .infinite-partners-section .partners-track {
+    display: flex !important;
+    gap: 60px !important;
+    
+    /* FORCE AUTO SCROLL ON REAL MOBILE */
+    width: max-content !important; 
+    min-width: 100% !important;
+    
+    animation: infinitePartnerScroll 20s linear infinite !important;
+    will-change: transform;
+  }
+  
+  @keyframes infinitePartnerScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } 
+  }
+
+  .partner-slide-item { flex-shrink: 0 !important; }
+  .partner-slide-img { height: 50px !important; width: auto !important; }
 
   /* --- VENUE STACK --- */
   .venue-grid { flex-direction: column; gap: 40px; }
