@@ -194,8 +194,23 @@
 
             <div class="speakers-grid" id="speakersGrid">
 
+
                 <div class="speaker-card">
-                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/Group 21 1.png" alt="Kartika Pratiwi" class="speaker-img"></div>
+                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/romana.jpg" alt="Romana Schweiger" class="speaker-img"></div>
+                    <h3 class="speaker-name">Romana Schweiger</h3>
+                    <p class="speaker-role">Senior Rule of Law, Justice, and Security Advisor</p>
+                    <p class="speaker-org">UNDP</p>
+                </div>
+
+                   <!-- <div class="speaker-card">
+                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/null.png" alt="JinBo Choi" class="speaker-img"></div>
+                    <h3 class="speaker-name">JinBo Choi</h3>
+                    <p class="speaker-role">Senior Rule of Law, Justice, and Security Advisor</p>
+                    <p class="speaker-org">UNDP</p>
+                </div> -->
+
+                <div class="speaker-card">
+                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/kartika.jpg" alt="Kartika Pratiwi" class="speaker-img"></div>
                     <h3 class="speaker-name">Kartika Pratiwi</h3>
                     <p class="speaker-role">Program Lead (Asia-Pacific)</p>
                     <p class="speaker-org">WITNESS</p>
@@ -211,22 +226,36 @@
                 <div class="speaker-card">
                     <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/yovonne.png" alt="Yvonne Ng" class="speaker-img"></div>
                     <h3 class="speaker-name">Yvonne Ng</h3>
-                    <p class="speaker-role">Senior Program Manager</p>
+                    <p class="speaker-role">Senior Program Manager of the Archives</p>
                     <p class="speaker-org">WITNESS</p>
                 </div>
 
                 <div class="speaker-card">
-                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/Group 21 1.png" alt="Huey Shin Choo" class="speaker-img"></div>
+                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/huey.png" alt="Huey Shin Choo" class="speaker-img"></div>
                     <h3 class="speaker-name">Huey Shin Choo</h3>
                     <p class="speaker-role">Program Coordinator</p>
                     <p class="speaker-org">WITNESS</p>
+                </div>
+
+                 <div class="speaker-card">
+                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/prubhu.jpg" alt="Prubhu Dolma" class="speaker-img"></div>
+                    <h3 class="speaker-name">Prubhu Dolma</h3>
+                    <p class="speaker-role">Programme Officer</p>
+                    <p class="speaker-org">HURIDOCS</p>
+                </div>
+
+                 <div class="speaker-card">
+                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/hyebin.jpg" alt="Hyebin Bina Jeon" class="speaker-img"></div>
+                    <h3 class="speaker-name">Hyebin Bina Jeon</h3>
+                    <p class="speaker-role">Programme Officer</p>
+                    <p class="speaker-org">HURIDOCS</p>
                 </div>
 
                 <div class="speaker-card">
                     <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/nilafdeen.png" alt="Ammaarah Nilafdeen" class="speaker-img"></div>
                     <h3 class="speaker-name">Ammaarah Nilafdeen</h3>
                     <p class="speaker-role">Researcher</p>
-                    <p class="speaker-org">CSOH</p>
+                    <p class="speaker-org"> Center for the Study of Organized Hate</p>
                 </div>
 
                 <div class="speaker-card">
@@ -281,7 +310,7 @@
                 <div class="speaker-card">
                     <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/arul.png" alt="Arul Prakkash Sinappan" class="speaker-img"></div>
                     <h3 class="speaker-name">Arul Prakkash</h3>
-                    <p class="speaker-role">Tech Expert</p>
+                    <p class="speaker-role">Video Advocacy and Technology Expert</p>
                     <p class="speaker-org">Independent</p>
                 </div>
 
@@ -403,10 +432,10 @@
                 <span class="sessions-tag">JOIN US LIVE</span>
                 <h2 class="sessions-title">The Schedule</h2>
 
-                <p class="sessions-desc">
+                <!-- <p class="sessions-desc">
                     Glides automatically.<br>
                     <strong>Desktop:</strong> Hover to pause. <strong>Mobile:</strong> Swipe to navigate.
-                </p>
+                </p> -->
 
                 <a href="<?php echo site_url('/sessions'); ?>" class="link-full-schedule">
                     View Full Schedule &rarr;
@@ -658,7 +687,7 @@
                         <img src="<?php echo get_template_directory_uri(); ?>/images/partner/witness logo new.png"
                             alt="WITNESS"
                             class="partner-logo"
-                            style="height: 65px;">
+                            style="height: 45px;">
                     </div>
                 </div>
             </div>
@@ -694,7 +723,7 @@
                     <img src="<?php echo get_template_directory_uri(); ?>/images/partner/brac logo.svg"
                         alt="BRAC University"
                         class="partner-logo"
-                        style="height: 55px;">
+                        style="height: 85px;">
                 </div>
             </div>
 
@@ -704,12 +733,12 @@
                     <img src="<?php echo get_template_directory_uri(); ?>/images/partner/undp logo.svg"
                         alt="UNDP"
                         class="partner-logo"
-                        style="height: 52px;">
+                        style="height: 120px;">
 
                     <img src="<?php echo get_template_directory_uri(); ?>/images/partner/netra logos.svg"
                         alt="Netra News"
                         class="partner-logo"
-                        style="height: 45px;">
+                        style="height: 40px;">
 
                     <img src="<?php echo get_template_directory_uri(); ?>/images/partner/archive-resist-fund-logo.png"
                         alt="Archive & Resist Fund"
@@ -720,6 +749,23 @@
 
         </div>
     </section>
+
+    <section class="cta-section volunteer-section">
+    <div class="container">
+        <h2 class="cta-title">JOIN AS VOLUNTEER</h2>
+        
+        <p class="cta-text">
+            We are looking for dedicated volunteers to support the Conclave. 
+            If you are passionate about human rights, archiving, and community work, 
+            join us in making this event a success.
+        </p>
+
+        <a href="https://forms.gle/84eqJTewPjg2H12L8" target="_blank" class="btn-cta-white">
+            APPLY TO VOLUNTEER
+        </a>
+    </div>
+</section>
+
     <section class="venue-section">
         <div class="container">
             <div class="venue-grid">

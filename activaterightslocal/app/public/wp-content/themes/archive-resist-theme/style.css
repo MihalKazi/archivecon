@@ -1147,6 +1147,65 @@ img {
 .partner-logo:hover {
   transform: scale(1.05);
 }
+/* --- 10.(A) VOLUNTEER CTA SECTION --- */
+.volunteer-section {
+    /* --- CONTROL SECTION SIZE HERE --- */
+    padding: 20px 0;  /* Increase to 150px for a taller section, decrease to 60px for smaller */
+    
+    background-color: var(--c-resist, #f62e2e); /* Red background */
+    text-align: center;
+    color: #ffffff;
+}
+
+.volunteer-section .cta-title {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 4rem; /* Big title size */
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 0 0 20px 0;
+    line-height: 0.9;
+    color: #ffffff;
+}
+
+.volunteer-section .cta-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.5;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    color: #ffffff;
+}
+
+/* White Button Style */
+.btn-cta-white {
+    display: inline-block;
+    background-color: #f6f4ee; /* Beige/White */
+    color: var(--c-resist, #f62e2e); /* Red Text */
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn-cta-white:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .volunteer-section .cta-title {
+        font-size: 3rem;
+    }
+    .volunteer-section {
+        padding: 60px 0; /* Smaller padding on mobile */
+    }
+}
 
 /* --- 11 VENUE / SAVE THE DATE SECTION --- */
 .venue-section {

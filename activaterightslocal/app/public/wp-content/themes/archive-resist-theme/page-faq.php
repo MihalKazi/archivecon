@@ -18,37 +18,142 @@ Template Name: FAQ Page
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
 
     <style>
+        /* --- FAQ PAGE SPECIFIC STYLES --- */
         html {
             scroll-behavior: smooth;
         }
 
-        .footer-logo-link {
-            text-decoration: none;
-            display: inline-block;
+        /* Variables fallback (in case style.css doesn't load immediately) */
+        :root {
+            --black: #262421;
+            --c-resist: #f62e2e;
+            --c-archive: #0f79eb;
+            --font-display: "Barlow Semi Condensed", sans-serif;
+            --font-body: "Inter", sans-serif;
         }
 
-        .footer-logo-link:hover {
-            opacity: 0.8;
+        /* Layout Overrides */
+        .faq-section {
+            padding: 80px 0;
+            background-color: var(--beige, #f6f4ee);
+            min-height: 60vh;
         }
 
+        .faq-header {
+            text-align: center;
+            margin-bottom: 60px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .faq-main-title {
+            font-family: var(--font-display);
+            font-size: 4rem;
+            line-height: 0.9;
+            text-transform: uppercase;
+            font-weight: 800;
+            margin: 0 0 20px 0;
+        }
+        
+        /* Mobile Title Size */
+        @media (max-width: 768px) {
+            .faq-main-title { font-size: 3rem; }
+        }
+
+        .faq-subtext {
+            font-family: var(--font-body);
+            font-weight: 500;
+            font-size: 1.2rem;
+            color: var(--black);
+            line-height: 1.5;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Accordion Styling */
+        .faq-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            margin-bottom: 0;
+        }
+
+        .faq-question {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: none;
+            border: none;
+            padding: 25px 0;
+            text-align: left;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .faq-question:hover .faq-q-text {
+            color: #262421;
+        }
+
+        .faq-q-text {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #10935b;
+            padding-right: 20px;
+            line-height: 1.2;
+        }
+
+        .faq-icon {
+            font-family: var(--font-body);
+            font-size: 2rem;
+            font-weight: 300;
+            color: var(--c-resist);
+            flex-shrink: 0;
+            line-height: 1;
+        }
+
+        /* The Answer (Hidden by default) */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+            padding-right: 20px;
+        }
+
+        .faq-answer p {
+            font-family: var(--font-body);
+            font-size: 1.05rem;
+            line-height: 1.6;
+            color: #444;
+            margin: 0 0 20px 0;
+        }
+
+        /* Active State */
+        .faq-item.active .faq-question .faq-q-text {
+            color: var(--c-resist);
+        }
+
+        /* Links inside text */
         .faq-link {
             color: var(--c-resist);
             text-decoration: underline;
             font-weight: 700;
         }
-
         .faq-link:hover {
-            color: var(--c-archive);
+            color: var(--c-resist);
         }
 
-        .faq-subtext {
-            margin-top: 10px;
-            font-family: 'Inter', sans-serif;
-            font-weight: 500;
-            font-size: 1.2rem;
-            color: var(--black);
-            line-height: 1.4;
+        /* Footer Overrides */
+        .footer-logo-link {
+            text-decoration: none;
+            display: inline-block;
         }
+        .footer-logo-link:hover { opacity: 0.8; }
     </style>
 
     <?php wp_head(); ?>
@@ -310,15 +415,20 @@ Template Name: FAQ Page
             // General Helpers
             function closeItem(item, contentClass, iconClass) {
                 item.classList.remove('active');
-                item.querySelector('.' + contentClass).style.maxHeight = 0;
-                item.querySelector('.' + iconClass).textContent = '+';
+                const content = item.querySelector('.' + contentClass);
+                const icon = item.querySelector('.' + iconClass);
+                
+                if(content) content.style.maxHeight = 0;
+                if(icon) icon.textContent = '+';
             }
 
             function openItem(item, contentClass, iconClass) {
                 item.classList.add('active');
                 const content = item.querySelector('.' + contentClass);
-                content.style.maxHeight = content.scrollHeight + "px";
-                item.querySelector('.' + iconClass).textContent = '−';
+                const icon = item.querySelector('.' + iconClass);
+                
+                if(content) content.style.maxHeight = content.scrollHeight + "px";
+                if(icon) icon.textContent = '−';
             }
 
             // FAQ ACCORDION LOGIC
@@ -327,9 +437,13 @@ Template Name: FAQ Page
                     e.stopPropagation();
                     const item = btn.parentElement;
                     const isActive = item.classList.contains('active');
+                    
+                    // Close others
                     document.querySelectorAll('.faq-item').forEach(other => {
                         if (other !== item) closeItem(other, 'faq-answer', 'faq-icon');
                     });
+                    
+                    // Toggle current
                     if (isActive) closeItem(item, 'faq-answer', 'faq-icon');
                     else openItem(item, 'faq-answer', 'faq-icon');
                 });
