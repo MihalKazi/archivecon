@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-   <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>?v=<?php echo time(); ?>">
 
     <?php wp_head(); ?>
 
@@ -202,12 +202,19 @@
                     <p class="speaker-org">UNDP</p>
                 </div>
 
-                   <!-- <div class="speaker-card">
+                <!-- <div class="speaker-card">
                     <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/null.png" alt="JinBo Choi" class="speaker-img"></div>
                     <h3 class="speaker-name">JinBo Choi</h3>
                     <p class="speaker-role">Senior Rule of Law, Justice, and Security Advisor</p>
                     <p class="speaker-org">UNDP</p>
                 </div> -->
+                
+                <div class="speaker-card">
+                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/majid.png" alt="Faisal Bin Majid" class="speaker-img"></div>
+                    <h3 class="speaker-name">Faisal Bin Majid</h3>
+                    <p class="speaker-role">Project Manager, Partnership for a Tolerant, Inclusive Bangladesh</p>
+                    <p class="speaker-org">UNDP</p>
+                </div>
 
                 <div class="speaker-card">
                     <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/kartika.jpg" alt="Kartika Pratiwi" class="speaker-img"></div>
@@ -237,14 +244,14 @@
                     <p class="speaker-org">WITNESS</p>
                 </div>
 
-                 <div class="speaker-card">
+                <div class="speaker-card">
                     <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/prubhu.jpg" alt="Prubhu Dolma" class="speaker-img"></div>
                     <h3 class="speaker-name">Prubhu Dolma</h3>
                     <p class="speaker-role">Programme Officer</p>
                     <p class="speaker-org">HURIDOCS</p>
                 </div>
 
-                 <div class="speaker-card">
+                <div class="speaker-card">
                     <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/hyebin.jpg" alt="Hyebin Bina Jeon" class="speaker-img"></div>
                     <h3 class="speaker-name">Hyebin Bina Jeon</h3>
                     <p class="speaker-role">Programme Officer</p>
@@ -272,18 +279,27 @@
                     <p class="speaker-org">Netra News</p>
                 </div>
 
-                <div class="speaker-card">
-                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/mazed.png" alt="Mohammad Ali Mazed" class="speaker-img"></div>
-                    <h3 class="speaker-name">Mohammad Ali Mazed</h3>
-                    <p class="speaker-role">Member Secretary</p>
-                    <p class="speaker-org">BJIM</p>
+                 <div class="speaker-card">
+                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/nabila.png" alt="Dr. Nabila Idris" class="speaker-img"></div>
+                    <h3 class="speaker-name">Dr. Nabila Idris</h3>
+                    <p class="speaker-role">Member</p>
+                    <p class="speaker-org">Commission of Inquiry on Enforced Disappearances</p>
                 </div>
 
+
                 <div class="speaker-card">
-                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/sam jahan.png" alt="Sam Jahan" class="speaker-img"></div>
-                    <h3 class="speaker-name">Sam Jahan</h3>
-                    <p class="speaker-role">Convener</p>
-                    <p class="speaker-org">BJIM</p>
+                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/miraj.png" alt="Miraj Ahmed Chowdhury" class="speaker-img"></div>
+                    <h3 class="speaker-name">Miraj Ahmed Chowdhury</h3>
+                    <p class="speaker-role">Managing Director</p>
+                    <p class="speaker-org">Digitally Right</p>
+                </div>
+        
+
+                 <div class="speaker-card">
+                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/arul.png" alt="Arul Prakkash Sinappan" class="speaker-img"></div>
+                    <h3 class="speaker-name">Arul Prakkash</h3>
+                    <p class="speaker-role">Video Advocacy and Technology Expert</p>
+                    <p class="speaker-org">Independent</p>
                 </div>
 
                 <div class="speaker-card">
@@ -299,22 +315,24 @@
                     <p class="speaker-role">Research and Policy Lead</p>
                     <p class="speaker-org">Activate Rights</p>
                 </div>
-
-                <div class="speaker-card">
-                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/majid.png" alt="Faisal Bin Majid" class="speaker-img"></div>
-                    <h3 class="speaker-name">Faisal Bin Majid</h3>
-                    <p class="speaker-role">Project Manager</p>
-                    <p class="speaker-org">UNDP</p>
+                  <div class="speaker-card">
+                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/mazed.png" alt="Mohammad Ali Mazed" class="speaker-img"></div>
+                    <h3 class="speaker-name">Mohammad Ali Mazed</h3>
+                    <p class="speaker-role">Member Secretary</p>
+                    <p class="speaker-org">BJIM</p>
                 </div>
 
                 <div class="speaker-card">
-                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/arul.png" alt="Arul Prakkash Sinappan" class="speaker-img"></div>
-                    <h3 class="speaker-name">Arul Prakkash</h3>
-                    <p class="speaker-role">Video Advocacy and Technology Expert</p>
-                    <p class="speaker-org">Independent</p>
+                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/sam jahan.png" alt="Sam Jahan" class="speaker-img"></div>
+                    <h3 class="speaker-name">Sam Jahan</h3>
+                    <p class="speaker-role">Convener</p>
+                    <p class="speaker-org">BJIM</p>
                 </div>
 
-                <div class="speaker-card">
+
+               
+
+                <!--                 <div class="speaker-card">
                     <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/placeholder.png" alt="Raqib Hameed Naik" class="speaker-img"></div>
                     <h3 class="speaker-name">Raqib Hameed Naik</h3>
                     <p class="speaker-role">Researcher</p>
@@ -362,7 +380,7 @@
                     <p class="speaker-role">Tech Lead</p>
                     <p class="speaker-org">Jogajog</p>
                 </div>
-
+ -->
             </div>
 
             <button id="toggleSpeakers" class="btn-view-speakers">
@@ -447,154 +465,160 @@
                 <button id="slidePrev" class="slider-nav-btn prev-btn" aria-label="Previous">←</button>
 
                 <div class="sessions-track" id="sessionsTrack">
-
                     <?php
                     // DATA: Cinema First, Posters Last
                     $sessions = [
+                        // --- ONGOING (TOP) ---
                         [
                             'title' => 'Resistance Cinema Fest',
                             'desc'  => 'Screening of documentaries and short films capturing the spirit of resistance.',
                             'type'  => 'Parallel',
-                            'date' => 'Jan 26-27',
-                            'time' => 'Ongoing',
+                            'date'  => 'Jan 26-27',
+                            'time'  => 'Ongoing',
                             'lead'  => 'Bangladesh Protest Archive',
-                            'org' => 'Bangladesh Protest Archive'
+                            'org'   => 'Bangladesh Protest Archive'
                         ],
+
+                        // --- DAY 01 (JAN 26) ---
                         [
-                            'title' => 'Collaborative Future for Community-Led Documentation',
-                            'desc'  => 'A foundational session exploring future frameworks for community-driven justice.',
+                            'title' => 'Collaborative Future for Community-Led Human Rights Documentation & Transitional Justice',
+                            'desc'  => 'A foundational session exploring frameworks for community-driven justice and documentation standards.',
                             'type'  => 'Plenary',
-                            'date' => 'Jan 26',
-                            'time' => '10:00 AM',
-                            'lead'  => 'Community Leaders',
-                            'org' => 'Community Leaders'
+                            'date'  => 'Jan 26',
+                            'time'  => '10:00 AM',
+                            'lead'  => 'All Partners',
+                            'org'   => 'All Partners'
                         ],
                         [
-                            'title' => 'Documenting Tech-Facilitated Gender-Based Violence',
-                            'desc'  => '10 Things You Need to Know: Identifying and combating gender-based violence in digital spaces.',
+                            'title' => 'Level Up Your Archiving, Starting from the Basics',
+                            'desc'  => 'Practical steps for activists to secure and organize their documentation for future justice processes.',
                             'type'  => 'Workshop',
-                            'date' => 'Jan 26',
-                            'time' => '11:00 AM',
-                            'lead'  => 'Minhaj Aman',
-                            'org' => 'Activate Rights'
+                            'date'  => 'Jan 26',
+                            'time'  => '11:30 AM',
+                            'lead'  => 'Yvonne Ng',
+                            'org'   => 'WITNESS'
                         ],
                         [
-                            'title' => 'From Hindutva Watch to CSOH: Countering Organized Hate',
+                            'title' => 'From Hindutva Watch to CSOH: Countering Organized Hate through Research & Documentation',
                             'desc'  => 'Interactive workshop on researching and documenting organized hate speech using CSOH methodologies.',
                             'type'  => 'Workshop',
-                            'date' => 'Jan 26',
-                            'time' => '12:00 PM',
-                            'lead'  => 'Ammaarah N., Raqib H.',
-                            'org' => 'CSOH'
+                            'date'  => 'Jan 26',
+                            'time'  => '02:00 PM',
+                            'lead'  => 'Ammaarah Nilafdeen,Raqib Hameed Naik',
+                            'org'   => 'Center for the Study of Organized Hate'
                         ],
                         [
-                            'title' => 'July Persist: Building Community-Led Archiving & OSINT',
-                            'desc'  => 'Strategies for sustainable community archives and investigating protest history.',
+                            'title' => 'July Persist: How to build Community-Led Archiving and OSINT Investigation in Bangladesh',
+                            'desc'  => 'Strategies for sustainable community archives and investigating protest history using open source intel.',
                             'type'  => 'Ideation',
-                            'date' => 'Jan 26',
-                            'time' => '02:30 PM',
-                            'lead'  => 'Netra News Team',
-                            'org' => 'Netra News, BDPA'
+                            'date'  => 'Jan 26',
+                            'time'  => '02:00 PM',
+                            'lead'  => 'Subinoy Mustofi Eron Aaqib Shatil Shoeb Abdullah Iffat Joye',
+                            'org'   => 'Netra News, Bangladesh Protest Archive'
                         ],
                         [
-                            'title' => 'Protect the Messenger: Digital & Physical Safety',
-                            'desc'  => 'Essential digital hygiene and physical security protocols for journalists covering protests.',
-                            'type'  => 'Workshop',
-                            'date' => 'Jan 26',
-                            'time' => '04:30 PM',
+                            'title' => 'Preserving the History: Coverage, Safety, and Documentation of Bangladesh General Election-2026',
+                            'desc'  => 'A critical dialogue on the role of media and safety protocols during the upcoming general election.',
+                            'type'  => 'Dialogue',
+                            'date'  => 'Jan 26',
+                            'time'  => '04:00 PM',
                             'lead'  => 'M A Mazed, Sam Jahan',
-                            'org' => 'BJIM'
+                            'org'   => 'BJIM'
+                        ],
+
+                        // --- DAY 02 (JAN 27) ---
+                        [
+                            'title' => 'Truth and Reconciliation: Conversations on Healing and Accountability',
+                            'desc'  => 'Conversations on balancing the need for healing with the demand for accountability in post-conflict contexts.',
+                            'type'  => 'Dialogue',
+                            'date'  => 'Jan 27',
+                            'time'  => '10:00 AM',
+                            'lead'  => 'UNDP Reps',
+                            'org'   => 'UNDP'
                         ],
                         [
-                            'title' => 'Let Knowledge Be Free: Open-Source Principles',
-                            'desc'  => 'How open-source principles can support modern journalistic practice.',
+                            'title' => 'Screenshot It, Bestie! But Do It Right: 10 Things You Need to Know About Documenting TFGBV',
+                            'desc'  => '10 Things You Need to Know: Identifying and combating gender-based violence in digital spaces.',
                             'type'  => 'Workshop',
-                            'date' => 'Jan 27',
-                            'time' => '10:00 AM',
+                            'date'  => 'Jan 27',
+                            'time'  => '11:30 AM',
+                            'lead'  => 'Minhaj Aman, Israr Hassan',
+                            'org'   => 'Activate Rights, BRAC James P Grant School of Public Health'
+                        ],
+                        [
+                            'title' => 'Let Knowledge Be Free: How Open-Source Principles Can Support Journalistic Practice and a Collaborative Future',
+                            'desc'  => 'How open-source principles can support modern journalistic practice and collaborative information sharing.',
+                            'type'  => 'Workshop',
+                            'date'  => 'Jan 27',
+                            'time'  => '11:30 AM',
                             'lead'  => 'M. Rafiul Bahar Rafi',
-                            'org' => 'Korikath Knowledge'
+                            'org'   => 'Korikath Knowledge'
                         ],
+
                         [
-                            'title' => 'Art as Evidence: Legal Admissibility',
-                            'desc'  => 'Can a song, a poem, or a mural be used as evidence in court? Lawyers and artists discuss.',
-                            'type'  => 'Roundtable',
-                            'date' => 'Jan 27',
-                            'time' => '11:00 AM',
-                            'lead'  => 'Lawyers & Artists',
-                            'org' => 'Legal Aid Network'
-                        ],
-                        [
-                            'title' => 'Deadly in Disguise: Hidden Lethality of Pellet Guns',
-                            'desc'  => 'Analyzing the medical and social impact of "non-lethal" crowd control weapons.',
+                            'title' => 'Deadly in Disguise: The Hidden Lethality of Pellet Guns/Chhorra Guli',
+                            'desc'  => 'Examining the often-overlooked dangers and fatal consequences of pellet guns, commonly known as chhorra guli.',
                             'type'  => 'Dialogue',
-                            'date' => 'Jan 27',
-                            'time' => '12:00 PM',
+                            'date'  => 'Jan 27',
+                            'time'  => '01:00 PM',
                             'lead'  => 'Zarif Rahman, Opsora Islam',
-                            'org' => 'Independent Researchers'
+                            'org'   => 'Sapran'
                         ],
                         [
-                            'title' => 'The Ethics of Archiving Trauma',
-                            'desc'  => 'When does documentation become exploitation? A critical look at the ethics of collecting traumatic history.',
-                            'type'  => 'Plenary',
-                            'date' => 'Jan 27',
-                            'time' => '01:00 PM',
-                            'lead'  => 'Academic Panel',
-                            'org' => 'Academic Panel'
-                        ],
-                        [
-                            'title' => 'Crisis Response Tech: Emerging Civic Technologies',
-                            'desc'  => 'Exploring challenges and opportunities for civic technologies in crisis response.',
+                            'title' => 'Crisis Response Tech: Exploring Challenges and Opportunities for Emerging Civic Technologies in Bangladesh',
+                            'desc'  => 'Analyzing the challenges and potential of emerging civic technologies in strengthening crisis response systems in Bangladesh.',
                             'type'  => 'Roundtable',
-                            'date' => 'Jan 27',
-                            'time' => '02:30 PM',
-                            'lead'  => 'Jogajog Team',
-                            'org' => 'Jogajog'
+                            'date'  => 'Jan 27',
+                            'time'  => '02:00 PM',
+                            'lead'  => 'Chowdhury Isfatul Karim, Rafid Khan',
+                            'org'   => 'Jogajog and Friends'
                         ],
                         [
-                            'title' => 'Beyond Disinformation: Countering Info Warfare',
-                            'desc'  => 'Understanding and countering industrial-scale information warfare.',
+                            'title' => 'Beyond Disinformation: Industrial-Scale Information Warfare in Bangladesh Before and After the Election',
+                            'desc'  => 'Investigating large-scale information warfare operations shaping public discourse in Bangladesh before and after the election.',
                             'type'  => 'Roundtable',
-                            'date' => 'Jan 27',
-                            'time' => '04:30 PM',
-                            'lead'  => 'Fact Checkers',
-                            'org' => 'Fact Checkers Alliance'
+                            'date'  => 'Jan 27',
+                            'time'  => '02:00 PM',
+                            'lead'  => 'Fact Checkers, Media',
+                            'org'   => 'The Dissent, Dismislab, Fact Watch, Rumor Scanner, AFP Fact Check, Shottify '
                         ],
                         [
-                            'title' => 'Truth and Reconciliation: Healing and Accountability',
-                            'desc'  => 'Conversations on balancing the need for healing with the demand for accountability.',
-                            'type'  => 'Dialogue',
-                            'date' => 'Jan 27',
-                            'time' => '09:00 AM',
-                            'lead'  => 'Open Forum',
-                            'org' => 'Open Forum'
+                            'title' => 'July Human Rights Documentation: What Worked, What Didn\'t',
+                            'desc'  => 'A critical retrospective on the documentation efforts during the July movement.',
+                            'type'  => 'Roundtable',
+                            'date'  => 'Jan 27',
+                            'time'  => '04:00 PM',
+                            'lead'  => 'JRA, July Stories, July Record, Private University Students Networks',
+                            'org'   => 'JRA, July Stories, July Record, Private University Students Networks'
                         ],
                         [
-                            'title' => 'Digital Security Clinic for Activists',
-                            'desc'  => 'Bring your devices. A hands-on clinic to help activists secure their phones and accounts.',
-                            'type'  => 'Workshop',
-                            'date' => 'Jan 26',
-                            'time' => '01:00 PM',
-                            'lead'  => 'SecDev Team',
-                            'org' => 'SecDev Team'
+                            'title' => 'Announcing Archive & Resist Fund',
+                            'desc'  => 'Introducing the Archive & Resist Fund to support documentation, resistance, and long-term civic memory initiatives.',
+                            'type'  => 'Invitation Only',
+                            'date'  => 'Jan 27',
+                            'time'  => '04:00 PM',
+                            'lead'  => 'Organizing Committee',
+                            'org'   => 'Organizing Committee'
                         ],
                         [
                             'title' => 'Closing Ceremony: The Way Forward',
-                            'desc'  => 'Reflecting on the two days of work and setting the agenda.',
+                            'desc'  => 'Reflecting on the two days of work and setting the agenda for the coming year.',
                             'type'  => 'Plenary',
-                            'date' => 'Jan 27',
-                            'time' => '06:30 PM',
+                            'date'  => 'Jan 27',
+                            'time'  => '06:30 PM',
                             'lead'  => 'Organizing Committee',
-                            'org' => 'Organizing Committee'
+                            'org'   => 'Organizing Committee'
                         ],
-                        // LAST: Posters
+
+                        // --- ONGOING (BOTTOM) ---
                         [
                             'title' => 'Posters of Resistance: Visual Solidarity',
-                            'desc'  => 'Interactive journey through the visual language of the movement.',
+                            'desc'  => 'Interactive journey through the visual language of the movement. Engaging with archive posters.',
                             'type'  => 'Parallel',
-                            'date' => 'Jan 26-27',
-                            'time' => 'Ongoing',
+                            'date'  => 'Jan 26-27',
+                            'time'  => 'Ongoing',
                             'lead'  => 'Artivism Studio',
-                            'org' => 'Artivism Studio'
+                            'org'   => 'Artivism Studio'
                         ]
                     ];
 
@@ -723,7 +747,7 @@
                     <img src="<?php echo get_template_directory_uri(); ?>/images/partner/brac logo.svg"
                         alt="BRAC University"
                         class="partner-logo"
-                        style="height: 85px;">
+                        style="height: 90px;">
                 </div>
             </div>
 
@@ -743,7 +767,7 @@
                     <img src="<?php echo get_template_directory_uri(); ?>/images/partner/archive-resist-fund-logo.png"
                         alt="Archive & Resist Fund"
                         class="partner-logo"
-                        style="height: 48px;">
+                        style="height: 100px;">
                 </div>
             </div>
 
@@ -751,20 +775,20 @@
     </section>
 
     <section class="cta-section volunteer-section">
-    <div class="container">
-        <h2 class="cta-title">JOIN AS VOLUNTEER</h2>
-        
-        <p class="cta-text">
-            We are looking for dedicated volunteers to support the Conclave. 
-            If you are passionate about human rights, archiving, and community work, 
-            join us in making this event a success.
-        </p>
+        <div class="container">
+            <h2 class="cta-title">JOIN AS VOLUNTEER</h2>
 
-        <a href="https://forms.gle/84eqJTewPjg2H12L8" target="_blank" class="btn-cta-white">
-            APPLY TO VOLUNTEER
-        </a>
-    </div>
-</section>
+            <p class="cta-text">
+                We are looking for dedicated volunteers to support the Conclave.
+                If you are passionate about human rights, archiving, and community work,
+                join us in making this event a success.
+            </p>
+
+            <a href="https://forms.gle/84eqJTewPjg2H12L8" target="_blank" class="btn-cta-white">
+                APPLY TO VOLUNTEER
+            </a>
+        </div>
+    </section>
 
     <section class="venue-section">
         <div class="container">
