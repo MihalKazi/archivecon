@@ -352,53 +352,58 @@ Template Name: Sessions Page
             color: #555;
             line-height: 1.5;
         }
-/* --- BOTH DAYS HEADER (Centered, Gradient & Description) --- */
-.both-days-header {
-    text-align: center !important;
-    padding-bottom: 20px; /* More space for the text */
-    margin-bottom: 40px;
-    
-    /* Gradient Border: Green to Red */
-    border-bottom: 5px solid;
-    border-image: linear-gradient(to right, var(--c-conclave), var(--c-resist)) 1;
-}
 
-.both-days-header h2 {
-    font-family: var(--font-display);
-    font-weight: 900;
-    font-size: 3.5rem;
-    text-transform: uppercase;
-    letter-spacing: -1px;
-    line-height: 1;
-    margin: 0;
-    
-    /* Gradient Text: Green to Red */
-    background:#0f79eb;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    display: inline-block;
-}
+        /* --- BOTH DAYS HEADER (Centered, Gradient & Description) --- */
+        .both-days-header {
+            text-align: center !important;
+            padding-bottom: 20px;
+            /* More space for the text */
+            margin-bottom: 40px;
 
-.both-days-header .date-sub {
-    font-family: var(--font-body);
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 1rem;
-    color: var(--black);
-    display: block;
-    margin-top: 10px;
-}
+            /* Gradient Border: Green to Red */
+            border-bottom: 5px solid;
+            border-image: linear-gradient(to right, var(--c-conclave), var(--c-resist)) 1;
+        }
 
-/* NEW: Centered Description Style */
-.both-days-header .day-desc {
-    font-family: var(--font-body);
-    font-size: 1.1rem;
-    color: #555;
-    line-height: 1.5;
-    max-width: 600px;    /* Prevents it from getting too wide */
-    margin: 15px auto 0; /* Centers the block horizontally */
-}
+        .both-days-header h2 {
+            font-family: var(--font-display);
+            font-weight: 900;
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            line-height: 1;
+            margin: 0;
+
+            /* Gradient Text: Green to Red */
+            background: #0f79eb;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+
+        .both-days-header .date-sub {
+            font-family: var(--font-body);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 1rem;
+            color: var(--black);
+            display: block;
+            margin-top: 10px;
+        }
+
+        /* NEW: Centered Description Style */
+        .both-days-header .day-desc {
+            font-family: var(--font-body);
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.5;
+            max-width: 600px;
+            /* Prevents it from getting too wide */
+            margin: 15px auto 0;
+            /* Centers the block horizontally */
+        }
+
         /* Card Content */
         .card-header {
             display: flex;
@@ -738,7 +743,7 @@ Template Name: Sessions Page
                 'org'   => 'WITNESS'
             ],
             [
-                'title' => 'From Hindutva Watch to CSOH: Countering Organized Hate through Research & Documentation',
+                'title' => 'Countering Organized Hate through Research & Documentation',
                 'desc'  => 'Interactive workshop on researching and documenting organized hate speech using CSOH methodologies.',
                 'type'  => 'Workshop',
                 'date'  => 'Jan 26',
@@ -761,8 +766,8 @@ Template Name: Sessions Page
                 'type'  => 'Dialogue',
                 'date'  => 'Jan 26',
                 'time'  => '04:00 PM',
-                'lead'  => 'M A Mazed, Sam Jahan',
-                'org'   => 'BJIM'
+                'lead'  => 'Mohammad Ali Mazed, Sam Jahan',
+                'org'   => 'Bangladeshi Journalists in International Media'
             ],
         ];
 
@@ -829,8 +834,8 @@ Template Name: Sessions Page
                 'type'  => 'Roundtable',
                 'date'  => 'Jan 27',
                 'time'  => '04:00 PM',
-                'lead'  => 'JRA, July Stories, July Record, Private University Students Networks',
-                'org'   => 'JRA, July Stories, July Record, Private University Students Networks'
+                'lead'  => 'JRA, July Record',
+                'org'   => 'JRA, July Record'
             ],
             [
                 'title' => 'Announcing Archive & Resist Fund',
@@ -867,36 +872,36 @@ Template Name: Sessions Page
         ?>
 
         <?php if (!empty($both_days_top)): ?>
-           <div class="reveal-on-scroll" style="margin-bottom: 40px;" id="schedule-grid">
-    
-    <div class="day-header both-days-header">
-        <h2>ONGOING</h2>
-        <span class="date-sub">Both Days</span>
-        <p class="day-desc">
-            An immersive exhibition running parallel to the main sessions. <br>
-            Open for all attendees throughout the conclave.
-        </p>
-    </div>
+            <div class="reveal-on-scroll" style="margin-bottom: 40px;" id="schedule-grid">
 
-    <?php foreach($both_days_top as $session): ?>
-    <div class="session-card full-width-card" style="margin-bottom: 30px;">
-        <div class="card-header">
-            <div>
-                <h3 class="card-title"><?php echo $session['title']; ?></h3>
-                <p class="session-org"><?php echo $session['org']; ?></p>
+                <div class="day-header both-days-header">
+                    <h2>ONGOING</h2>
+                    <span class="date-sub">Both Days</span>
+                    <p class="day-desc">
+                        An immersive exhibition running parallel to the main sessions. <br>
+                        Open for all attendees throughout the conclave.
+                    </p>
+                </div>
+
+                <?php foreach ($both_days_top as $session): ?>
+                    <div class="session-card full-width-card" style="margin-bottom: 30px;">
+                        <div class="card-header">
+                            <div>
+                                <h3 class="card-title"><?php echo $session['title']; ?></h3>
+                                <p class="session-org"><?php echo $session['org']; ?></p>
+                            </div>
+                            <span class="card-badge badge-parallel"><?php echo $session['type']; ?></span>
+                        </div>
+                        <div class="card-details">
+                            <div class="detail-row"><span>⏰</span> <?php echo $session['time']; ?></div>
+                            <div class="detail-row"><span>👤</span> <?php echo $session['lead']; ?></div>
+                        </div>
+                        <div class="card-description-area">
+                            <p class="card-description"><?php echo $session['desc']; ?></p>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
             </div>
-            <span class="card-badge badge-parallel"><?php echo $session['type']; ?></span>
-        </div>
-        <div class="card-details">
-            <div class="detail-row"><span>⏰</span> <?php echo $session['time']; ?></div>
-            <div class="detail-row"><span>👤</span> <?php echo $session['lead']; ?></div>
-        </div>
-        <div class="card-description-area">
-            <p class="card-description"><?php echo $session['desc']; ?></p>
-        </div>
-    </div>
-    <?php endforeach; ?>
-</div>
         <?php endif; ?>
 
         <div class="schedule-layout">
@@ -1080,13 +1085,13 @@ Template Name: Sessions Page
         </section>
     </div>
 
-    <section class="cta-banner reveal-on-scroll">
+<!--     <section class="cta-banner reveal-on-scroll">
         <h2 class="cta-title">SUBMIT YOUR SESSION</h2>
         <p class="cta-text">
             Session submissions are open to individuals and organizations working on human rights, digital rights, social justice, documentation, and archiving, including practitioners, researchers, journalists, technologists, activists, and community organizers, with the submission deadline set for 6 January 2026.
         </p>
         <a href="https://forms.gle/5znCihw4n17QiQnN8" target="_blank" rel="noopener noreferrer" class="btn-apply">APPLY</a>
-    </section>
+    </section> -->
 
     <footer>
         <div class="footer-bottom">

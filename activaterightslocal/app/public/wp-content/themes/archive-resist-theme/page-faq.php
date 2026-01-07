@@ -362,7 +362,7 @@ Template Name: FAQ Page
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Yes, you may join as a volunteer. Volunteers will receive travel allowance, meals and snacks, a certificate, access to sessions and guests.</p>
+                        <p>Yes, you may join as a volunteer. Volunteers will receive travel allowance, meals and snacks, a certificate, mystery gifts, access to sessions and guests.</p>
                     </div>
                 </div>
 

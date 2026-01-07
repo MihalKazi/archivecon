@@ -15,48 +15,48 @@
     <?php wp_head(); ?>
 
     <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Event",
-            "name": "Archive & Resist Conclave 2026",
-            "description": "Collaborative Future for Community-Led Human Rights Documentation and Transitional Justice.",
-            "startDate": "2026-01-26",
-            "endDate": "2026-01-27",
-            "eventStatus": "https://schema.org/EventScheduled",
-            "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-            "location": {
-                "@type": "Place",
-                "name": "BRAC University",
-                "address": {
-                    "@type": "PostalAddress",
-                    "streetAddress": "Kha 224, Bir Uttam Rafiqul Islam Ave, Merul Badda",
-                    "addressLocality": "Dhaka",
-                    "postalCode": "1212",
-                    "addressCountry": "BD"
-                }
-            },
-            "image": [
-                "https://archivecon.activaterights.org/wp-content/themes/archive-resist-theme/images/history-back.jpg"
-            ],
-            "organizer": {
-                "@type": "Organization",
-                "name": "Activate Rights",
-                "url": "https://activaterights.org/"
-            },
-            "offers": {
-                "@type": "Offer",
-                "url": "https://forms.gle/5znCihw4n17QiQnN8",
-                "price": "0",
-                "priceCurrency": "BDT",
-                "availability": "https://schema.org/InStock",
-                "validFrom": "2025-12-01"
-            },
-            "performer": {
-                "@type": "Organization",
-                "name": "Various Human Rights Experts"
-            }
-        }
-    </script>
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Archive & Resist Conclave 2026",
+  "description": "Collaborative Future for Community-Led Human Rights Documentation. A two-day conclave focused on archiving, resistance, and justice.",
+  "startDate": "2026-01-26T10:00",
+  "endDate": "2026-01-27T20:00",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "location": {
+    "@type": "Place",
+    "name": "BRAC University",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "66 Mohakhali",
+      "addressLocality": "Dhaka",
+      "postalCode": "1212",
+      "addressCountry": "BD"
+    }
+  },
+  "image": [
+    "https://archivecon.activaterights.org/wp-content/themes/archive-resist-theme/images/history-back.jpg"
+  ],
+  "organizer": {
+    "@type": "Organization",
+    "name": "Activate Rights",
+    "url": "https://activaterights.org"
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": "https://forms.gle/5znCihw4n17QiQnN8",
+    "price": "0",
+    "priceCurrency": "BDT",
+    "availability": "https://schema.org/InStock",
+    "validFrom": "2025-10-01"
+  },
+  "performer": {
+    "@type": "Organization",
+    "name": "Bangladesh Protest Archive"
+  }
+}
+</script>
 </head>
 
 <body id="top" <?php body_class(); ?>>
@@ -208,13 +208,13 @@
                     <p class="speaker-role">Senior Rule of Law, Justice, and Security Advisor</p>
                     <p class="speaker-org">UNDP</p>
                 </div> -->
-                
-                <div class="speaker-card">
+
+                <!--                 <div class="speaker-card">
                     <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/majid.png" alt="Faisal Bin Majid" class="speaker-img"></div>
                     <h3 class="speaker-name">Faisal Bin Majid</h3>
                     <p class="speaker-role">Project Manager, Partnership for a Tolerant, Inclusive Bangladesh</p>
                     <p class="speaker-org">UNDP</p>
-                </div>
+                </div> -->
 
                 <div class="speaker-card">
                     <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/kartika.jpg" alt="Kartika Pratiwi" class="speaker-img"></div>
@@ -259,10 +259,24 @@
                 </div>
 
                 <div class="speaker-card">
+                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/raqib.png" alt="Raqib Hameed Naik" class="speaker-img"></div>
+                    <h3 class="speaker-name">Raqib Hameed Naik</h3>
+                    <p class="speaker-role">Executive Director</p>
+                    <p class="speaker-org">Center for the Study of Organized Hate</p>
+                </div>
+
+                <div class="speaker-card">
                     <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/nilafdeen.png" alt="Ammaarah Nilafdeen" class="speaker-img"></div>
                     <h3 class="speaker-name">Ammaarah Nilafdeen</h3>
                     <p class="speaker-role">Researcher</p>
-                    <p class="speaker-org"> Center for the Study of Organized Hate</p>
+                    <p class="speaker-org">Center for the Study of Organized Hate</p>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/nabila.png" alt="Dr. Nabila Idris" class="speaker-img"></div>
+                    <h3 class="speaker-name">Dr. Nabila Idris</h3>
+                    <p class="speaker-role">Member</p>
+                    <p class="speaker-org">Commission of Inquiry on Enforced Disappearances</p>
                 </div>
 
                 <div class="speaker-card">
@@ -273,17 +287,10 @@
                 </div>
 
                 <div class="speaker-card">
-                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/iktisad.png" alt="Ikhtishad Ahmed" class="speaker-img"></div>
-                    <h3 class="speaker-name">Ikhtishad Ahmed</h3>
+                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/iktisad.png" alt="Ikhtisad Ahmed" class="speaker-img"></div>
+                    <h3 class="speaker-name">Ikhtisad Ahmed</h3>
                     <p class="speaker-role">Managing Editor</p>
                     <p class="speaker-org">Netra News</p>
-                </div>
-
-                 <div class="speaker-card">
-                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/nabila.png" alt="Dr. Nabila Idris" class="speaker-img"></div>
-                    <h3 class="speaker-name">Dr. Nabila Idris</h3>
-                    <p class="speaker-role">Member</p>
-                    <p class="speaker-org">Commission of Inquiry on Enforced Disappearances</p>
                 </div>
 
 
@@ -293,9 +300,9 @@
                     <p class="speaker-role">Managing Director</p>
                     <p class="speaker-org">Digitally Right</p>
                 </div>
-        
 
-                 <div class="speaker-card">
+
+                <div class="speaker-card">
                     <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/arul.png" alt="Arul Prakkash Sinappan" class="speaker-img"></div>
                     <h3 class="speaker-name">Arul Prakkash</h3>
                     <p class="speaker-role">Video Advocacy and Technology Expert</p>
@@ -312,32 +319,53 @@
                 <div class="speaker-card">
                     <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/minhaj.jpg" alt="Minhaj Aman" class="speaker-img"></div>
                     <h3 class="speaker-name">Minhaj Aman</h3>
-                    <p class="speaker-role">Research and Policy Lead</p>
+                    <p class="speaker-role">Co-Founder, Research and Policy Lead</p>
                     <p class="speaker-org">Activate Rights</p>
                 </div>
-                  <div class="speaker-card">
+				
+				<div class="speaker-card">
+                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/maruf.png" alt="Dewan Maruf Ahmed" class="speaker-img"></div>
+                    <h3 class="speaker-name">Dewan Maruf Ahmed</h3>
+                    <p class="speaker-role">Program and Strategy Lead</p>
+                    <p class="speaker-org">Activate Rights</p>
+                </div>
+				
+                <div class="speaker-card">
                     <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/mazed.png" alt="Mohammad Ali Mazed" class="speaker-img"></div>
                     <h3 class="speaker-name">Mohammad Ali Mazed</h3>
                     <p class="speaker-role">Member Secretary</p>
-                    <p class="speaker-org">BJIM</p>
+                    <p class="speaker-org">Bangladeshi Journalists in International Media</p>
                 </div>
 
                 <div class="speaker-card">
                     <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/sam jahan.png" alt="Sam Jahan" class="speaker-img"></div>
                     <h3 class="speaker-name">Sam Jahan</h3>
                     <p class="speaker-role">Convener</p>
-                    <p class="speaker-org">BJIM</p>
+                    <p class="speaker-org">Bangladeshi Journalists in International Media</p>
                 </div>
 
-
-               
-
-                <!--                 <div class="speaker-card">
-                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/placeholder.png" alt="Raqib Hameed Naik" class="speaker-img"></div>
-                    <h3 class="speaker-name">Raqib Hameed Naik</h3>
-                    <p class="speaker-role">Researcher</p>
-                    <p class="speaker-org">CSOH</p>
+                <div class="speaker-card">
+                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/ayesha.png" alt="Ayesha Kabir" class="speaker-img"></div>
+                    <h3 class="speaker-name">Ayesha Kabir</h3>
+                    <p class="speaker-role">Head of English Web</p>
+                    <p class="speaker-org">Prothom Alo</p>
                 </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/zyma.png" alt="Zyma Islam" class="speaker-img"></div>
+                    <h3 class="speaker-name">Zyma Islam</h3>
+                    <p class="speaker-role">Senior Reporter</p>
+                    <p class="speaker-org">The Daily Star</p>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/shishir.png" alt="Qadaruddin Shishir" class="speaker-img"></div>
+                    <h3 class="speaker-name">Qadaruddin Shishir</h3>
+                    <p class="speaker-role">Editor</p>
+                    <p class="speaker-org">The Dissent</p>
+                </div>
+
+                <!--         
 
                 <div class="speaker-card">
                     <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/placeholder.png" alt="Subinoy Mustofi Eron" class="speaker-img"></div>
@@ -455,9 +483,8 @@
                     <strong>Desktop:</strong> Hover to pause. <strong>Mobile:</strong> Swipe to navigate.
                 </p> -->
 
-                <a href="<?php echo site_url('/sessions'); ?>" class="link-full-schedule">
-                    View Full Schedule &rarr;
-                </a>
+                <a href="<?php echo site_url('/sessions'); ?>" class="link-full-schedule" target="_blank" rel="noopener noreferrer">View Full Schedule &rarr;</a>
+
             </div>
 
             <div class="sessions-slider-wrapper">
@@ -499,7 +526,7 @@
                             'org'   => 'WITNESS'
                         ],
                         [
-                            'title' => 'From Hindutva Watch to CSOH: Countering Organized Hate through Research & Documentation',
+                            'title' => 'Countering Organized Hate through Research & Documentation',
                             'desc'  => 'Interactive workshop on researching and documenting organized hate speech using CSOH methodologies.',
                             'type'  => 'Workshop',
                             'date'  => 'Jan 26',
@@ -522,8 +549,8 @@
                             'type'  => 'Dialogue',
                             'date'  => 'Jan 26',
                             'time'  => '04:00 PM',
-                            'lead'  => 'M A Mazed, Sam Jahan',
-                            'org'   => 'BJIM'
+                            'lead'  => 'Mohammad Ali Mazed, Sam Jahan',
+                            'org'   => 'Bangladeshi Journalists in International Media'
                         ],
 
                         // --- DAY 02 (JAN 27) ---
@@ -588,8 +615,8 @@
                             'type'  => 'Roundtable',
                             'date'  => 'Jan 27',
                             'time'  => '04:00 PM',
-                            'lead'  => 'JRA, July Stories, July Record, Private University Students Networks',
-                            'org'   => 'JRA, July Stories, July Record, Private University Students Networks'
+                            'lead'  => 'JRA, July Record',
+                            'org'   => 'JRA, July Record'
                         ],
                         [
                             'title' => 'Announcing Archive & Resist Fund',
@@ -711,7 +738,7 @@
                         <img src="<?php echo get_template_directory_uri(); ?>/images/partner/witness logo new.png"
                             alt="WITNESS"
                             class="partner-logo"
-                            style="height: 45px;">
+                            style="height: 38px;">
                     </div>
                 </div>
             </div>
