@@ -527,6 +527,155 @@ Template Name: Sessions Page
             margin-top: 20px;
         }
 
+        .countdown-section {
+    background-color: var(--c-resist, #f62e2e); /* Red background like volunteer section */
+    padding: 20px 0;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.countdown-section .countdown-title {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0 0 50px 0;
+    line-height: 1;
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+
+/* Countdown Timer Wrapper */
+.countdown-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: 0 auto 40px auto;
+    flex-wrap: wrap;
+}
+
+/* Individual Countdown Block */
+.countdown-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 120px;
+}
+
+.countdown-number {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 5rem;
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.countdown-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    opacity: 0.95;
+}
+
+/* Description Text */
+.countdown-section .countdown-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 500;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    color: #ffffff;
+    opacity: 0.95;
+}
+
+/* Button Style (Matches volunteer section) */
+.btn-countdown {
+    display: inline-block;
+    background-color: #f6f4ee; /* Beige/White */
+    color: var(--c-resist, #f62e2e); /* Red Text */
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    padding: 18px 45px;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-countdown:hover {
+    opacity: 0.9;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .countdown-section {
+        padding: 60px 0;
+    }
+    
+    .countdown-section .countdown-title {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+    }
+    
+    .countdown-wrapper {
+        gap: 25px;
+    }
+    
+    .countdown-block {
+        min-width: 80px;
+    }
+    
+    .countdown-number {
+        font-size: 3.5rem;
+    }
+    
+    .countdown-label {
+        font-size: 0.9rem;
+        margin-top: 8px;
+    }
+    
+    .countdown-section .countdown-text {
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+    
+    .btn-countdown {
+        font-size: 1rem;
+        padding: 15px 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .countdown-wrapper {
+        gap: 15px;
+    }
+    
+    .countdown-block {
+        min-width: 70px;
+    }
+    
+    .countdown-number {
+        font-size: 2.5rem;
+    }
+    
+    .countdown-label {
+        font-size: 0.75rem;
+    }
+}
         /* Partners & CTA */
         .partners-section {
             padding: 80px 0;
@@ -748,7 +897,7 @@ Template Name: Sessions Page
                 'type'  => 'Workshop',
                 'date'  => 'Jan 26',
                 'time'  => '02:00 PM',
-                'lead'  => 'Ammaarah Nilafdeen,Raqib Hameed Naik',
+                'lead'  => 'Ammaarah Nilafdeen, Raqib Hameed Naik',
                 'org'   => 'Center for the Study of Organized Hate'
             ],
             [
@@ -757,7 +906,7 @@ Template Name: Sessions Page
                 'type'  => 'Ideation',
                 'date'  => 'Jan 26',
                 'time'  => '02:00 PM',
-                'lead'  => 'Subinoy Mustofi Eron Aaqib Shatil Shoeb Abdullah Iffat Joye',
+                'lead'  => 'Shoeb Abdullah, Subinoy Mustofi Eron, Aaqib Shatil, Iffat Joye',
                 'org'   => 'Netra News, Bangladesh Protest Archive'
             ],
             [
@@ -791,15 +940,15 @@ Template Name: Sessions Page
                 'lead'  => 'Minhaj Aman, Israr Hassan',
                 'org'   => 'Activate Rights, BRAC James P Grant School of Public Health'
             ],
-            [
-                'title' => 'Let Knowledge Be Free: How Open-Source Principles Can Support Journalistic Practice and a Collaborative Future',
-                'desc'  => 'How open-source principles can support modern journalistic practice and collaborative information sharing.',
-                'type'  => 'Workshop',
-                'date'  => 'Jan 27',
-                'time'  => '11:30 AM',
-                'lead'  => 'M. Rafiul Bahar Rafi',
-                'org'   => 'Korikath Knowledge'
-            ],
+//             [
+//                 'title' => 'Let Knowledge Be Free: How Open-Source Principles Can Support Journalistic Practice and a Collaborative Future',
+//                 'desc'  => 'How open-source principles can support modern journalistic practice and collaborative information sharing.',
+//                 'type'  => 'Workshop',
+//                 'date'  => 'Jan 27',
+//                 'time'  => '11:30 AM',
+//                 'lead'  => 'M. Rafiul Bahar Rafi',
+//                 'org'   => 'Korikath Knowledge'
+//             ],
 
             [
                 'title' => 'Deadly in Disguise: The Hidden Lethality of Pellet Guns/Chhorra Guli',
@@ -1000,6 +1149,43 @@ Template Name: Sessions Page
             </div>
         <?php endif; ?>
 
+        <section class="countdown-section">
+    <div class="container">
+        <h2 class="countdown-title">EVENT STARTS IN</h2>
+        
+        <div class="countdown-wrapper" id="countdownTimer">
+            <div class="countdown-block">
+                <span class="countdown-number" id="days">00</span>
+                <span class="countdown-label">Days</span>
+            </div>
+            
+            <div class="countdown-block">
+                <span class="countdown-number" id="hours">00</span>
+                <span class="countdown-label">Hours</span>
+            </div>
+            
+            <div class="countdown-block">
+                <span class="countdown-number" id="minutes">00</span>
+                <span class="countdown-label">Minutes</span>
+            </div>
+            
+            <div class="countdown-block">
+                <span class="countdown-number" id="seconds">00</span>
+                <span class="countdown-label">Seconds</span>
+            </div>
+        </div>
+        
+        <p class="countdown-text">
+            Join us for a transformative two-day conclave on human rights documentation, 
+            archiving, and transitional justice.
+        </p>
+        
+        <a href="https://forms.gle/5znCihw4n17QiQnN8" target="_blank" class="btn-countdown">
+            REGISTER NOW
+        </a>
+    </div>
+</section>
+
         <section class="partners-section reveal-on-scroll">
             <h2 class="partners-title">Organizers & Partners</h2>
 
@@ -1116,6 +1302,47 @@ Template Name: Sessions Page
     <?php wp_footer(); ?>
 
     <script>
+         // ==========================================
+    //  COUNTDOWN TIMER
+    // ==========================================
+    const countdownTimer = document.getElementById('countdownTimer');
+    
+    if (countdownTimer) {
+        // Set the event date: January 26, 2026, 09:00 AM (Bangladesh Time)
+        const eventDate = new Date('2026-01-26T09:00:00+06:00').getTime();
+        
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+            
+            // Time calculations
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            // Update DOM elements
+            const daysEl = document.getElementById('days');
+            const hoursEl = document.getElementById('hours');
+            const minutesEl = document.getElementById('minutes');
+            const secondsEl = document.getElementById('seconds');
+            
+            if (daysEl) daysEl.textContent = String(days).padStart(2, '0');
+            if (hoursEl) hoursEl.textContent = String(hours).padStart(2, '0');
+            if (minutesEl) minutesEl.textContent = String(minutes).padStart(2, '0');
+            if (secondsEl) secondsEl.textContent = String(seconds).padStart(2, '0');
+            
+            // If countdown is finished
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                countdownTimer.innerHTML = '<h3 style="color: #ffffff; font-family: var(--font-display); font-size: 3rem; font-weight: 900; margin: 0; text-transform: uppercase;">EVENT IS LIVE NOW!</h3>';
+            }
+        }
+        
+        // Update immediately and then every second
+        updateCountdown();
+        const countdownInterval = setInterval(updateCountdown, 1000);
+    }
         document.addEventListener("DOMContentLoaded", function() {
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {

@@ -531,7 +531,7 @@
                             'type'  => 'Workshop',
                             'date'  => 'Jan 26',
                             'time'  => '02:00 PM',
-                            'lead'  => 'Ammaarah Nilafdeen,Raqib Hameed Naik',
+                            'lead'  => 'Ammaarah Nilafdeen, Raqib Hameed Naik',
                             'org'   => 'Center for the Study of Organized Hate'
                         ],
                         [
@@ -540,7 +540,7 @@
                             'type'  => 'Ideation',
                             'date'  => 'Jan 26',
                             'time'  => '02:00 PM',
-                            'lead'  => 'Subinoy Mustofi Eron Aaqib Shatil Shoeb Abdullah Iffat Joye',
+                            'lead'  => ' Shoeb Abdullah, Subinoy Mustofi Eron, Aaqib Shatil, Iffat Joye',
                             'org'   => 'Netra News, Bangladesh Protest Archive'
                         ],
                         [
@@ -572,15 +572,15 @@
                             'lead'  => 'Minhaj Aman, Israr Hassan',
                             'org'   => 'Activate Rights, BRAC James P Grant School of Public Health'
                         ],
-                        [
-                            'title' => 'Let Knowledge Be Free: How Open-Source Principles Can Support Journalistic Practice and a Collaborative Future',
-                            'desc'  => 'How open-source principles can support modern journalistic practice and collaborative information sharing.',
-                            'type'  => 'Workshop',
-                            'date'  => 'Jan 27',
-                            'time'  => '11:30 AM',
-                            'lead'  => 'M. Rafiul Bahar Rafi',
-                            'org'   => 'Korikath Knowledge'
-                        ],
+//                         [
+//                             'title' => 'Let Knowledge Be Free: How Open-Source Principles Can Support Journalistic Practice and a Collaborative Future',
+//                             'desc'  => 'How open-source principles can support modern journalistic practice and collaborative information sharing.',
+//                             'type'  => 'Workshop',
+//                             'date'  => 'Jan 27',
+//                             'time'  => '11:30 AM',
+//                             'lead'  => 'M. Rafiul Bahar Rafi',
+//                             'org'   => 'Korikath Knowledge'
+//                         ],
 
                         [
                             'title' => 'Deadly in Disguise: The Hidden Lethality of Pellet Guns/Chhorra Guli',
@@ -714,6 +714,43 @@
             </div>
         </div>
     </section>
+
+    <section class="countdown-section">
+    <div class="container">
+        <h2 class="countdown-title">EVENT STARTS IN</h2>
+        
+        <div class="countdown-wrapper" id="countdownTimer">
+            <div class="countdown-block">
+                <span class="countdown-number" id="days">00</span>
+                <span class="countdown-label">Days</span>
+            </div>
+            
+            <div class="countdown-block">
+                <span class="countdown-number" id="hours">00</span>
+                <span class="countdown-label">Hours</span>
+            </div>
+            
+            <div class="countdown-block">
+                <span class="countdown-number" id="minutes">00</span>
+                <span class="countdown-label">Minutes</span>
+            </div>
+            
+            <div class="countdown-block">
+                <span class="countdown-number" id="seconds">00</span>
+                <span class="countdown-label">Seconds</span>
+            </div>
+        </div>
+        
+        <p class="countdown-text">
+            Join us for a transformative two-day conclave on human rights documentation, 
+            archiving, and transitional justice.
+        </p>
+        
+        <a href="https://forms.gle/5znCihw4n17QiQnN8" target="_blank" class="btn-countdown">
+            REGISTER NOW
+        </a>
+    </div>
+</section>
     <section class="partners-section">
         <div class="container">
             <h2 class="partners-title">Organizers & Partners</h2>
@@ -902,145 +939,246 @@
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
+   <script>
+   
 
-            // ==========================================
-            // 1. GENERAL UI (Accordion, etc.)
-            // ==========================================
-            function closeItem(item, contentClass, iconClass) {
-                item.classList.remove('active');
-                if (contentClass) item.querySelector('.' + contentClass).style.maxHeight = 0;
-                if (iconClass) item.querySelector('.' + iconClass).textContent = '+';
-            }
+document.addEventListener('DOMContentLoaded', function() {
 
-            function openItem(item, contentClass, iconClass) {
-                item.classList.add('active');
-                const content = item.querySelector('.' + contentClass);
-                content.style.maxHeight = content.scrollHeight + "px";
-                if (iconClass) item.querySelector('.' + iconClass).textContent = '−';
-            }
+    // ==========================================
+    // 1. GENERAL UI (Accordion, etc.)
+    // ==========================================
+    function closeItem(item, contentClass, iconClass) {
+        item.classList.remove('active');
+        if (contentClass) item.querySelector('.' + contentClass).style.maxHeight = 0;
+        if (iconClass) item.querySelector('.' + iconClass).textContent = '+';
+    }
 
-            document.querySelectorAll('.accordion-header').forEach(header => {
-                header.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    const item = header.parentElement;
-                    const isActive = item.classList.contains('active');
-                    document.querySelectorAll('.accordion-item').forEach(other => {
-                        if (other !== item) closeItem(other, 'accordion-content', 'acc-icon');
-                    });
-                    isActive ? closeItem(item, 'accordion-content', 'acc-icon') : openItem(item, 'accordion-content', 'acc-icon');
-                });
+    function openItem(item, contentClass, iconClass) {
+        item.classList.add('active');
+        const content = item.querySelector('.' + contentClass);
+        content.style.maxHeight = content.scrollHeight + "px";
+        if (iconClass) item.querySelector('.' + iconClass).textContent = '−';
+    }
+
+    document.querySelectorAll('.accordion-header').forEach(header => {
+        header.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const item = header.parentElement;
+            const isActive = item.classList.contains('active');
+            document.querySelectorAll('.accordion-item').forEach(other => {
+                if (other !== item) closeItem(other, 'accordion-content', 'acc-icon');
             });
-
-            // Toggle Details Button
-            document.querySelectorAll('.btn-toggle-details').forEach(btn => {
-                btn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    const card = this.closest('.session-card');
-                    const isOpen = card.classList.contains('open');
-                    if (!isOpen) {
-                        card.classList.add('open');
-                        if (this.tagName === 'BUTTON') this.textContent = 'Close';
-                    } else {
-                        card.classList.remove('open');
-                        if (this.tagName === 'BUTTON') this.textContent = 'View Details';
-                    }
-                });
-            });
-
-            // Back To Top
-            const mybutton = document.getElementById("backToTop");
-            if (mybutton) {
-                window.onscroll = function() {
-                    mybutton.style.display = (window.scrollY > 300) ? "flex" : "none";
-                };
-                mybutton.addEventListener('click', () => window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                }));
-            }
-
-
-            // ==========================================
-            // 2. MAIN SESSIONS SLIDER (The Big One)
-            // ==========================================
-            const track = document.getElementById('sessionsTrack');
-            const prevBtn = document.getElementById('slidePrev');
-            const nextBtn = document.getElementById('slideNext');
-
-            if (track) {
-                let animId;
-                let isPaused = false;
-                let speed = 1.0;
-
-                function sessionScroll() {
-                    if (!isPaused) {
-                        track.scrollLeft += speed;
-                        if (track.scrollLeft >= (track.scrollWidth / 2)) {
-                            track.scrollLeft = 0;
-                        }
-                    }
-                    animId = requestAnimationFrame(sessionScroll);
-                }
-                animId = requestAnimationFrame(sessionScroll);
-
-                track.addEventListener('mouseenter', () => isPaused = true);
-                track.addEventListener('mouseleave', () => isPaused = false);
-                track.addEventListener('touchstart', () => isPaused = true);
-                track.addEventListener('touchend', () => isPaused = false);
-
-                if (prevBtn && nextBtn) {
-                    [prevBtn, nextBtn].forEach(btn => {
-                        btn.addEventListener('mouseenter', () => isPaused = true);
-                        btn.addEventListener('mouseleave', () => isPaused = false);
-                    });
-                    prevBtn.addEventListener('click', () => track.scrollBy({
-                        left: -380,
-                        behavior: 'smooth'
-                    }));
-                    nextBtn.addEventListener('click', () => track.scrollBy({
-                        left: 380,
-                        behavior: 'smooth'
-                    }));
-                }
-            }
-
-
-            // ==========================================
-            // 3. PARTNER LOGO SLIDER (The New One)
-            // ==========================================
-            const partnerTrack = document.getElementById('partnerTickerTrack');
-
-            if (partnerTrack) {
-                let pAnimId;
-                let pPaused = false;
-                let pSpeed = 0.8; // Speed of logos
-
-                function partnerScroll() {
-                    if (!pPaused) {
-                        partnerTrack.scrollLeft += pSpeed;
-
-                        // Reset Logic
-                        if (partnerTrack.scrollLeft >= (partnerTrack.scrollWidth / 2)) {
-                            partnerTrack.scrollLeft = 0;
-                        }
-                    }
-                    pAnimId = requestAnimationFrame(partnerScroll);
-                }
-                // Start
-                pAnimId = requestAnimationFrame(partnerScroll);
-
-                // Pause on Hover
-                partnerTrack.addEventListener('mouseenter', () => pPaused = true);
-                partnerTrack.addEventListener('mouseleave', () => pPaused = false);
-                partnerTrack.addEventListener('touchstart', () => pPaused = true);
-                partnerTrack.addEventListener('touchend', () => pPaused = false);
-            }
-
+            isActive ? closeItem(item, 'accordion-content', 'acc-icon') : openItem(item, 'accordion-content', 'acc-icon');
         });
-    </script>
+    });
+
+    // Toggle Details Button
+    document.querySelectorAll('.btn-toggle-details').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const card = this.closest('.session-card');
+            const isOpen = card.classList.contains('open');
+            if (!isOpen) {
+                card.classList.add('open');
+                if (this.tagName === 'BUTTON') this.textContent = 'Close';
+            } else {
+                card.classList.remove('open');
+                if (this.tagName === 'BUTTON') this.textContent = 'View Details';
+            }
+        });
+    });
+
+    // Back To Top
+    const mybutton = document.getElementById("backToTop");
+    if (mybutton) {
+        window.onscroll = function() {
+            mybutton.style.display = (window.scrollY > 300) ? "flex" : "none";
+        };
+        mybutton.addEventListener('click', () => window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        }));
+    }
+
+
+    // ==========================================
+    // 2. MAIN SESSIONS SLIDER (The Big One)
+    // ==========================================
+    const track = document.getElementById('sessionsTrack');
+    const prevBtn = document.getElementById('slidePrev');
+    const nextBtn = document.getElementById('slideNext');
+
+    if (track) {
+        let animId;
+        let isPaused = false;
+        let speed = 1.0;
+
+        function sessionScroll() {
+            if (!isPaused) {
+                track.scrollLeft += speed;
+                if (track.scrollLeft >= (track.scrollWidth / 2)) {
+                    track.scrollLeft = 0;
+                }
+            }
+            animId = requestAnimationFrame(sessionScroll);
+        }
+        animId = requestAnimationFrame(sessionScroll);
+
+        track.addEventListener('mouseenter', () => isPaused = true);
+        track.addEventListener('mouseleave', () => isPaused = false);
+        track.addEventListener('touchstart', () => isPaused = true);
+        track.addEventListener('touchend', () => isPaused = false);
+
+        if (prevBtn && nextBtn) {
+            [prevBtn, nextBtn].forEach(btn => {
+                btn.addEventListener('mouseenter', () => isPaused = true);
+                btn.addEventListener('mouseleave', () => isPaused = false);
+            });
+            prevBtn.addEventListener('click', () => track.scrollBy({
+                left: -380,
+                behavior: 'smooth'
+            }));
+            nextBtn.addEventListener('click', () => track.scrollBy({
+                left: 380,
+                behavior: 'smooth'
+            }));
+        }
+    }
+
+
+    // ==========================================
+    // 3. PARTNER LOGO SLIDER (The New One)
+    // ==========================================
+    const partnerTrack = document.getElementById('partnerTickerTrack');
+
+    if (partnerTrack) {
+        let pAnimId;
+        let pPaused = false;
+        let pSpeed = 0.8; // Speed of logos
+
+        function partnerScroll() {
+            if (!pPaused) {
+                partnerTrack.scrollLeft += pSpeed;
+
+                // Reset Logic
+                if (partnerTrack.scrollLeft >= (partnerTrack.scrollWidth / 2)) {
+                    partnerTrack.scrollLeft = 0;
+                }
+            }
+            pAnimId = requestAnimationFrame(partnerScroll);
+        }
+        // Start
+        pAnimId = requestAnimationFrame(partnerScroll);
+
+        // Pause on Hover
+        partnerTrack.addEventListener('mouseenter', () => pPaused = true);
+        partnerTrack.addEventListener('mouseleave', () => pPaused = false);
+        partnerTrack.addEventListener('touchstart', () => pPaused = true);
+        partnerTrack.addEventListener('touchend', () => pPaused = false);
+    }
+
+
+    // ==========================================
+    // 4. COUNTDOWN TIMER
+    // ==========================================
+    const countdownTimer = document.getElementById('countdownTimer');
+    
+    if (countdownTimer) {
+        // Set the event date: January 26, 2026, 09:00 AM (Bangladesh Time)
+        const eventDate = new Date('2026-01-26T09:00:00+06:00').getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+            
+            // Time calculations
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            // Update DOM elements
+            const daysEl = document.getElementById('days');
+            const hoursEl = document.getElementById('hours');
+            const minutesEl = document.getElementById('minutes');
+            const secondsEl = document.getElementById('seconds');
+            
+            if (daysEl) daysEl.textContent = String(days).padStart(2, '0');
+            if (hoursEl) hoursEl.textContent = String(hours).padStart(2, '0');
+            if (minutesEl) minutesEl.textContent = String(minutes).padStart(2, '0');
+            if (secondsEl) secondsEl.textContent = String(seconds).padStart(2, '0');
+            
+            // If countdown is finished
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                countdownTimer.innerHTML = '<h3 style="color: #ffffff; font-family: var(--font-display); font-size: 3rem; font-weight: 900; margin: 0; text-transform: uppercase;">EVENT IS LIVE NOW!</h3>';
+            }
+        }
+        
+        // Update immediately and then every second
+        updateCountdown();
+        const countdownInterval = setInterval(updateCountdown, 1000);
+    }
+
+
+    // ==========================================
+    // 5. SPEAKERS TOGGLE (Show More/Less)
+    // ==========================================
+    const speakersGrid = document.getElementById('speakersGrid');
+    const toggleSpeakersBtn = document.getElementById('toggleSpeakers');
+    
+    if (speakersGrid && toggleSpeakersBtn) {
+        const speakers = speakersGrid.querySelectorAll('.speaker-card');
+        const limit = 16;
+        let isExpanded = false;
+
+        // Initially hide speakers beyond the limit
+        if (speakers.length > limit) {
+            for (let i = limit; i < speakers.length; i++) {
+                speakers[i].style.display = 'none';
+            }
+        } else {
+            toggleSpeakersBtn.style.display = 'none';
+        }
+
+        // Toggle button click handler
+        toggleSpeakersBtn.addEventListener('click', function() {
+            if (!isExpanded) {
+                // EXPAND: Show all speakers
+                for (let i = limit; i < speakers.length; i++) {
+                    speakers[i].style.display = 'flex';
+                    speakers[i].style.opacity = '0';
+                    speakers[i].style.transform = 'translateY(20px)';
+                    speakers[i].style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                    
+                    setTimeout(() => {
+                        speakers[i].style.opacity = '1';
+                        speakers[i].style.transform = 'translateY(0)';
+                    }, 50);
+                }
+                this.textContent = 'Show Less ↑';
+                isExpanded = true;
+            } else {
+                // COLLAPSE: Hide extra speakers
+                for (let i = limit; i < speakers.length; i++) {
+                    speakers[i].style.display = 'none';
+                }
+                this.textContent = 'View Full Speaker List ↓';
+                
+                // Smooth scroll back to button area
+                this.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center'
+                });
+                
+                isExpanded = false;
+            }
+        });
+    }
+
+});
+</script>
     <?php wp_footer(); ?>
 </body>
 

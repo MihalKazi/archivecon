@@ -1074,7 +1074,154 @@ img {
     grid-template-columns: 1fr;
   }
 }
+.countdown-section {
+    background-color: var(--c-resist, #f62e2e); /* Red background like volunteer section */
+    padding: 20px 0;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
 
+.countdown-section .countdown-title {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0 0 50px 0;
+    line-height: 1;
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+
+/* Countdown Timer Wrapper */
+.countdown-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: 0 auto 40px auto;
+    flex-wrap: wrap;
+}
+
+/* Individual Countdown Block */
+.countdown-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 120px;
+}
+
+.countdown-number {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 5rem;
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.countdown-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    opacity: 0.95;
+}
+
+/* Description Text */
+.countdown-section .countdown-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 500;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    color: #ffffff;
+    opacity: 0.95;
+}
+
+/* Button Style (Matches volunteer section) */
+.btn-countdown {
+    display: inline-block;
+    background-color: #f6f4ee; /* Beige/White */
+    color: var(--c-resist, #f62e2e); /* Red Text */
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    padding: 18px 45px;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-countdown:hover {
+    opacity: 0.9;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .countdown-section {
+        padding: 60px 0;
+    }
+    
+    .countdown-section .countdown-title {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+    }
+    
+    .countdown-wrapper {
+        gap: 25px;
+    }
+    
+    .countdown-block {
+        min-width: 80px;
+    }
+    
+    .countdown-number {
+        font-size: 3.5rem;
+    }
+    
+    .countdown-label {
+        font-size: 0.9rem;
+        margin-top: 8px;
+    }
+    
+    .countdown-section .countdown-text {
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+    
+    .btn-countdown {
+        font-size: 1rem;
+        padding: 15px 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .countdown-wrapper {
+        gap: 15px;
+    }
+    
+    .countdown-block {
+        min-width: 70px;
+    }
+    
+    .countdown-number {
+        font-size: 2.5rem;
+    }
+    
+    .countdown-label {
+        font-size: 0.75rem;
+    }
+}
 /* --- 10. ORGANIZERS & PARTNERS SECTION --- */
 .partners-section {
  
