@@ -72,7 +72,7 @@
         <header class="site-header">
             <nav class="main-nav">
                 <a href="#about">About</a>
-                <a href="#sessions">Sessions</a>
+                <a href="<?php echo site_url('/session'); ?>" target="_blank" rel="noopener noreferrer">Sessions</a>
                 <a href="https://forms.gle/5znCihw4n17QiQnN8" target="_blank">Registration</a>
                 <a href="<?php echo site_url('/faq'); ?>" target="_blank" rel="noopener noreferrer">FAQ</a>
             </nav>
@@ -498,7 +498,7 @@
                         // --- ONGOING (TOP) ---
                         [
                             'title' => 'Resistance Cinema Fest',
-                            'desc'  => 'Screening of documentaries and short films capturing the spirit of resistance.',
+                            'desc'  => 'Across both days of the Conclave, Resistance Cinema Fest will screen a curated selection of investigative documentaries and resistance cinema from Bangladesh and beyond. These films document struggles for justice, human rights violations, and movements of resistance, creating space to reflect on the power of visual storytelling as evidence, memory, and a tool for accountability.',
                             'type'  => 'Parallel',
                             'date'  => 'Jan 26-27',
                             'time'  => 'Ongoing',
@@ -506,10 +506,11 @@
                             'org'   => 'Bangladesh Protest Archive'
                         ],
 
+
                         // --- DAY 01 (JAN 26) ---
                         [
                             'title' => 'Collaborative Future for Community-Led Human Rights Documentation & Transitional Justice',
-                            'desc'  => 'A foundational session exploring frameworks for community-driven justice and documentation standards.',
+                            'desc'  => 'This opening plenary brings together all partner organizations to express collective solidarity and a shared commitment to sustaining the Archive & Resist Conclave beyond this year. The session will reflect on why community-led documentation matters, how archives can support transitional justice, and how we can build long-term collaboration to strengthen this work in Bangladesh and the region. Together, partners will outline a common vision for keeping this platform alive and growing as a space for learning, resistance, and accountability.',
                             'type'  => 'Plenary',
                             'date'  => 'Jan 26',
                             'time'  => '10:00 AM',
@@ -518,8 +519,8 @@
                         ],
                         [
                             'title' => 'Level Up Your Archiving, Starting from the Basics',
-                            'desc'  => 'Practical steps for activists to secure and organize their documentation for future justice processes.',
-                            'type'  => 'Workshop',
+                            'desc'  => 'Archiving exists on a spectrum—from simple, baseline practices to more robust systems—depending on available resources, capacities, and the nature of the materials. This hands-on workshop offers a practical introduction to the core components of archiving, including selection, collection, organization, packaging, storage, cataloging, and access. Starting from the basics, participants will explore how to build safer, more resilient archiving practices over time. The workshop is designed for those who are new to archiving, as well as practitioners who want to strengthen and “level up” their existing approaches.',
+                            'type'  => 'Interactive Workshop',
                             'date'  => 'Jan 26',
                             'time'  => '11:30 AM',
                             'lead'  => 'Yvonne Ng',
@@ -527,7 +528,7 @@
                         ],
                         [
                             'title' => 'Countering Organized Hate through Research & Documentation',
-                            'desc'  => 'Interactive workshop on researching and documenting organized hate speech using CSOH methodologies.',
+                            'desc'  => 'This session introduces the work of the Center for the Study of Organized Hate (CSOH) and explores how research-driven hate tracking can strengthen human rights documentation, advocacy, and policy engagement in South Asia. Through discussion and peer exchange, participants will reflect on shared challenges and how to build regional collaboration to counter organized hate and protect democratic space.',
                             'type'  => 'Dialogue',
                             'date'  => 'Jan 26',
                             'time'  => '01:00 PM',
@@ -536,8 +537,8 @@
                         ],
                         [
                             'title' => 'Capture, Protect, Preserve: Resilient Evidence Documentation for Elections, Crackdowns & Internet Shutdowns',
-                            'desc'  => 'Investigating large-scale information warfare operations shaping public discourse in Bangladesh before and after the election.',
-                            'type'  => 'Workshop',
+                            'desc'  => 'This hands-on workshop offers practical, field-tested steps to help activists, documenters, and journalists securely capture, organize, and preserve documentation so it remains safe, findable, and usable for future accountability and justice processes. Participants will practice a simple Capture–Protect–Preserve workflow designed for high-risk situations such as elections, raids, violent crackdowns, and internet shutdowns. The session focuses on realistic, low-barrier methods that can be applied even under pressure and limited resources. Participants will leave with a clear, adaptable approach they can immediately use with their teams and communities.',
+                            'type'  => 'Interactive Workshop',
                             'date'  => 'Jan 26',
                             'time'  => '02:00 PM',
                             'lead'  => 'Arul Prakkash Sinappan',
@@ -545,7 +546,7 @@
                         ],
                         [
                             'title' => 'July Persist: How to build Community-Led Archiving and OSINT Investigation in Bangladesh',
-                            'desc'  => 'Strategies for sustainable community archives and investigating protest history using open source intel.',
+                            'desc'  => 'This session explores how community-led archiving and open-source investigations are emerging in Bangladesh after July, focusing on the work of Netra News and the Bangladesh Protest Archive (BPA). It examines how journalists, researchers, and activists are building a community-driven ecosystem for human rights documentation and grassroots investigations. Speakers will share how these initiatives collect, verify, and preserve open-source information to document violations, counter disinformation, and support accountability, while reflecting on the challenges of trust, safety, and sustaining community participation.',
                             'type'  => 'Ideation',
                             'date'  => 'Jan 26',
                             'time'  => '03:00 PM',
@@ -554,7 +555,7 @@
                         ],
                         [
                             'title' => 'Preserving the History: Coverage, Safety, and Documentation of Bangladesh General Election-2026',
-                            'desc'  => 'A critical dialogue on the role of media and safety protocols during the upcoming general election.',
+                            'desc'  => 'This session brings together journalists, researchers, and civil society to discuss ethical election coverage, journalist safety, and effective documentation practices. It will explore challenges like misinformation and digital threats, while highlighting ways to protect democratic processes and preserve a credible public record of the 2026 election.',
                             'type'  => 'Dialogue',
                             'date'  => 'Jan 26',
                             'time'  => '04:00 PM',
@@ -563,7 +564,7 @@
                         ],
                         [
                             'title' => 'Building human rights database systems as a tool for sustained resistance',
-                            'desc'  => 'Examining the role of art in documenting human rights abuses and fostering collective memory.',
+                            'desc'  => 'This practical session explores how fragmented documentation and scattered datasets can be transformed into structured, resilient human rights database systems. Participants will learn why databases matter for long-term documentation, investigations, and accountability work. The discussion will cover key principles of organizing, standardizing, and maintaining human rights data in challenging environments. The session will also reflect on ethical, security, and sustainability considerations. Participants will leave with a clearer understanding of how database systems can support sustained resistance and long-term justice efforts.',
                             'type'  => 'Roundtable',
                             'date'  => 'Jan 26',
                             'time'  => '05:00 PM',
@@ -572,8 +573,9 @@
                         ],
                         [
                             'title' => 'Tools and skills to build visual investigations using OSINT',
-                            'desc'  => 'Opening remarks and keynote address on the importance of documentation in transitional justice processes.',
-                            'type'  => 'Workshop',
+                            'desc'  => 'This practical session explores video-based approaches to building visual investigations using open-source information. Participants will be introduced to key OSINT tools and workflows for collecting, verifying, analyzing, and presenting visual evidence from videos, images, and social media content. The session will also introduce different open-source tools for visualizing investigations, helping participants understand how to structure findings and communicate evidence clearly. It highlights how visual investigations can support human rights documentation, journalism, and accountability efforts.
+',
+                            'type'  => 'Interactive Workshop',
                             'date'  => 'Jan 26',
                             'time'  => '06:30 PM',
                             'lead'  => 'Georgia Edwards',
@@ -592,8 +594,8 @@
                         ],
                         [
                             'title' => 'Screenshot It, Bestie! But Do It Right: 10 Things You Need to Know About Documenting TFGBV',
-                            'desc'  => '10 Things You Need to Know: Identifying and combating gender-based violence in digital spaces.',
-                            'type'  => 'Workshop',
+                            'desc'  => 'Technology-Facilitated Gender-Based Violence (TFGBV) is widespread, fast-moving, and often poorly documented—making accountability harder and harm deeper. This session offers a practical, survivor-centered introduction to documenting TFGBV safely, ethically, and effectively, with a focus on supporting platform accountability. Through real-world examples and hands-on guidance, participants will learn core principles for capturing, preserving, and organizing digital evidence; minimizing risks to survivors and documenters; and using documentation to support advocacy, platform accountability, and legal or policy action. This session is designed for activists, journalists, researchers, and community responders working at the frontlines of online harm.',
+                            'type'  => 'Interactive Workshop',
                             'date'  => 'Jan 27',
                             'time'  => '11:30 AM',
                             'lead'  => 'Minhaj Aman, Israr Hassan',
@@ -620,7 +622,7 @@
 
                         [
                             'title' => 'Deadly in Disguise: The Hidden Lethality of Pellet Guns/Chhorra Guli',
-                            'desc'  => 'Examining the often-overlooked dangers and fatal consequences of pellet guns, commonly known as chhorra guli.',
+                            'desc'  => 'This session examines the often-overlooked lethality of pellet guns (chhorra guli) when used in crowd-control contexts and the severe human suffering they cause. Drawing on investigative research and documentation, the session will explore how these weapons inflict life-altering injuries, permanent disability, and, in some cases, death.Through case studies and evidence-based analysis, participants will learn how lethality is investigated, documented, and communicated, and why exposing the real impacts of so-called “less-lethal” weapons is essential for accountability, advocacy, and the protection of human rights.',
                             'type'  => 'Dialogue',
                             'date'  => 'Jan 27',
                             'time'  => '01:00 PM',
@@ -629,7 +631,7 @@
                         ],
                         [
                             'title' => 'Crisis Response Tech: Exploring Challenges and Opportunities for Emerging Civic Technologies in Bangladesh',
-                            'desc'  => 'Analyzing the challenges and potential of emerging civic technologies in strengthening crisis response systems in Bangladesh.',
+                            'desc'  => 'This session explores how emerging civic technologies can support crisis response, documentation, and accountability in Bangladesh. Participants will discuss real-world challenges, local needs, and opportunities for building tools that strengthen community resilience and human rights work.',
                             'type'  => 'Roundtable',
                             'date'  => 'Jan 27',
                             'time'  => '02:00 PM',
@@ -638,7 +640,7 @@
                         ],
                         [
                             'title' => 'Beyond Disinformation: Industrial-Scale Information Warfare in Bangladesh Before and After the Election',
-                            'desc'  => 'Investigating large-scale information warfare operations shaping public discourse in Bangladesh before and after the election.',
+                            'desc'  => 'This session examines how coordinated, industrial-scale information disorder—including FIMI, disinformation, and influence operations—is shaping Bangladesh’s information environment before and after the election. It will explore key tactics, actors, and real-world impacts, and discuss how research, documentation, and cross-sector collaboration can help expose and counter large-scale information warfare.',
                             'type'  => 'Roundtable',
                             'date'  => 'Jan 27',
                             'time'  => '02:00 PM',
@@ -646,8 +648,8 @@
                             'org'   => 'The Dissent, Dismislab, Fact Watch, Rumor Scanner, AFP Fact Check, Shottify '
                         ],
                         [
-                            'title' => 'July Human Rights Documentation: What Worked, What Didn\'t',
-                            'desc'  => 'A critical retrospective on the documentation efforts during the July movement.',
+                            'title' => 'A Fight to Remember: July Human Rights Documentation: What Worked, What Didn\'t',
+                            'desc'  => 'This session reflects on the community-led, self-organized human rights documentation efforts that emerged during and after July, examining what worked, what failed, and what must be reimagined. Drawing on the experiences of JRA, July Record, and university networks, the discussion explores how students, volunteers, and civil society mobilized to collect evidence, preserve memory, and respond to unfolding violations. Speakers will share field-level lessons, including verification challenges, safety risks, coordination gaps, ethical dilemmas, and emotional labor. The session invites participants into a collective reflection on how July’s documentation efforts can inform stronger, safer, and more sustainable community-led documentation models for the future.',
                             'type'  => 'Roundtable',
                             'date'  => 'Jan 27',
                             'time'  => '04:00 PM',
@@ -656,12 +658,12 @@
                         ],
                         [
                             'title' => 'Announcing Archive & Resist Fund',
-                            'desc'  => 'Introducing the Archive & Resist Fund to support documentation, resistance, and long-term civic memory initiatives.',
+                            'desc'  => 'This invitation-only, closed-door session marks the official announcement of the Archive & Resist Fund—an independent fundraising initiative to support community-led human rights documentation, archiving, and accountability work. The session will bring together philanthropists, activists, and community leaders to share solidarity and explore ways to build sustainable, long-term support for grassroots documentation efforts. While the fund is being initiated by Activate Rights and the Bangladesh Protest Archive (BPA), it will be independently governed and led by an independent advisory board to ensure transparency, accountability, and community trust.',
                             'type'  => 'Invitation Only',
                             'date'  => 'Jan 27',
                             'time'  => '04:00 PM',
-                            'lead'  => 'Organizing Committee',
-                            'org'   => 'Organizing Committee'
+                            'lead'  => 'Bangladesh Protest Archive',
+                            'org'   => 'Bangladesh Protest Archive'
                         ],
                         [
                             'title' => 'Closing Ceremony: The Way Forward',
@@ -676,7 +678,7 @@
                         // --- ONGOING (BOTTOM) ---
                         [
                             'title' => 'Posters of Resistance: Visual Solidarity',
-                            'desc'  => 'Interactive journey through the visual language of the movement. Engaging with archive posters.',
+                            'desc'  => 'Running alongside Archive & Resist Conclave 2026, this interactive exhibition showcases posters and artworks from protests and human rights movements, inspired by the July Uprising in Bangladesh and global youth-led struggles. Selected works will be displayed at BRAC University, with contributors invited to join participatory art sessions and potentially be featured in an online resistance gallery.',
                             'type'  => 'Parallel',
                             'date'  => 'Jan 26-27',
                             'time'  => 'Ongoing',

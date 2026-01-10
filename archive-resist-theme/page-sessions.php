@@ -405,14 +405,55 @@ Template Name: Sessions Page
         }
 
         /* Card Content */
-        .card-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 15px;
-            margin-bottom: 15px;
-            gap: 15px;
+        .card-description-area {
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+            margin-top: 15px;
+            position: relative;
+        }
+
+        /* The Text Container */
+        .desc-content {
+            transition: max-height 0.4s ease-out;
+            /* Smooth animation */
+            overflow: hidden;
+        }
+
+        /* State A: Collapsed (Show only ~3 lines) */
+        .desc-content.collapsed {
+            max-height: 4.5em;
+            /* Adjust this number to show more/less lines */
+            mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+            /* Fades out the bottom text */
+        }
+
+        /* State B: Expanded (Show everything) */
+        .desc-content.expanded {
+            max-height: 1000px;
+            /* Arbitrary large height to allow animation */
+            mask-image: none;
+            -webkit-mask-image: none;
+        }
+
+        /* The Button */
+        .desc-toggle-btn {
+            background: none;
+            border: none;
+            padding: 0;
+            margin-top: 8px;
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--c-resist);
+            /* Uses your Red color */
+            cursor: pointer;
+            text-transform: uppercase;
+            display: block;
+        }
+
+        .desc-toggle-btn:hover {
+            text-decoration: underline;
         }
 
         .card-title {
@@ -435,13 +476,29 @@ Template Name: Sessions Page
         }
 
         .card-badge {
-            padding: 5px 10px;
+            /* 1. Layout for multi-line text */
+            white-space: normal !important;
+            /* Allows text to wrap */
+            max-width: 120px;
+            /* Forces wrapping if text is wider than this */
+            text-align: center;
+            /* Centers the stacked text */
+            line-height: 1.1;
+            /* Tighter spacing between lines */
+            display: inline-flex;
+            /* Keeps content centered vertically/horizontally */
+            align-items: center;
+            justify-content: center;
+            min-height: 25px;
+            /* Ensures consistent height for short badges */
+
+            /* 2. Your existing visual styles */
+            padding: 6px 8px;
             font-size: 0.7rem;
             font-weight: 700;
             text-transform: uppercase;
-            border: 1px solid #000;
-            white-space: nowrap;
             flex-shrink: 0;
+            /* Prevents the badge from getting squashed */
         }
 
         .badge-plenary {
@@ -491,6 +548,8 @@ Template Name: Sessions Page
         .card-description-area {
             border-top: 1px solid #eee;
             padding-top: 15px;
+            margin-top: 15px;
+            position: relative;
         }
 
         .card-description {
@@ -501,30 +560,92 @@ Template Name: Sessions Page
             margin: 0;
         }
 
-        .full-width-card {
+        /* --- FIX FOR PARALLEL / ONGOING CARD --- */
+        .session-card.full-width-card {
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
+            flex-direction: column;
+            /* Stack items vertically instead of side-by-side */
+            gap: 20px;
+            padding: 35px;
+            /* More breathing room */
+            border: 3px solid #000;
+            background: #fff;
+            position: relative;
+
         }
 
+        /* 1. Header: Title on Left, Badge on Right */
         .full-width-card .card-header {
-            border-bottom: none;
-            flex: 2;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-
-        .full-width-card .card-details {
-            flex: 1;
-            border-left: 1px solid #eee;
-            padding-left: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 2px solid #f0f0f0;
+            /* Light separator line */
+            padding-bottom: 20px;
             margin-bottom: 0;
         }
 
-        .full-width-card .card-description-area {
+        /* Make the title big and clean */
+        .full-width-card .card-title {
+            font-size: 2.5rem;
+            /* Larger than normal cards */
+            margin-bottom: 5px;
             width: 100%;
-            margin-top: 20px;
+        }
+
+        .full-width-card .session-org {
+            font-size: 1.1rem;
+            color: var(--c-resist);
+            /* Red color for organizer */
+            font-weight: 700;
+            margin: 0;
+        }
+
+        /* 2. Middle Row: Time & Lead Icons */
+        .full-width-card .card-details {
+            display: flex;
+            flex-wrap: wrap;
+            /* Allows wrapping on small screens */
+            gap: 30px;
+            font-family: var(--font-body);
+            font-weight: 600;
+            color: #444;
+            background: #fafafa;
+            /* Light grey background for data */
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .full-width-card .detail-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* 3. Bottom: Description text has full width now */
+        .full-width-card .card-description-area {
+            margin-top: 5px;
+        }
+
+        .full-width-card .card-description {
+            font-size: 1.15rem;
+            line-height: 1.6;
+            color: #222;
+            max-width: 100%;
+            /* Lets text fill the space */
+        }
+
+        /* Mobile Adjustment */
+        @media screen and (max-width: 768px) {
+            .full-width-card .card-header {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .full-width-card .card-details {
+                flex-direction: column;
+                gap: 10px;
+            }
         }
 
         .countdown-section {
@@ -865,7 +986,7 @@ Template Name: Sessions Page
         $both_days_top = [
             [
                 'title' => 'Resistance Cinema Fest',
-                'desc'  => 'Screening of documentaries and short films capturing the spirit of resistance.',
+                'desc'  => 'Across both days of the Conclave, Resistance Cinema Fest will screen a curated selection of investigative documentaries and resistance cinema from Bangladesh and beyond. These films document struggles for justice, human rights violations, and movements of resistance, creating space to reflect on the power of visual storytelling as evidence, memory, and a tool for accountability.',
                 'type'  => 'Parallel',
                 'date'  => 'Jan 26-27',
                 'time'  => 'Ongoing',
@@ -877,20 +998,10 @@ Template Name: Sessions Page
 
         // --- 2. DAY 1 SESSIONS (Jan 26) ---
         $day1 = [
-            [
-                'title' => 'Resistance Cinema Fest',
-                'desc'  => 'Screening of documentaries and short films capturing the spirit of resistance.',
-                'type'  => 'Parallel',
-                'date'  => 'Jan 26-27',
-                'time'  => 'Ongoing',
-                'lead'  => 'Bangladesh Protest Archive',
-                'org'   => 'Bangladesh Protest Archive'
-            ],
-
             // --- DAY 01 (JAN 26) ---
             [
                 'title' => 'Collaborative Future for Community-Led Human Rights Documentation & Transitional Justice',
-                'desc'  => 'A foundational session exploring frameworks for community-driven justice and documentation standards.',
+                'desc'  => 'This opening plenary brings together all partner organizations to express collective solidarity and a shared commitment to sustaining the Archive & Resist Conclave beyond this year. The session will reflect on why community-led documentation matters, how archives can support transitional justice, and how we can build long-term collaboration to strengthen this work in Bangladesh and the region. Together, partners will outline a common vision for keeping this platform alive and growing as a space for learning, resistance, and accountability.',
                 'type'  => 'Plenary',
                 'date'  => 'Jan 26',
                 'time'  => '10:00 AM',
@@ -899,8 +1010,8 @@ Template Name: Sessions Page
             ],
             [
                 'title' => 'Level Up Your Archiving, Starting from the Basics',
-                'desc'  => 'Practical steps for activists to secure and organize their documentation for future justice processes.',
-                'type'  => 'Workshop',
+                'desc'  => 'Archiving exists on a spectrum—from simple, baseline practices to more robust systems—depending on available resources, capacities, and the nature of the materials. This hands-on workshop offers a practical introduction to the core components of archiving, including selection, collection, organization, packaging, storage, cataloging, and access. Starting from the basics, participants will explore how to build safer, more resilient archiving practices over time. The workshop is designed for those who are new to archiving, as well as practitioners who want to strengthen and “level up” their existing approaches.',
+                'type'  => 'Interactive Workshop',
                 'date'  => 'Jan 26',
                 'time'  => '11:30 AM',
                 'lead'  => 'Yvonne Ng',
@@ -908,7 +1019,7 @@ Template Name: Sessions Page
             ],
             [
                 'title' => 'Countering Organized Hate through Research & Documentation',
-                'desc'  => 'Interactive workshop on researching and documenting organized hate speech using CSOH methodologies.',
+                'desc'  => 'This session introduces the work of the Center for the Study of Organized Hate (CSOH) and explores how research-driven hate tracking can strengthen human rights documentation, advocacy, and policy engagement in South Asia. Through discussion and peer exchange, participants will reflect on shared challenges and how to build regional collaboration to counter organized hate and protect democratic space.',
                 'type'  => 'Dialogue',
                 'date'  => 'Jan 26',
                 'time'  => '01:00 PM',
@@ -917,8 +1028,8 @@ Template Name: Sessions Page
             ],
             [
                 'title' => 'Capture, Protect, Preserve: Resilient Evidence Documentation for Elections, Crackdowns & Internet Shutdowns',
-                'desc'  => 'Investigating large-scale information warfare operations shaping public discourse in Bangladesh before and after the election.',
-                'type'  => 'Workshop',
+                'desc'  => 'This hands-on workshop offers practical, field-tested steps to help activists, documenters, and journalists securely capture, organize, and preserve documentation so it remains safe, findable, and usable for future accountability and justice processes. Participants will practice a simple Capture–Protect–Preserve workflow designed for high-risk situations such as elections, raids, violent crackdowns, and internet shutdowns. The session focuses on realistic, low-barrier methods that can be applied even under pressure and limited resources. Participants will leave with a clear, adaptable approach they can immediately use with their teams and communities.',
+                'type'  => 'Interactive Workshop',
                 'date'  => 'Jan 26',
                 'time'  => '02:00 PM',
                 'lead'  => 'Arul Prakkash Sinappan',
@@ -926,7 +1037,7 @@ Template Name: Sessions Page
             ],
             [
                 'title' => 'July Persist: How to build Community-Led Archiving and OSINT Investigation in Bangladesh',
-                'desc'  => 'Strategies for sustainable community archives and investigating protest history using open source intel.',
+                'desc'  => 'This session explores how community-led archiving and open-source investigations are emerging in Bangladesh after July, focusing on the work of Netra News and the Bangladesh Protest Archive (BPA). It examines how journalists, researchers, and activists are building a community-driven ecosystem for human rights documentation and grassroots investigations. Speakers will share how these initiatives collect, verify, and preserve open-source information to document violations, counter disinformation, and support accountability, while reflecting on the challenges of trust, safety, and sustaining community participation.',
                 'type'  => 'Ideation',
                 'date'  => 'Jan 26',
                 'time'  => '03:00 PM',
@@ -935,7 +1046,7 @@ Template Name: Sessions Page
             ],
             [
                 'title' => 'Preserving the History: Coverage, Safety, and Documentation of Bangladesh General Election-2026',
-                'desc'  => 'A critical dialogue on the role of media and safety protocols during the upcoming general election.',
+                'desc'  => 'This session brings together journalists, researchers, and civil society to discuss ethical election coverage, journalist safety, and effective documentation practices. It will explore challenges like misinformation and digital threats, while highlighting ways to protect democratic processes and preserve a credible public record of the 2026 election.',
                 'type'  => 'Dialogue',
                 'date'  => 'Jan 26',
                 'time'  => '04:00 PM',
@@ -944,7 +1055,7 @@ Template Name: Sessions Page
             ],
             [
                 'title' => 'Building human rights database systems as a tool for sustained resistance',
-                'desc'  => 'Examining the role of art in documenting human rights abuses and fostering collective memory.',
+                'desc'  => 'This practical session explores how fragmented documentation and scattered datasets can be transformed into structured, resilient human rights database systems. Participants will learn why databases matter for long-term documentation, investigations, and accountability work. The discussion will cover key principles of organizing, standardizing, and maintaining human rights data in challenging environments. The session will also reflect on ethical, security, and sustainability considerations. Participants will leave with a clearer understanding of how database systems can support sustained resistance and long-term justice efforts.',
                 'type'  => 'Roundtable',
                 'date'  => 'Jan 26',
                 'time'  => '05:00 PM',
@@ -953,8 +1064,9 @@ Template Name: Sessions Page
             ],
             [
                 'title' => 'Tools and skills to build visual investigations using OSINT',
-                'desc'  => 'Opening remarks and keynote address on the importance of documentation in transitional justice processes.',
-                'type'  => 'Workshop',
+                'desc'  => 'This practical session explores video-based approaches to building visual investigations using open-source information. Participants will be introduced to key OSINT tools and workflows for collecting, verifying, analyzing, and presenting visual evidence from videos, images, and social media content. The session will also introduce different open-source tools for visualizing investigations, helping participants understand how to structure findings and communicate evidence clearly. It highlights how visual investigations can support human rights documentation, journalism, and accountability efforts.
+',
+                'type'  => 'Interactive Workshop',
                 'date'  => 'Jan 26',
                 'time'  => '06:30 PM',
                 'lead'  => 'Georgia Edwards',
@@ -974,8 +1086,8 @@ Template Name: Sessions Page
             ],
             [
                 'title' => 'Screenshot It, Bestie! But Do It Right: 10 Things You Need to Know About Documenting TFGBV',
-                'desc'  => '10 Things You Need to Know: Identifying and combating gender-based violence in digital spaces.',
-                'type'  => 'Workshop',
+                'desc'  => 'Technology-Facilitated Gender-Based Violence (TFGBV) is widespread, fast-moving, and often poorly documented—making accountability harder and harm deeper. This session offers a practical, survivor-centered introduction to documenting TFGBV safely, ethically, and effectively, with a focus on supporting platform accountability. Through real-world examples and hands-on guidance, participants will learn core principles for capturing, preserving, and organizing digital evidence; minimizing risks to survivors and documenters; and using documentation to support advocacy, platform accountability, and legal or policy action. This session is designed for activists, journalists, researchers, and community responders working at the frontlines of online harm.',
+                'type'  => 'Interactive Workshop',
                 'date'  => 'Jan 27',
                 'time'  => '11:30 AM',
                 'lead'  => 'Minhaj Aman, Israr Hassan',
@@ -1002,7 +1114,7 @@ Template Name: Sessions Page
 
             [
                 'title' => 'Deadly in Disguise: The Hidden Lethality of Pellet Guns/Chhorra Guli',
-                'desc'  => 'Examining the often-overlooked dangers and fatal consequences of pellet guns, commonly known as chhorra guli.',
+                'desc'  => 'This session examines the often-overlooked lethality of pellet guns (chhorra guli) when used in crowd-control contexts and the severe human suffering they cause. Drawing on investigative research and documentation, the session will explore how these weapons inflict life-altering injuries, permanent disability, and, in some cases, death.Through case studies and evidence-based analysis, participants will learn how lethality is investigated, documented, and communicated, and why exposing the real impacts of so-called “less-lethal” weapons is essential for accountability, advocacy, and the protection of human rights.',
                 'type'  => 'Dialogue',
                 'date'  => 'Jan 27',
                 'time'  => '01:00 PM',
@@ -1011,7 +1123,7 @@ Template Name: Sessions Page
             ],
             [
                 'title' => 'Crisis Response Tech: Exploring Challenges and Opportunities for Emerging Civic Technologies in Bangladesh',
-                'desc'  => 'Analyzing the challenges and potential of emerging civic technologies in strengthening crisis response systems in Bangladesh.',
+                'desc'  => 'This session explores how emerging civic technologies can support crisis response, documentation, and accountability in Bangladesh. Participants will discuss real-world challenges, local needs, and opportunities for building tools that strengthen community resilience and human rights work.',
                 'type'  => 'Roundtable',
                 'date'  => 'Jan 27',
                 'time'  => '02:00 PM',
@@ -1020,7 +1132,7 @@ Template Name: Sessions Page
             ],
             [
                 'title' => 'Beyond Disinformation: Industrial-Scale Information Warfare in Bangladesh Before and After the Election',
-                'desc'  => 'Investigating large-scale information warfare operations shaping public discourse in Bangladesh before and after the election.',
+                'desc'  => 'This session examines how coordinated, industrial-scale information disorder—including FIMI, disinformation, and influence operations—is shaping Bangladesh’s information environment before and after the election. It will explore key tactics, actors, and real-world impacts, and discuss how research, documentation, and cross-sector collaboration can help expose and counter large-scale information warfare.',
                 'type'  => 'Roundtable',
                 'date'  => 'Jan 27',
                 'time'  => '02:00 PM',
@@ -1028,8 +1140,8 @@ Template Name: Sessions Page
                 'org'   => 'The Dissent, Dismislab, Fact Watch, Rumor Scanner, AFP Fact Check, Shottify '
             ],
             [
-                'title' => 'July Human Rights Documentation: What Worked, What Didn\'t',
-                'desc'  => 'A critical retrospective on the documentation efforts during the July movement.',
+                'title' => 'A Fight to Remember: July Human Rights Documentation: What Worked, What Didn\'t',
+                'desc'  => 'This session reflects on the community-led, self-organized human rights documentation efforts that emerged during and after July, examining what worked, what failed, and what must be reimagined. Drawing on the experiences of JRA, July Record, and university networks, the discussion explores how students, volunteers, and civil society mobilized to collect evidence, preserve memory, and respond to unfolding violations. Speakers will share field-level lessons, including verification challenges, safety risks, coordination gaps, ethical dilemmas, and emotional labor. The session invites participants into a collective reflection on how July’s documentation efforts can inform stronger, safer, and more sustainable community-led documentation models for the future.',
                 'type'  => 'Roundtable',
                 'date'  => 'Jan 27',
                 'time'  => '04:00 PM',
@@ -1038,12 +1150,12 @@ Template Name: Sessions Page
             ],
             [
                 'title' => 'Announcing Archive & Resist Fund',
-                'desc'  => 'Introducing the Archive & Resist Fund to support documentation, resistance, and long-term civic memory initiatives.',
+                'desc'  => 'This invitation-only, closed-door session marks the official announcement of the Archive & Resist Fund—an independent fundraising initiative to support community-led human rights documentation, archiving, and accountability work. The session will bring together philanthropists, activists, and community leaders to share solidarity and explore ways to build sustainable, long-term support for grassroots documentation efforts. While the fund is being initiated by Activate Rights and the Bangladesh Protest Archive (BPA), it will be independently governed and led by an independent advisory board to ensure transparency, accountability, and community trust.',
                 'type'  => 'Invitation Only',
                 'date'  => 'Jan 27',
                 'time'  => '04:00 PM',
-                'lead'  => 'Organizing Committee',
-                'org'   => 'Organizing Committee'
+                'lead'  => 'Bangladesh Protest Archive',
+                'org'   => 'Bangladesh Protest Archive'
             ],
             [
                 'title' => 'Closing Ceremony: The Way Forward',
@@ -1060,7 +1172,7 @@ Template Name: Sessions Page
         $both_days_bottom = [
             [
                 'title' => 'Posters of Resistance: Visual Solidarity',
-                'desc'  => 'Interactive journey through the visual language of the movement. Engaging with archive posters.',
+                'desc'  => 'Running alongside Archive & Resist Conclave 2026, this interactive exhibition showcases posters and artworks from protests and human rights movements, inspired by the July Uprising in Bangladesh and global youth-led struggles. Selected works will be displayed at BRAC University, with contributors invited to join participatory art sessions and potentially be featured in an online resistance gallery.',
                 'type'  => 'Parallel',
                 'date'  => 'Jan 26-27',
                 'time'  => 'Ongoing',
@@ -1082,21 +1194,30 @@ Template Name: Sessions Page
                     </p>
                 </div>
 
-                <?php foreach ($both_days_top as $session): ?>
+                <?php foreach ($both_days_top as $session):
+                    // LOGIC: Change text if it is a workshop
+                    $displayType = $session['type'];
+                    if (trim(strtolower($session['type'])) == 'workshop') {
+                        $displayType = 'Interactive Workshop';
+                    }
+                ?>
                     <div class="session-card full-width-card" style="margin-bottom: 30px;">
                         <div class="card-header">
                             <div>
                                 <h3 class="card-title"><?php echo $session['title']; ?></h3>
                                 <p class="session-org"><?php echo $session['org']; ?></p>
                             </div>
-                            <span class="card-badge badge-parallel"><?php echo $session['type']; ?></span>
+                            <span class="card-badge badge-parallel"><?php echo $displayType; ?></span>
                         </div>
                         <div class="card-details">
                             <div class="detail-row"><span>⏰</span> <?php echo $session['time']; ?></div>
                             <div class="detail-row"><span>👤</span> <?php echo $session['lead']; ?></div>
                         </div>
                         <div class="card-description-area">
-                            <p class="card-description"><?php echo $session['desc']; ?></p>
+                            <div class="desc-content collapsed">
+                                <p class="card-description"><?php echo $session['desc']; ?></p>
+                            </div>
+                            <button class="desc-toggle-btn" onclick="toggleDescription(this)">Read More ▼</button>
                         </div>
                     </div>
                 <?php endforeach; ?>
@@ -1112,10 +1233,18 @@ Template Name: Sessions Page
                 <div class="card-stack">
                     <?php foreach ($day1 as $session):
                         $type = strtolower($session['type']);
+
+                        // CLASS LOGIC
                         if (strpos($type, 'plenary') !== false) $badgeClass = 'badge-plenary';
                         elseif (strpos($type, 'workshop') !== false) $badgeClass = 'badge-workshop';
                         elseif (strpos($type, 'ideation') !== false) $badgeClass = 'badge-ideation';
                         else $badgeClass = 'badge-workshop';
+
+                        // DISPLAY TEXT LOGIC
+                        $displayType = $session['type'];
+                        if (trim($type) == 'workshop') {
+                            $displayType = 'Interactive Workshop';
+                        }
                     ?>
                         <div class="session-card static-card reveal-on-scroll">
                             <div class="card-header">
@@ -1123,7 +1252,7 @@ Template Name: Sessions Page
                                     <h3 class="card-title"><?php echo $session['title']; ?></h3>
                                     <p class="session-org" style="color:#ff4d4d; font-weight:700; font-size:0.9rem; margin-bottom:5px; text-transform:uppercase;"><?php echo $session['org']; ?></p>
                                 </div>
-                                <div class="header-meta"><span class="card-badge <?php echo $badgeClass; ?>"><?php echo $session['type']; ?></span></div>
+                                <div class="header-meta"><span class="card-badge <?php echo $badgeClass; ?>"><?php echo $displayType; ?></span></div>
                             </div>
                             <div class="card-details">
                                 <div class="detail-row"><span class="detail-icon icon-time">⏰</span> <?php echo $session['time']; ?></div>
@@ -1131,7 +1260,10 @@ Template Name: Sessions Page
                                 <div class="detail-row"><span class="detail-icon icon-user">👤</span> <?php echo $session['lead']; ?></div>
                             </div>
                             <div class="card-description-area">
-                                <p class="card-description"><?php echo $session['desc']; ?></p>
+                                <div class="desc-content collapsed">
+                                    <p class="card-description"><?php echo $session['desc']; ?></p>
+                                </div>
+                                <button class="desc-toggle-btn" onclick="toggleDescription(this)">Read More ▼</button>
                             </div>
                         </div>
                     <?php endforeach; ?>
@@ -1146,12 +1278,20 @@ Template Name: Sessions Page
                 <div class="card-stack">
                     <?php foreach ($day2 as $session):
                         $type = strtolower($session['type']);
+
+                        // CLASS LOGIC
                         if (strpos($type, 'plenary') !== false) $badgeClass = 'badge-plenary';
                         elseif (strpos($type, 'workshop') !== false) $badgeClass = 'badge-workshop';
                         elseif (strpos($type, 'ideation') !== false) $badgeClass = 'badge-ideation';
                         elseif (strpos($type, 'dialogue') !== false) $badgeClass = 'badge-dialogue';
                         elseif (strpos($type, 'roundtable') !== false) $badgeClass = 'badge-roundtable';
                         else $badgeClass = 'badge-workshop';
+
+                        // DISPLAY TEXT LOGIC
+                        $displayType = $session['type'];
+                        if (trim($type) == 'workshop') {
+                            $displayType = 'Interactive Workshop';
+                        }
                     ?>
                         <div class="session-card static-card reveal-on-scroll">
                             <div class="card-header">
@@ -1159,7 +1299,7 @@ Template Name: Sessions Page
                                     <h3 class="card-title"><?php echo $session['title']; ?></h3>
                                     <p class="session-org" style="color:#ff4d4d; font-weight:700; font-size:0.9rem; margin-bottom:5px; text-transform:uppercase;"><?php echo $session['org']; ?></p>
                                 </div>
-                                <div class="header-meta"><span class="card-badge <?php echo $badgeClass; ?>"><?php echo $session['type']; ?></span></div>
+                                <div class="header-meta"><span class="card-badge <?php echo $badgeClass; ?>"><?php echo $displayType; ?></span></div>
                             </div>
                             <div class="card-details">
                                 <div class="detail-row"><span class="detail-icon icon-time">⏰</span> <?php echo $session['time']; ?></div>
@@ -1167,7 +1307,10 @@ Template Name: Sessions Page
                                 <div class="detail-row"><span class="detail-icon icon-user">👤</span> <?php echo $session['lead']; ?></div>
                             </div>
                             <div class="card-description-area">
-                                <p class="card-description"><?php echo $session['desc']; ?></p>
+                                <div class="desc-content collapsed">
+                                    <p class="card-description"><?php echo $session['desc']; ?></p>
+                                </div>
+                                <button class="desc-toggle-btn" onclick="toggleDescription(this)">Read More ▼</button>
                             </div>
                         </div>
                     <?php endforeach; ?>
@@ -1177,14 +1320,22 @@ Template Name: Sessions Page
 
         <?php if (!empty($both_days_bottom)): ?>
             <div class="both-days-container reveal-on-scroll">
-                <?php foreach ($both_days_bottom as $session): $badgeClass = 'badge-parallel'; ?>
+                <?php foreach ($both_days_bottom as $session):
+                    $badgeClass = 'badge-parallel';
+
+                    // DISPLAY TEXT LOGIC
+                    $displayType = $session['type'];
+                    if (trim(strtolower($session['type'])) == 'workshop') {
+                        $displayType = 'Interactive Workshop';
+                    }
+                ?>
                     <div class="session-card static-card full-width-card">
                         <div class="card-header">
                             <div class="header-content">
                                 <h3 class="card-title"><?php echo $session['title']; ?></h3>
                                 <p class="session-org" style="color:#ff4d4d; font-weight:700; font-size:0.95rem; margin-bottom:5px; text-transform:uppercase;"><?php echo $session['org']; ?></p>
                             </div>
-                            <div class="header-meta"><span class="card-badge <?php echo $badgeClass; ?>"><?php echo $session['type']; ?></span></div>
+                            <div class="header-meta"><span class="card-badge <?php echo $badgeClass; ?>"><?php echo $displayType; ?></span></div>
                         </div>
                         <div class="card-details">
                             <div class="detail-row"><span class="detail-icon icon-time">⏰</span> <?php echo $session['time']; ?></div>
@@ -1192,7 +1343,11 @@ Template Name: Sessions Page
                             <div class="detail-row"><span class="detail-icon icon-user">👤</span> <?php echo $session['lead']; ?></div>
                         </div>
                         <div class="card-description-area">
-                            <p class="card-description"><?php echo $session['desc']; ?></p>
+                            <div class="desc-content collapsed">
+                                <p class="card-description"><?php echo $session['desc']; ?></p>
+                            </div>
+
+                            <button class="desc-toggle-btn" onclick="toggleDescription(this)">Read More ▼</button>
                         </div>
                     </div>
                 <?php endforeach; ?>
@@ -1351,49 +1506,88 @@ Template Name: Sessions Page
 
     <?php wp_footer(); ?>
 
+
     <script>
         // ==========================================
-        //  COUNTDOWN TIMER
+        //  1. GLOBAL FUNCTIONS (Must be outside DOMContentLoaded)
         // ==========================================
-        const countdownTimer = document.getElementById('countdownTimer');
 
-        if (countdownTimer) {
-            // Set the event date: January 26, 2026, 09:00 AM (Bangladesh Time)
-            const eventDate = new Date('2026-01-26T09:00:00+06:00').getTime();
+        // Function to expand/collapse descriptions
+        function toggleDescription(btn) {
+            // Find the text container immediately before this button
+            var content = btn.previousElementSibling;
 
-            function updateCountdown() {
-                const now = new Date().getTime();
-                const distance = eventDate - now;
+            // Toggle the 'collapsed' and 'expanded' classes
+            if (content.classList.contains('collapsed')) {
+                content.classList.remove('collapsed');
+                content.classList.add('expanded');
+                btn.innerHTML = "Show Less ▲";
+            } else {
+                content.classList.remove('expanded');
+                content.classList.add('collapsed');
+                btn.innerHTML = "Read More ▼";
+            }
+        }
 
-                // Time calculations
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        // ==========================================
+        //  2. ON PAGE LOAD
+        // ==========================================
+        document.addEventListener("DOMContentLoaded", function() {
 
-                // Update DOM elements
-                const daysEl = document.getElementById('days');
-                const hoursEl = document.getElementById('hours');
-                const minutesEl = document.getElementById('minutes');
-                const secondsEl = document.getElementById('seconds');
+            // --- A. COUNTDOWN TIMER ---
+            const countdownTimer = document.getElementById('countdownTimer');
+            if (countdownTimer) {
+                // Set the event date: January 26, 2026, 09:00 AM (Bangladesh Time)
+                const eventDate = new Date('2026-01-26T09:00:00+06:00').getTime();
 
-                if (daysEl) daysEl.textContent = String(days).padStart(2, '0');
-                if (hoursEl) hoursEl.textContent = String(hours).padStart(2, '0');
-                if (minutesEl) minutesEl.textContent = String(minutes).padStart(2, '0');
-                if (secondsEl) secondsEl.textContent = String(seconds).padStart(2, '0');
+                function updateCountdown() {
+                    const now = new Date().getTime();
+                    const distance = eventDate - now;
 
-                // If countdown is finished
-                if (distance < 0) {
-                    clearInterval(countdownInterval);
-                    countdownTimer.innerHTML = '<h3 style="color: #ffffff; font-family: var(--font-display); font-size: 3rem; font-weight: 900; margin: 0; text-transform: uppercase;">EVENT IS LIVE NOW!</h3>';
+                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                    const daysEl = document.getElementById('days');
+                    const hoursEl = document.getElementById('hours');
+                    const minutesEl = document.getElementById('minutes');
+                    const secondsEl = document.getElementById('seconds');
+
+                    if (daysEl) daysEl.textContent = String(days).padStart(2, '0');
+                    if (hoursEl) hoursEl.textContent = String(hours).padStart(2, '0');
+                    if (minutesEl) minutesEl.textContent = String(minutes).padStart(2, '0');
+                    if (secondsEl) secondsEl.textContent = String(seconds).padStart(2, '0');
+
+                    if (distance < 0) {
+                        clearInterval(countdownInterval);
+                        countdownTimer.innerHTML = '<h3 style="color: #ffffff; font-family: var(--font-display); font-size: 3rem; font-weight: 900; margin: 0; text-transform: uppercase;">EVENT IS LIVE NOW!</h3>';
+                    }
                 }
+
+                updateCountdown();
+                const countdownInterval = setInterval(updateCountdown, 1000);
             }
 
-            // Update immediately and then every second
-            updateCountdown();
-            const countdownInterval = setInterval(updateCountdown, 1000);
-        }
-        document.addEventListener("DOMContentLoaded", function() {
+            // --- B. DESCRIPTION BUTTON CHECKER ---
+            // Automatically hide "Read More" button if text is short
+            var descriptions = document.querySelectorAll('.desc-content');
+            descriptions.forEach(function(desc) {
+                // If text is shorter than 85px (approx 3 lines), hide the button
+                if (desc.scrollHeight < 85) {
+                    desc.classList.remove('collapsed'); // Just show it all
+                    desc.style.maskImage = 'none'; // Remove fade
+                    desc.style.webkitMaskImage = 'none';
+
+                    // Safely hide the button if it exists
+                    var btn = desc.nextElementSibling;
+                    if (btn && btn.classList.contains('desc-toggle-btn')) {
+                        btn.style.display = 'none';
+                    }
+                }
+            });
+
+            // --- C. SCROLL REVEAL ANIMATION ---
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -1408,21 +1602,23 @@ Template Name: Sessions Page
 
             document.querySelectorAll(".reveal-on-scroll").forEach((el) => observer.observe(el));
 
-            // BACK TO TOP
+            // --- D. BACK TO TOP BUTTON ---
             const mybutton = document.getElementById("backToTop");
-            window.onscroll = function() {
-                if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-                    mybutton.style.display = "flex";
-                } else {
-                    mybutton.style.display = "none";
-                }
-            };
-            mybutton.addEventListener('click', function() {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
+            if (mybutton) {
+                window.onscroll = function() {
+                    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                        mybutton.style.display = "flex";
+                    } else {
+                        mybutton.style.display = "none";
+                    }
+                };
+                mybutton.addEventListener('click', function() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
                 });
-            });
+            }
         });
     </script>
 </body>

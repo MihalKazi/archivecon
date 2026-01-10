@@ -790,9 +790,8 @@ img {
 .card-header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 1rem;
-  gap: 10px;
+  align-items: flex-start; /* CRITICAL: Keeps title at the top if badge gets taller */
+  gap: 15px;
 }
 .header-content {
   flex: 1;
@@ -825,17 +824,26 @@ img {
 }
 
 .card-badge {
+  /* 1. Allow text to break into a paragraph */
+  white-space: normal !important;
+
+  /* 2. Set a limit so it wraps instead of pushing the title */
+  max-width: 100px;
+
+  /* 3. Center the text inside the box */
+  text-align: center;
+  line-height: 1.2;
+
+  /* 4. Let the box grow vertically */
+  height: auto;
+  display: inline-block;
+
+  /* Keep your existing styling */
+  padding: 6px 10px;
   font-size: 0.75rem;
-  padding: 4px 12px;
-  border-radius: 0;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  white-space: nowrap;
-  position: relative;
-  overflow: hidden;
 }
-
 .card-badge::after {
   content: "";
   position: absolute;
