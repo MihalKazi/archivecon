@@ -304,6 +304,135 @@ Template Name: FAQ Page
             }
         }
 
+.partners-section {
+  padding: 60px 0 80px 0;
+  color: var(--black);
+  width: 100%;
+  margin: 0 auto;
+  border-top: 1px solid #ddd;
+}
+
+.partners-title {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(2rem, 4vw, 3rem);
+  text-transform: uppercase;
+  color: var(--c-conclave);
+  margin-bottom: 50px;
+  line-height: 1;
+}
+
+.partner-row {
+  display: flex;
+  align-items: flex-start;
+  border-top: 1px solid var(--c-conclave);
+  padding: 35px 0;
+  width: 100%;
+}
+.partner-row.no-border {
+  border-bottom: none;
+}
+
+.partner-label {
+  width: 25%;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #444;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  padding-top: 10px;
+}
+
+.partner-logos-wrapper {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+
+.partner-logos-wrapper.is-stacked {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.logo-line {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  width: 100%;
+}
+
+.partner-logo {
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+.partner-logo:hover {
+  transform: scale(1.05);
+}
+
+        .infinite-partners-section {
+  padding: 60px 0 80px 0;
+  overflow: hidden;
+  border-top: 1px solid #eee;
+}
+
+.partners-slider-title {
+  text-align: center;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #009945;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+.partners-slider-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.partners-track {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  width: 100%;
+  padding: 10px 0;
+  overflow-x: auto;
+  scroll-behavior: auto !important;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.partners-track::-webkit-scrollbar {
+  display: none;
+}
+
+.partner-slide-item {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partner-slide-img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  opacity: 1;
+  filter: none;
+  transition: transform 0.3s ease;
+}
+.partner-slide-img:hover {
+  transform: scale(1.1);
+}
+
+
         /* Footer Overrides */
         .footer-logo-link {
             text-decoration: none;
@@ -332,7 +461,7 @@ Template Name: FAQ Page
             <nav class="main-nav">
                 <a href="<?php echo site_url(); ?>">Home</a>
 
-                <a href="<?php echo site_url('/#sessions'); ?>">Sessions</a>
+                <a href="<?php echo site_url('/session'); ?>" target="_blank" rel="noopener noreferrer">Sessions</a>
                 <a href="https://forms.gle/5znCihw4n17QiQnN8" target="_blank" rel="noopener noreferrer">Registration</a>
                 <a href="<?php echo site_url('/faq'); ?>" class="active">FAQ</a>
             </nav>
@@ -362,7 +491,7 @@ Template Name: FAQ Page
                 <div class="date-divider"></div>
 
                 <div class="hero-date">
-                    24-25 January 2025 | Dhaka
+                    26-27 January 2026 | BRAC University, Dhaka
                 </div>
 
                 <a href="https://forms.gle/5znCihw4n17QiQnN8" target="_blank" rel="noopener noreferrer" class="btn-ticket">GET YOUR TICKET</a>
@@ -424,7 +553,7 @@ Template Name: FAQ Page
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>The conclave will take place <strong>24–25 January 2025</strong> in Dhaka, Bangladesh.</p>
+                        <p>The conclave will take place <strong>26- 27 January 2026</strong> in BRAC University Dhaka, Bangladesh.</p>
                         <p>Final venue details will be shared with confirmed participants.</p>
                     </div>
                 </div>
@@ -584,7 +713,127 @@ Template Name: FAQ Page
             </a>
         </div>
     </section>
+    <section class="partners-section">
+        <div class="container">
+            <h2 class="partners-title">Organizers & Partners</h2>
 
+            <div class="partner-row">
+                <div class="partner-label">Conveyed by</div>
+
+                <div class="partner-logos-wrapper is-stacked">
+                    <div class="logo-line">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/partner/activate.svg"
+                            alt="Activate Rights"
+                            class="partner-logo"
+                            style="height: 45px;">
+
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/partner/bpa logo.svg"
+                            alt="Bangladesh Protest Archive"
+                            class="partner-logo"
+                            style="height: 45px;">
+                    </div>
+
+                    <div class="logo-line">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/partner/witness logo new.png"
+                            alt="WITNESS"
+                            class="partner-logo"
+                            style="height: 38px;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="partner-row">
+                <div class="partner-label">Collaboration with</div>
+
+                <div class="partner-logos-wrapper is-stacked">
+                    <div class="logo-line">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/partner/BJIM Logo.svg"
+                            alt="BJIM"
+                            class="partner-logo"
+                            style="height: 48px;">
+
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/partner/HURIDOCS.png"
+                            alt="HURIDOCS"
+                            class="partner-logo"
+                            style="height: 42px;">
+                    </div>
+
+                    <div class="logo-line">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/partner/Surge.webp"
+                            alt="Surge Bangladesh"
+                            class="partner-logo"
+                            style="height: 50px;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="partner-row">
+                <div class="partner-label">In Partnership with</div>
+                <div class="partner-logos-wrapper">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/partner/brac logo.svg"
+                        alt="BRAC University"
+                        class="partner-logo"
+                        style="height: 90px;">
+                </div>
+            </div>
+
+            <div class="partner-row no-border">
+                <div class="partner-label">With Support from</div>
+                <div class="partner-logos-wrapper">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/partner/undp logo.svg"
+                        alt="UNDP"
+                        class="partner-logo"
+                        style="height: 120px;">
+
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/partner/netra logos.svg"
+                        alt="Netra News"
+                        class="partner-logo"
+                        style="height: 40px;">
+
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/partner/archive-resist-fund-logo.png"
+                        alt="Archive & Resist Fund"
+                        class="partner-logo"
+                        style="height: 100px;">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+   <section class="infinite-partners-section">
+        <div class="container">
+            <h2 class="partners-slider-title">SESSION CO-HOSTS</h2>
+
+            <div class="partners-slider-wrapper">
+                <div class="partners-track" id="partnerTickerTrack">
+                    <?php
+                    // 1. Define Logos
+                    $logos = [
+                        ['src' => '/images/copartner/Kashful Foundation.png', 'alt' => 'Kashful Foundation'],
+                        ['src' => '/images/copartner/sapran logo.png', 'alt' => 'Sapran'],
+                        ['src' => '/images/copartner/jogajog.png', 'alt' => 'Jogajog'],
+                        ['src' => '/images/copartner/punab.png', 'alt' => 'Punab'],
+                        ['src' => '/images/copartner/Kashful Foundation.png', 'alt' => 'Kashful Foundation'],
+                        ['src' => '/images/copartner/sapran logo.png', 'alt' => 'Sapran'],
+                        ['src' => '/images/copartner/jogajog.png', 'alt' => 'Jogajog'],
+                        ['src' => '/images/copartner/punab.png', 'alt' => 'Punab'],
+                    ];
+
+                    // 2. Loop 6 times to ensure the track is very long
+                    for ($i = 0; $i < 6; $i++) {
+                        foreach ($logos as $logo): ?>
+                            <div class="partner-slide-item">
+                                <img src="<?php echo get_template_directory_uri() . $logo['src']; ?>"
+                                    alt="<?php echo $logo['alt']; ?>"
+                                    class="partner-slide-img">
+                            </div>
+                    <?php endforeach;
+                    }
+                    ?>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer>
         <div class="footer-bottom">
             <div class="container">
@@ -677,6 +926,34 @@ Template Name: FAQ Page
                 });
             });
         });
+            const partnerTrack = document.getElementById('partnerTickerTrack');
+
+            if (partnerTrack) {
+                let pAnimId;
+                let pPaused = false;
+                let pSpeed = 0.8; // Speed of logos
+
+                function partnerScroll() {
+                    if (!pPaused) {
+                        partnerTrack.scrollLeft += pSpeed;
+
+                        // Reset Logic
+                        if (partnerTrack.scrollLeft >= (partnerTrack.scrollWidth / 2)) {
+                            partnerTrack.scrollLeft = 0;
+                        }
+                    }
+                    pAnimId = requestAnimationFrame(partnerScroll);
+                }
+                // Start
+                pAnimId = requestAnimationFrame(partnerScroll);
+
+                // Pause on Hover
+                partnerTrack.addEventListener('mouseenter', () => pPaused = true);
+                partnerTrack.addEventListener('mouseleave', () => pPaused = false);
+                partnerTrack.addEventListener('touchstart', () => pPaused = true);
+                partnerTrack.addEventListener('touchend', () => pPaused = false);
+            }
+
         // ==========================================
         // 4. COUNTDOWN TIMER
         // ==========================================

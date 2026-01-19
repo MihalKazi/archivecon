@@ -202,12 +202,12 @@
                     <p class="speaker-org">UNDP</p>
                 </div>
 
-                <!-- <div class="speaker-card">
-                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/null.png" alt="JinBo Choi" class="speaker-img"></div>
+                <div class="speaker-card">
+                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/jinbo.png" alt="JinBo Choi" class="speaker-img"></div>
                     <h3 class="speaker-name">JinBo Choi</h3>
-                    <p class="speaker-role">Senior Rule of Law, Justice, and Security Advisor</p>
+                    <p class="speaker-role">Program Associate, Rule of Law, Justice</p>
                     <p class="speaker-org">UNDP</p>
-                </div> -->
+                </div>
 
                 <!--                 <div class="speaker-card">
                     <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/majid.png" alt="Faisal Bin Majid" class="speaker-img"></div>
@@ -277,6 +277,13 @@
                     <h3 class="speaker-name">Dr. Nabila Idris</h3>
                     <p class="speaker-role">Member</p>
                     <p class="speaker-org">Commission of Inquiry on Enforced Disappearances</p>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/sadaf.png" alt="Sadaf Saaz Siddiqi" class="speaker-img"></div>
+                    <h3 class="speaker-name">Sadaf Saaz Siddiqi</h3>
+                    <p class="speaker-role"></p>
+                    <p class="speaker-org">The Forum for Women's Political Rights</p>
                 </div>
 
                 <div class="speaker-card">
@@ -374,40 +381,6 @@
                     <p class="speaker-org">Netra News</p>
                 </div>
 
-                <div class="speaker-card">
-                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/placeholder.png" alt="Aaqib Shatil" class="speaker-img"></div>
-                    <h3 class="speaker-name">Aaqib Shatil</h3>
-                    <p class="speaker-role">Researcher</p>
-                    <p class="speaker-org">BD Protest Archive</p>
-                </div>
-
-                <div class="speaker-card">
-                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/placeholder.png" alt="Iffat Joye" class="speaker-img"></div>
-                    <h3 class="speaker-name">Iffat Joye</h3>
-                    <p class="speaker-role">Coordinator</p>
-                    <p class="speaker-org">Netra News</p>
-                </div>
-
-                <div class="speaker-card">
-                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/placeholder.png" alt="M. Rafiul Bahar Rafi" class="speaker-img"></div>
-                    <h3 class="speaker-name">M. Rafiul Bahar Rafi</h3>
-                    <p class="speaker-role">Founder</p>
-                    <p class="speaker-org">Korikath Knowledge</p>
-                </div>
-
-                <div class="speaker-card">
-                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/placeholder.png" alt="Zarif Rahman" class="speaker-img"></div>
-                    <h3 class="speaker-name">Zarif Rahman</h3>
-                    <p class="speaker-role">Researcher</p>
-                    <p class="speaker-org">Independent</p>
-                </div>
-
-                <div class="speaker-card">
-                    <div class="speaker-img-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/avatar/placeholder.png" alt="Chowdhury Isfatul Karim" class="speaker-img"></div>
-                    <h3 class="speaker-name">Chowdhury Isfatul Karim</h3>
-                    <p class="speaker-role">Tech Lead</p>
-                    <p class="speaker-org">Jogajog</p>
-                </div>
  -->
             </div>
 
@@ -526,15 +499,7 @@
                             'lead'  => 'Yvonne Ng',
                             'org'   => 'WITNESS'
                         ],
-                        [
-                            'title' => 'Countering Organized Hate through Research & Documentation',
-                            'desc'  => 'This session introduces the work of the Center for the Study of Organized Hate (CSOH) and explores how research-driven hate tracking can strengthen human rights documentation, advocacy, and policy engagement in South Asia. Through discussion and peer exchange, participants will reflect on shared challenges and how to build regional collaboration to counter organized hate and protect democratic space.',
-                            'type'  => 'Dialogue',
-                            'date'  => 'Jan 26',
-                            'time'  => '01:00 PM',
-                            'lead'  => 'Ammaarah Nilafdeen, Raqib Hameed Naik',
-                            'org'   => 'Center for the Study of Organized Hate'
-                        ],
+
                         [
                             'title' => 'Capture, Protect, Preserve: Resilient Evidence Documentation for Elections, Crackdowns & Internet Shutdowns',
                             'desc'  => 'This hands-on workshop offers practical, field-tested steps to help activists, documenters, and journalists securely capture, organize, and preserve documentation so it remains safe, findable, and usable for future accountability and justice processes. Participants will practice a simple Capture–Protect–Preserve workflow designed for high-risk situations such as elections, raids, violent crackdowns, and internet shutdowns. The session focuses on realistic, low-barrier methods that can be applied even under pressure and limited resources. Participants will leave with a clear, adaptable approach they can immediately use with their teams and communities.',
@@ -542,7 +507,7 @@
                             'date'  => 'Jan 26',
                             'time'  => '02:00 PM',
                             'lead'  => 'Arul Prakkash Sinappan',
-                            'org'   => 'Activate Rights'
+                            'org'   => 'Independent'
                         ],
                         [
                             'title' => 'July Persist: How to build Community-Led Archiving and OSINT Investigation in Bangladesh',
@@ -563,7 +528,16 @@
                             'org'   => 'Bangladeshi Journalists in International Media'
                         ],
                         [
-                            'title' => 'Building human rights database systems as a tool for sustained resistance',
+                            'title' => 'Prepare, Don’t Panic: How to Respond to AI and Deepfakes in Bangladesh Election Contexts',
+                            'desc'  => 'As Bangladesh approaches its February election, we’re seeing increasing use of AI-generated content and deepfakes to confuse, discredit, and intimidate activists, journalists, and civic actors. The session is designed to be more than a panel but lighter than a technical training. It focuses on how to respond rather than panic or over-rely on tools. Participants will be guided through common election-related scenarios to discuss what to do when encountering suspected AI-generated content, how to interpret detection claims cautiously, and how to make informed decisions under pressure.',
+                            'type'  => 'Interactive Workshop',
+                            'date'  => 'Jan 26',
+                            'time'  => '04:00 PM',
+                            'lead'  => 'Kartika Pratiwi, Minhaj Aman',
+                            'org'   => 'Witness, Activate Rights'
+                        ],
+                        [
+                            'title' => 'Building Human Rights Database Systems as a Tool for Sustained Resistance',
                             'desc'  => 'This practical session explores how fragmented documentation and scattered datasets can be transformed into structured, resilient human rights database systems. Participants will learn why databases matter for long-term documentation, investigations, and accountability work. The discussion will cover key principles of organizing, standardizing, and maintaining human rights data in challenging environments. The session will also reflect on ethical, security, and sustainability considerations. Participants will leave with a clearer understanding of how database systems can support sustained resistance and long-term justice efforts.',
                             'type'  => 'Roundtable',
                             'date'  => 'Jan 26',
@@ -572,7 +546,7 @@
                             'org'   => 'HURIDOCS'
                         ],
                         [
-                            'title' => 'Tools and skills to build visual investigations using OSINT',
+                            'title' => 'Tools and Skills to Build Visual Investigations using OSINT',
                             'desc'  => 'This practical session explores video-based approaches to building visual investigations using open-source information. Participants will be introduced to key OSINT tools and workflows for collecting, verifying, analyzing, and presenting visual evidence from videos, images, and social media content. The session will also introduce different open-source tools for visualizing investigations, helping participants understand how to structure findings and communicate evidence clearly. It highlights how visual investigations can support human rights documentation, journalism, and accountability efforts.
 ',
                             'type'  => 'Interactive Workshop',
@@ -586,10 +560,10 @@
                         [
                             'title' => 'Truth and Reconciliation: Conversations on Healing and Accountability',
                             'desc'  => 'Conversations on balancing the need for healing with the demand for accountability in post-conflict contexts.',
-                            'type'  => 'Dialogue',
+                            'type'  => 'Plenary',
                             'date'  => 'Jan 27',
                             'time'  => '10:00 AM',
-                            'lead'  => 'UNDP Reps',
+                            'lead'  => 'UNDP, UNESCO, CSOH, The Forum for Women\'s Political Rights,',
                             'org'   => 'UNDP'
                         ],
                         [
@@ -598,7 +572,7 @@
                             'type'  => 'Interactive Workshop',
                             'date'  => 'Jan 27',
                             'time'  => '11:30 AM',
-                            'lead'  => 'Minhaj Aman, Israr Hassan',
+                            'lead'  => 'Minhaj Aman, Selima Sara Kabir',
                             'org'   => 'Activate Rights, BRAC James P Grant School of Public Health'
                         ],
                         [
@@ -619,6 +593,15 @@
                         //                             'lead'  => 'M. Rafiul Bahar Rafi',
                         //                             'org'   => 'Korikath Knowledge'
                         //                         ],
+                        [
+                            'title' => 'Countering Organized Hate through Research & Documentation',
+                            'desc'  => 'This session introduces the work of the Center for the Study of Organized Hate (CSOH) and explores how research-driven hate tracking can strengthen human rights documentation, advocacy, and policy engagement in South Asia. Through discussion and peer exchange, participants will reflect on shared challenges and how to build regional collaboration to counter organized hate and protect democratic space.',
+                            'type'  => 'Dialogue',
+                            'date'  => 'Jan 27',
+                            'time'  => '01:00 PM',
+                            'lead'  => 'Ammaarah Nilafdeen, Raqib Hameed Naik',
+                            'org'   => 'Center for the Study of Organized Hate'
+                        ],
 
                         [
                             'title' => 'Deadly in Disguise: The Hidden Lethality of Pellet Guns/Chhorra Guli',
@@ -629,6 +612,16 @@
                             'lead'  => 'Zarif Rahman, Opsora Islam',
                             'org'   => 'Sapran'
                         ],
+                        [
+                            'title' => 'Why People Rise: Stories of Resistance in Bangladesh',
+                            'desc'  => 'This session traces a historical timeline of protest and resistance in Bangladesh, reaching back to movements before 1971 and continuing through later waves of mass mobilization. It will explore why people rise—examining the political, social, and economic forces that fuel resistance, and the moments that turn grievance into collective action. Through historical examples and analysis, the session will look at key drivers of protest, how resistance spreads across communities, including, gender and  and the nationwide impacts these movements have had on society, culture, and state power. The discussion invites participants to understand resistance not as isolated events, but as a continuous struggle shaped by memory, injustice, and collective courage.This session traces a historical timeline of protest and resistance in Bangladesh, reaching back to movements before 1971 and continuing through later waves of mass mobilization. It will explore why people rise—examining the political, social, and economic forces that fuel resistance, and the moments that turn grievance into collective action. Through historical examples and analysis, the session will look at key drivers of protest, how resistance spreads across communities, including, gender and  and the nationwide impacts these movements have had on society, culture, and state power. The discussion invites participants to understand resistance not as isolated events, but as a continuous struggle shaped by memory, injustice, and collective courage.',
+                            'type'  => 'Interactive Discussion',
+                            'date'  => 'Jan 27',
+                            'time'  => '1:00 PM',
+                            'lead'  => 'Amir Hamza Zihad',
+                            'org'   => 'Makeateam'
+                        ],
+
                         [
                             'title' => 'Crisis Response Tech: Exploring Challenges and Opportunities for Emerging Civic Technologies in Bangladesh',
                             'desc'  => 'This session explores how emerging civic technologies can support crisis response, documentation, and accountability in Bangladesh. Participants will discuss real-world challenges, local needs, and opportunities for building tools that strengthen community resilience and human rights work.',
@@ -649,12 +642,12 @@
                         ],
                         [
                             'title' => 'A Fight to Remember: July Human Rights Documentation: What Worked, What Didn\'t',
-                            'desc'  => 'This session reflects on the community-led, self-organized human rights documentation efforts that emerged during and after July, examining what worked, what failed, and what must be reimagined. Drawing on the experiences of JRA, July Record, and university networks, the discussion explores how students, volunteers, and civil society mobilized to collect evidence, preserve memory, and respond to unfolding violations. Speakers will share field-level lessons, including verification challenges, safety risks, coordination gaps, ethical dilemmas, and emotional labor. The session invites participants into a collective reflection on how July’s documentation efforts can inform stronger, safer, and more sustainable community-led documentation models for the future.',
+                            'desc'  => 'This session reflects on the community-led, self-organized human rights documentation efforts that emerged during and after July, examining what worked, what failed, and what must be reimagined. Drawing on the experiences of JRA, July Record, PUNAB and university networks, the discussion explores how students, volunteers, and civil society mobilized to collect evidence, preserve memory, and respond to unfolding violations. Speakers will share field-level lessons, including verification challenges, safety risks, coordination gaps, ethical dilemmas, and emotional labor. The session invites participants into a collective reflection on how July’s documentation efforts can inform stronger, safer, and more sustainable community-led documentation models for the future.',
                             'type'  => 'Roundtable',
                             'date'  => 'Jan 27',
                             'time'  => '04:00 PM',
-                            'lead'  => 'JRA, July Record',
-                            'org'   => 'JRA, July Record'
+                            'lead'  => 'JRA, July Record, PUNAB',
+                            'org'   => 'JRA, July Record, PUNAB'
                         ],
                         [
                             'title' => 'Announcing Archive & Resist Fund',
@@ -937,9 +930,11 @@
                         ['src' => '/images/copartner/Kashful Foundation.png', 'alt' => 'Kashful Foundation'],
                         ['src' => '/images/copartner/sapran logo.png', 'alt' => 'Sapran'],
                         ['src' => '/images/copartner/jogajog.png', 'alt' => 'Jogajog'],
+                        ['src' => '/images/copartner/punab.png', 'alt' => 'Punab'],
                         ['src' => '/images/copartner/Kashful Foundation.png', 'alt' => 'Kashful Foundation'],
                         ['src' => '/images/copartner/sapran logo.png', 'alt' => 'Sapran'],
                         ['src' => '/images/copartner/jogajog.png', 'alt' => 'Jogajog'],
+                        ['src' => '/images/copartner/punab.png', 'alt' => 'Punab'],
                     ];
 
                     // 2. Loop 6 times to ensure the track is very long
