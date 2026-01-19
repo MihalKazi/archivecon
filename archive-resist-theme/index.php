@@ -515,7 +515,7 @@
                             'type'  => 'Ideation',
                             'date'  => 'Jan 26',
                             'time'  => '03:00 PM',
-                            'lead'  => ' Shoeb Abdullah, Subinoy Mustofi Eron, Aaqib Shatil, Iffat Joye',
+                            'lead'  => ' Shoeb Abdullah, Subinoy Mustofi Eron, Aaqib Shatil, Iffat Nowshin Joye',
                             'org'   => 'Netra News, Bangladesh Protest Archive'
                         ],
                         [

@@ -458,18 +458,18 @@ Template Name: Sessions Page
             margin-bottom: 40px;
             display: flex;
             align-items: center;
-            /* ADD THIS */
             justify-content: center;
+            min-width: 0;
             /* ADD THIS */
         }
 
         .card-stack {
             width: 100%;
-            /* ADD THIS */
-            max-width: 500px;
-            /* ADD THIS - adjust this value as needed */
+            max-width: 100%;
+            /* Full width within grid */
             gap: 30px;
             padding: 0 10px;
+            min-width: 0;
         }
 
         .session-card {
@@ -478,11 +478,13 @@ Template Name: Sessions Page
             box-sizing: border-box;
             background: #fff;
             border: 2px solid #000;
-            padding: 30px;
+            padding: 20px;
+            /* REDUCED from 25px */
             display: flex;
             flex-direction: column;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             flex: 1;
+            min-width: 0;
         }
 
         /* Card Headers */
@@ -602,8 +604,10 @@ Template Name: Sessions Page
         /* Card Content */
         .card-description-area {
             border-top: 1px solid #eee;
-            padding-top: 15px;
-            margin-top: 15px;
+            padding-top: 10px;
+            /* REDUCED from 15px */
+            margin-top: 10px;
+            /* REDUCED from 15px */
             position: relative;
         }
 
@@ -613,7 +617,8 @@ Template Name: Sessions Page
         }
 
         .desc-content.collapsed {
-            max-height: 4.5em;
+            max-height: 3.5em;
+            /* REDUCED from 4.5em */
             mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
             -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
         }
@@ -628,9 +633,11 @@ Template Name: Sessions Page
             background: none;
             border: none;
             padding: 0;
-            margin-top: 8px;
+            margin-top: 6px;
+            /* REDUCED from 8px */
             font-family: var(--font-body);
-            font-size: 0.8rem;
+            font-size: 0.75rem;
+            /* REDUCED from 0.8rem */
             font-weight: 700;
             color: var(--c-resist);
             cursor: pointer;
@@ -644,13 +651,19 @@ Template Name: Sessions Page
 
         .card-title {
             font-family: var(--font-display);
-            font-size: 1.6rem;
-            line-height: 1.1;
+            font-size: 1.5rem;
+            line-height: 1.05;
             margin: 0 0 8px 0;
+            /* REDUCED from 12px */
             text-transform: uppercase;
             font-weight: 800;
             color: #000;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            max-width: 100%;
+            letter-spacing: -0.02em;
         }
+
 
         .session-org {
             font-family: var(--font-body);
@@ -659,41 +672,52 @@ Template Name: Sessions Page
             font-size: 0.9rem;
             margin: 0;
             text-transform: uppercase;
+            letter-spacing: 0.02em;
+            line-height: 1.3;
         }
 
         .card-header {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: flex-start;
-            margin-bottom: 15px;
-            gap: 15px;
+            margin-bottom: 12px;
+            /* REDUCED from 20px */
+            gap: 8px;
+            /* REDUCED from 12px */
         }
 
         .header-content {
             flex: 1;
             min-width: 0;
+            width: 100%;
+            /* Full width for better wrapping */
+            order: 2;
+            /* Title comes second */
         }
 
         .header-meta {
             flex-shrink: 0;
             align-self: flex-start;
+            order: 1;
+            /* Badge comes first */
         }
 
         .card-badge {
-            white-space: normal;
-            max-width: 120px;
+            white-space: nowrap;
             text-align: center;
             line-height: 1.1;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            min-height: 25px;
-            padding: 6px 8px;
+            min-height: 22px;
+            /* REDUCED from 25px */
+            padding: 6px 12px;
+            /* REDUCED from 8px 14px */
             font-size: 0.7rem;
+            /* REDUCED from 0.75rem */
             font-weight: 700;
             text-transform: uppercase;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
+            font-family: var(--font-body);
         }
 
         .badge-plenary {
@@ -727,27 +751,31 @@ Template Name: Sessions Page
         }
 
         .card-details {
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
         .detail-row {
             display: flex;
             align-items: center;
-            gap: 10px;
-            margin-bottom: 6px;
-            font-size: 0.9rem;
+            gap: 8px;
+            margin-bottom: 4px;
+            /* REDUCED from 6px */
+            font-size: 0.85rem;
             color: var(--c-archive);
-            /* Use blue theme color */
             font-family: var(--font-body);
-            font-weight: 700;
+            font-weight: 600;
         }
 
         .card-description {
             font-family: var(--font-body);
-            font-size: 0.95rem;
+            font-size: 0.88rem;
+            /* REDUCED from 0.95rem */
             color: #555;
-            line-height: 1.5;
+            line-height: 1.4;
+            /* REDUCED from 1.5 */
             margin: 0;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
 
         /* Day Badge */
@@ -791,6 +819,14 @@ Template Name: Sessions Page
         }
 
         /* Full Width Card */
+        .full-width-card .header-content {
+            order: 1;
+        }
+
+        .full-width-card .header-meta {
+            order: 2;
+        }
+
         .session-card.full-width-card {
             display: flex;
             flex-direction: column;
@@ -802,18 +838,21 @@ Template Name: Sessions Page
         }
 
         .full-width-card .card-header {
-            display: flex;
+            flex-direction: row;
+            /* Keep horizontal for full-width */
             justify-content: space-between;
             align-items: flex-start;
             border-bottom: 2px solid #f0f0f0;
             padding-bottom: 20px;
-            margin-bottom: 0;
+            margin-bottom: 20px;
         }
 
         .full-width-card .card-title {
             font-size: 2.5rem;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
             width: 100%;
+            line-height: 1.1;
+            max-width: 900px;
         }
 
         .full-width-card .session-org {
@@ -1142,6 +1181,12 @@ Template Name: Sessions Page
                 align-items: center;
             }
 
+            .card-title {
+                font-size: 1.5rem;
+                /* REDUCED from 1.6rem */
+                line-height: 1.1;
+            }
+
             .schedule-layout {
                 display: flex;
                 flex-direction: column;
@@ -1270,10 +1315,13 @@ Template Name: Sessions Page
                     display: block;
                     font-family: var(--font-display);
                     font-weight: 800;
-                    font-size: 1.1rem;
+                    font-size: 0.9rem;
+                    /* REDUCED */
                     text-transform: uppercase;
-                    padding: 8px 12px;
-                    margin-bottom: 10px;
+                    padding: 6px 10px;
+                    /* REDUCED */
+                    margin-bottom: 8px;
+                    /* REDUCED */
                     color: white;
                     letter-spacing: 0.5px;
                 }
@@ -1297,20 +1345,24 @@ Template Name: Sessions Page
 
                 /* Mobile time badge styling */
                 .mobile-time-badge {
-                    display: inline-block;
+                    display: block;
                     background: var(--black);
                     color: var(--white);
-                    padding: 6px 12px;
-                    font-size: 0.85rem;
+                    padding: 4px 10px;
+                    font-size: 0.8rem;
+                    /* Slightly smaller */
                     font-weight: 700;
                     text-transform: uppercase;
-                    margin-bottom: 15px;
+                    margin-bottom: 12px;
                     font-family: var(--font-body);
                 }
 
                 /* Add left border accent to cards based on room */
                 .session-card {
-                    border-left-width: 5px;
+                    padding: 18px;
+                    /* REDUCED for mobile */
+                    margin-bottom: 25px;
+                    /* REDUCED from 30px */
                 }
 
                 .day-column:nth-child(2) .session-card {
@@ -1330,6 +1382,11 @@ Template Name: Sessions Page
                 }
             }
 
+            .card-header {
+                margin-bottom: 10px;
+                gap: 6px;
+            }
+
             /* Collapse card header on mobile */
             .session-card .card-header {
                 flex-direction: column;
@@ -1339,8 +1396,9 @@ Template Name: Sessions Page
 
             .session-card .card-badge {
                 align-self: flex-start;
-                margin-top: 5px;
+                margin-top: 0;
             }
+
 
             .partner-row {
                 flex-direction: column;
@@ -1626,7 +1684,7 @@ Template Name: Sessions Page
                         'title' => 'July Persist: How to build Community-Led Archiving and OSINT Investigation in Bangladesh',
                         'desc'  => 'This session explores how community-led archiving and open-source investigations are emerging in Bangladesh after July, focusing on the work of Netra News and the Bangladesh Protest Archive (BPA). It examines how journalists, researchers, and activists are building a community-driven ecosystem for human rights documentation and grassroots investigations. Speakers will share how these initiatives collect, verify, and preserve open-source information to document violations, counter disinformation, and support accountability, while reflecting on the challenges of trust, safety, and sustaining community participation.',
                         'type'  => 'Ideation',
-                        'lead'  => ' Shoeb Abdullah, Subinoy Mustofi Eron, Aaqib Shatil, Iffat Joye',
+                        'lead'  => ' Shoeb Abdullah, Subinoy Mustofi Eron, Aaqib Shatil, Iffat Nowshin Joye',
                         'org'   => 'Netra News, Bangladesh Protest Archive'
                     ],
                 ]
