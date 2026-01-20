@@ -651,12 +651,12 @@ Template Name: Sessions Page
 
         .card-title {
             font-family: var(--font-display);
-            font-size: 1.5rem;
+            font-size: 1.1rem;
             line-height: 1.05;
             margin: 0 0 8px 0;
             /* REDUCED from 12px */
             text-transform: uppercase;
-            font-weight: 800;
+            font-weight: 850;
             color: #000;
             word-wrap: break-word;
             overflow-wrap: break-word;
@@ -1662,7 +1662,7 @@ Template Name: Sessions Page
                 <div class="search-label-line"></div>
             </div>
             <div class="search-container">
-                <input type="text" id="sessionSearch" class="search-input" placeholder="SEARCH SESSIONS...">
+                <input type="text" id="sessionSearch" class="search-input" placeholder="SEARCH SESSIONS, SPEAKERS, ORGANIZATIONS...">
                 <button id="clearSearch" class="search-clear-btn">&times;</button>
                 <div id="searchResults" class="search-results"></div>
             </div>
@@ -1901,8 +1901,8 @@ Template Name: Sessions Page
                         'title' => 'Truth and Reconciliation: Conversations on Healing and Accountability',
                         'desc'  => 'Conversations on balancing the need for healing with the demand for accountability in post-conflict contexts.',
                         'type'  => 'Plenary',
-                        'lead'  => 'UNDP, UNESCO, CSOH, The Forum for Women\'s Political Rights',
-                        'org'   => 'UNDP, UNESCO, CSOH, The Forum for Women\'s Political Rights'
+                        'lead'  => 'ALL PARTNERS',
+                        'org'   => 'ALL PARTNERS'
                     ],
                     'room2' => [
                         'title' => '',
