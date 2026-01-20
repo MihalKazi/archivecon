@@ -1475,6 +1475,142 @@ Template Name: Sessions Page
                 font-size: 0.75rem;
             }
         }
+
+        /* Full-width session card that spans all columns */
+        .full-width-session {
+            grid-column: 1 / -1;
+            /* Spans from first to last column */
+            max-width: 100% !important;
+        }
+
+        .full-width-session .session-card {
+            max-width: 100% !important;
+            padding: 25px;
+            border: 3px solid #000;
+        }
+
+        .full-width-session .card-header {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .full-width-session .header-content {
+            flex: 1;
+            order: 1;
+            max-width: none;
+        }
+
+        .full-width-session .header-meta {
+            order: 2;
+            align-self: flex-start;
+        }
+
+        .full-width-session .card-title {
+            font-size: 2.2rem;
+            line-height: 1.1;
+            margin-bottom: 10px;
+        }
+
+        .full-width-session .session-org {
+            font-size: 1rem;
+        }
+
+        .full-width-session .card-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-bottom: 15px;
+            padding-top: 12px;
+            border-top: 2px solid #f0f0f0;
+        }
+
+        .full-width-session .card-description {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        /* Desktop: Show room badges for full-width sessions */
+        .full-width-session .room-badges {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .full-width-session .room-badge {
+            background: var(--black);
+            color: var(--white);
+            padding: 6px 12px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-family: var(--font-body);
+        }
+
+        /* Special styling for LUNCH/BREAK cards */
+        .full-width-session.lunch-break .card-header {
+            justify-content: center;
+            text-align: center;
+        }
+
+        .full-width-session.lunch-break .header-content {
+            max-width: 100%;
+            text-align: center;
+        }
+
+        .full-width-session.lunch-break .header-meta {
+            display: none;
+            /* Hide badge for lunch */
+        }
+
+        .full-width-session.lunch-break .card-title {
+            text-align: center;
+        }
+
+        .full-width-session.lunch-break .session-org {
+            text-align: center;
+        }
+
+        .full-width-session.lunch-break .card-details {
+            justify-content: center;
+            border-top: none;
+            padding-top: 5px;
+        }
+
+        .full-width-session.lunch-break .card-description-area {
+            text-align: center;
+        }
+
+        .full-width-session.lunch-break .room-badges {
+            display: none;
+            /* Don't show room badges for lunch */
+        }
+
+        /* Mobile adjustments for full-width sessions */
+        @media screen and (max-width: 900px) {
+            .full-width-session .session-card {
+                padding: 20px;
+            }
+
+            .full-width-session .card-header {
+                flex-direction: column;
+            }
+
+            .full-width-session .card-title {
+                font-size: 1.7rem;
+            }
+
+            .full-width-session .card-details {
+                gap: 15px;
+            }
+
+            /* Hide room badges on mobile */
+            .full-width-session .room-badges {
+                display: none;
+            }
+        }
     </style>
 </head>
 
@@ -1659,12 +1795,11 @@ Template Name: Sessions Page
                 'time' => '2:00-3:30 PM',
                 'rooms' => [
                     'room1' => [
-                        'title' => 'Resistance Cinema Fest',
-                        'desc'  => 'Across both days of the Conclave, Resistance Cinema Fest will screen a curated selection of investigative documentaries and resistance cinema from Bangladesh and beyond. These films document struggles for justice, human rights violations, and movements of resistance, creating space to reflect on the power of visual storytelling as evidence, memory, and a tool for accountability.',
-                        'type'  => 'Parallel',
-                        'time'  => 'Ongoing',
-                        'lead'  => 'Bangladesh Protest Archive',
-                        'org'   => 'Bangladesh Protest Archive'
+                        'title' => '',
+                        'desc'  => '',
+                        'type'  => 'TBA',
+                        'lead'  => 'TBA',
+                        'org'   => 'TBA'
                     ],
                     'room2' => [
                         'title' => 'Tools and Skills to Build Visual Investigations using OSINT',
@@ -1707,11 +1842,11 @@ Template Name: Sessions Page
                         'org'   => 'Witness, Activate Rights'
                     ],
                     'room3' => [
-                        'title' => '',
+                        'title' => 'From Screen to Street: Tracing Online Extremism and Its Offline Impact',
                         'desc'  => '',
-                        'type'  => 'TBA',
-                        'lead'  => 'TBA',
-                        'org'   => 'TBA'
+                        'type'  => 'Interactive Workshop',
+                        'lead'  => 'Hasan Al Mahmud, Sabah Ahmed',
+                        'org'   => 'Tech & Hate, SecDev'
                     ],
                     'room4' => [
                         'title' => 'Building Human Rights Database Systems as a Tool for Sustained Resistance',
@@ -1729,8 +1864,8 @@ Template Name: Sessions Page
                         'title' => 'Posters of Resistance: Visual Solidarity',
                         'desc'  => 'Running alongside Archive & Resist Conclave 2026, this interactive exhibition showcases posters and artworks from protests and human rights movements, inspired by the July Uprising in Bangladesh and global youth-led struggles. Selected works will be displayed at BRAC University, with contributors invited to join participatory art sessions and potentially be featured in an online resistance gallery.',
                         'type'  => 'Parallel',
-                        'lead'  => 'Pruhbu Dolma, Hyebin Bina Jeon',
-                        'org'   => 'HURIDOCS'
+                        'lead'  => 'Artivism Studio',
+                        'org'   => 'Artivism Studio'
                     ],
                     'room2' => [
                         'title' => '',
@@ -1895,11 +2030,11 @@ Template Name: Sessions Page
                 'time' => '3:30-5:00 PM',
                 'rooms' => [
                     'room1' => [
-                        'title' => '',
-                        'desc'  => '',
+                        'title' => 'The Island That Resists: Debunk the Discourse of Daruchini Dwip’s Fantasy',
+                        'desc'  => 'This session explores how the Saint Martin community archives silenced histories and resists dominant tourism and top-down conservation narratives. Through dialogue, documentary clips, and live conversation with island residents, participants will engage with community-led resistance, memory, and alternative imaginaries. The discussion examines how systems of governance shape land, livelihoods, and belonging. Participants will also reflect on building rights-based, accountable approaches to tourism and conservation.',
                         'type'  => 'TBA',
-                        'lead'  => 'TBA',
-                        'org'   => 'TBA'
+                        'lead'  => 'Shoilee Akhund',
+                        'org'   => 'Centre for Critical Discourse'
                     ],
                     'room2' => [
                         'title' => '',
@@ -2022,7 +2157,6 @@ Template Name: Sessions Page
                 <?php endforeach; ?>
             </div>
         <?php endif; ?>
-
         <!-- DAY 1 SCHEDULE -->
         <div class="day-section" style="margin-bottom: 80px;">
             <div class="day-header both-days-header" style="margin-bottom: 40px;">
@@ -2044,49 +2178,176 @@ Template Name: Sessions Page
                     <!-- Time Slot -->
                     <div class="time-slot"><?php echo $slot['time']; ?></div>
 
-                    <!-- Sessions for each room at this time -->
-                    <?php foreach ($room_config as $room_key => $room_info):
-                        $session = $slot['rooms'][$room_key];
-                        if ($session):
-                            $type = strtolower($session['type']);
+                    <?php
+                    // Check if this should be a full-width session
+                    $room1_session = $slot['rooms']['room1'];
+                    $is_full_width = false;
+                    $is_lunch = false;
+                    $allocated_rooms = [];
 
-                            if (strpos($type, 'plenary') !== false) $badgeClass = 'badge-plenary';
-                            elseif (strpos($type, 'workshop') !== false) $badgeClass = 'badge-workshop';
-                            elseif (strpos($type, 'ideation') !== false) $badgeClass = 'badge-ideation';
-                            elseif (strpos($type, 'dialogue') !== false) $badgeClass = 'badge-dialogue';
-                            elseif (strpos($type, 'roundtable') !== false) $badgeClass = 'badge-roundtable';
-                            elseif (strpos($type, 'parallel') !== false) $badgeClass = 'badge-parallel';
-                            else $badgeClass = 'badge-workshop';
+                    // Count how many rooms have actual sessions (not BOOKED, not TBA, not empty)
+                    $active_sessions = [];
+                    foreach ($slot['rooms'] as $room_key => $room_session) {
+                        if (
+                            $room_session &&
+                            !empty($room_session['title']) &&
+                            $room_session['lead'] !== 'BOOKED' &&
+                            $room_session['lead'] !== 'TBA' &&
+                            $room_session['title'] !== ''
+                        ) {
+                            $active_sessions[$room_key] = $room_session;
+                        }
+                    }
 
-                            $displayType = $session['type'];
-                            if (trim($type) == 'workshop') {
-                                $displayType = 'Interactive Workshop';
+                    $active_count = count($active_sessions);
+
+                    // Make it full-width if:
+                    // 1. It's a Plenary, OR
+                    // 2. It's a Lunch Break, OR
+                    // 3. There's only 1 active session (rest are BOOKED/TBA)
+                    if ($room1_session && (
+                        strpos(strtolower($room1_session['type']), 'plenary') !== false ||
+                        strpos(strtolower($room1_session['type']), 'lunch') !== false ||
+                        strpos(strtolower($slot['time']), 'lunch') !== false ||
+                        $active_count === 1
+                    )) {
+                        $is_full_width = true;
+
+                        // Check if it's a lunch break
+                        if (
+                            strpos(strtolower($room1_session['type']), 'lunch') !== false ||
+                            strpos(strtolower($slot['time']), 'lunch') !== false
+                        ) {
+                            $is_lunch = true;
+                        }
+
+                        // Get the session to display (use the first active one)
+                        if ($active_count === 1) {
+                            $session = reset($active_sessions);
+                            $session_room_key = key($active_sessions);
+                            $allocated_rooms[] = $room_config[$session_room_key]['name'];
+                        } else {
+                            // For plenary/lunch, check all rooms with same title
+                            $session = $room1_session;
+                            foreach ($slot['rooms'] as $room_key => $room_session) {
+                                if (
+                                    $room_session &&
+                                    !empty($room_session['title']) &&
+                                    $room_session['title'] === $room1_session['title'] &&
+                                    $room_session['title'] !== '' &&
+                                    $room_session['lead'] !== 'BOOKED' &&
+                                    $room_session['lead'] !== 'TBA'
+                                ) {
+                                    $allocated_rooms[] = $room_config[$room_key]['name'];
+                                }
                             }
+                        }
+                    }
+
+                    if ($is_full_width):
+                        // RENDER FULL-WIDTH SESSION
+                        $type = strtolower($session['type']);
+
+                        if (strpos($type, 'plenary') !== false) $badgeClass = 'badge-plenary';
+                        elseif (strpos($type, 'workshop') !== false) $badgeClass = 'badge-workshop';
+                        elseif (strpos($type, 'lunch') !== false) $badgeClass = 'badge-workshop';
+                        elseif (strpos($type, 'parallel') !== false) $badgeClass = 'badge-parallel';
+                        elseif (strpos($type, 'ideation') !== false) $badgeClass = 'badge-ideation';
+                        elseif (strpos($type, 'dialogue') !== false) $badgeClass = 'badge-dialogue';
+                        elseif (strpos($type, 'roundtable') !== false) $badgeClass = 'badge-roundtable';
+                        else $badgeClass = 'badge-workshop';
+
+                        $displayType = $session['type'];
+                        if (trim($type) == 'workshop') {
+                            $displayType = 'Interactive Workshop';
+                        }
+
+                        // Add lunch-break class if it's a lunch session
+                        $lunchClass = $is_lunch ? ' lunch-break' : '';
                     ?>
-                            <div class="session-card static-card reveal-on-scroll">
-                                <div class="mobile-room-label <?php echo $room_key; ?>"><?php echo $room_info['name']; ?></div>
-                                <div class="mobile-time-badge"><?php echo $slot['time']; ?></div>
+                        <div class="full-width-session<?php echo $lunchClass; ?>">
+                            <div class="session-card reveal-on-scroll">
+                                <?php if (!$is_lunch && !empty($allocated_rooms)): ?>
+                                    <!-- Show only allocated room badges for non-lunch full-width sessions (Desktop only) -->
+                                    <div class="room-badges">
+                                        <?php foreach ($allocated_rooms as $room_name): ?>
+                                            <span class="room-badge"><?php echo $room_name; ?></span>
+                                        <?php endforeach; ?>
+                                    </div>
+                                <?php endif; ?>
+
                                 <div class="card-header">
                                     <div class="header-content">
                                         <h3 class="card-title"><?php echo $session['title']; ?></h3>
                                         <p class="session-org"><?php echo $session['org']; ?></p>
                                     </div>
-                                    <div class="header-meta"><span class="card-badge <?php echo $badgeClass; ?>"><?php echo $displayType; ?></span></div>
-                                </div>
-                                <div class="card-details">
-                                    <div class="detail-row"><span class="detail-icon icon-user">👤</span> <?php echo $session['lead']; ?></div>
-                                </div>
-                                <div class="card-description-area">
-                                    <div class="desc-content collapsed">
-                                        <p class="card-description"><?php echo $session['desc']; ?></p>
+                                    <div class="header-meta">
+                                        <span class="card-badge <?php echo $badgeClass; ?>"><?php echo $displayType; ?></span>
                                     </div>
-                                    <button class="desc-toggle-btn" onclick="toggleDescription(this)">Read More ▼</button>
                                 </div>
+
+                                <div class="card-details">
+                                    <div class="detail-row"><span>⏰</span> <?php echo $slot['time']; ?></div>
+                                    <?php if (!empty($session['lead']) && $session['lead'] !== 'Lunch Break'): ?>
+                                        <div class="detail-row"><span>👤</span> <?php echo $session['lead']; ?></div>
+                                    <?php endif; ?>
+                                </div>
+
+                                <?php if (!empty($session['desc'])): ?>
+                                    <div class="card-description-area">
+                                        <div class="desc-content collapsed">
+                                            <p class="card-description"><?php echo $session['desc']; ?></p>
+                                        </div>
+                                        <button class="desc-toggle-btn" onclick="toggleDescription(this)">Read More ▼</button>
+                                    </div>
+                                <?php endif; ?>
                             </div>
-                        <?php else: ?>
-                            <div class="empty-slot"></div>
-                        <?php endif; ?>
-                    <?php endforeach; ?>
+                        </div>
+                        <?php else:
+                        // RENDER NORMAL GRID SESSIONS (one per room)
+                        foreach ($room_config as $room_key => $room_info):
+                            $session = $slot['rooms'][$room_key];
+                            if ($session):
+                                $type = strtolower($session['type']);
+
+                                if (strpos($type, 'plenary') !== false) $badgeClass = 'badge-plenary';
+                                elseif (strpos($type, 'workshop') !== false) $badgeClass = 'badge-workshop';
+                                elseif (strpos($type, 'ideation') !== false) $badgeClass = 'badge-ideation';
+                                elseif (strpos($type, 'dialogue') !== false) $badgeClass = 'badge-dialogue';
+                                elseif (strpos($type, 'roundtable') !== false) $badgeClass = 'badge-roundtable';
+                                elseif (strpos($type, 'parallel') !== false) $badgeClass = 'badge-parallel';
+                                else $badgeClass = 'badge-workshop';
+
+                                $displayType = $session['type'];
+                                if (trim($type) == 'workshop') {
+                                    $displayType = 'Interactive Workshop';
+                                }
+                        ?>
+                                <div class="session-card static-card reveal-on-scroll">
+                                    <div class="mobile-room-label <?php echo $room_key; ?>"><?php echo $room_info['name']; ?></div>
+                                    <div class="mobile-time-badge"><?php echo $slot['time']; ?></div>
+                                    <div class="card-header">
+                                        <div class="header-content">
+                                            <h3 class="card-title"><?php echo $session['title']; ?></h3>
+                                            <p class="session-org"><?php echo $session['org']; ?></p>
+                                        </div>
+                                        <div class="header-meta"><span class="card-badge <?php echo $badgeClass; ?>"><?php echo $displayType; ?></span></div>
+                                    </div>
+                                    <div class="card-details">
+                                        <div class="detail-row"><span class="detail-icon icon-user">👤</span> <?php echo $session['lead']; ?></div>
+                                    </div>
+                                    <div class="card-description-area">
+                                        <div class="desc-content collapsed">
+                                            <p class="card-description"><?php echo $session['desc']; ?></p>
+                                        </div>
+                                        <button class="desc-toggle-btn" onclick="toggleDescription(this)">Read More ▼</button>
+                                    </div>
+                                </div>
+                            <?php else: ?>
+                                <div class="empty-slot"></div>
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
                 <?php endforeach; ?>
             </div>
         </div>
@@ -2112,49 +2373,176 @@ Template Name: Sessions Page
                     <!-- Time Slot -->
                     <div class="time-slot"><?php echo $slot['time']; ?></div>
 
-                    <!-- Sessions for each room at this time -->
-                    <?php foreach ($room_config as $room_key => $room_info):
-                        $session = $slot['rooms'][$room_key];
-                        if ($session):
-                            $type = strtolower($session['type']);
+                    <?php
+                    // Check if this should be a full-width session
+                    $room1_session = $slot['rooms']['room1'];
+                    $is_full_width = false;
+                    $is_lunch = false;
+                    $allocated_rooms = [];
 
-                            if (strpos($type, 'plenary') !== false) $badgeClass = 'badge-plenary';
-                            elseif (strpos($type, 'workshop') !== false) $badgeClass = 'badge-workshop';
-                            elseif (strpos($type, 'ideation') !== false) $badgeClass = 'badge-ideation';
-                            elseif (strpos($type, 'dialogue') !== false) $badgeClass = 'badge-dialogue';
-                            elseif (strpos($type, 'roundtable') !== false) $badgeClass = 'badge-roundtable';
-                            elseif (strpos($type, 'parallel') !== false) $badgeClass = 'badge-parallel';
-                            else $badgeClass = 'badge-workshop';
+                    // Count how many rooms have actual sessions (not BOOKED, not TBA, not empty)
+                    $active_sessions = [];
+                    foreach ($slot['rooms'] as $room_key => $room_session) {
+                        if (
+                            $room_session &&
+                            !empty($room_session['title']) &&
+                            $room_session['lead'] !== 'BOOKED' &&
+                            $room_session['lead'] !== 'TBA' &&
+                            $room_session['title'] !== ''
+                        ) {
+                            $active_sessions[$room_key] = $room_session;
+                        }
+                    }
 
-                            $displayType = $session['type'];
-                            if (trim($type) == 'workshop') {
-                                $displayType = 'Interactive Workshop';
+                    $active_count = count($active_sessions);
+
+                    // Make it full-width if:
+                    // 1. It's a Plenary, OR
+                    // 2. It's a Lunch Break, OR
+                    // 3. There's only 1 active session (rest are BOOKED/TBA)
+                    if ($room1_session && (
+                        strpos(strtolower($room1_session['type']), 'plenary') !== false ||
+                        strpos(strtolower($room1_session['type']), 'lunch') !== false ||
+                        strpos(strtolower($slot['time']), 'lunch') !== false ||
+                        $active_count === 1
+                    )) {
+                        $is_full_width = true;
+
+                        // Check if it's a lunch break
+                        if (
+                            strpos(strtolower($room1_session['type']), 'lunch') !== false ||
+                            strpos(strtolower($slot['time']), 'lunch') !== false
+                        ) {
+                            $is_lunch = true;
+                        }
+
+                        // Get the session to display (use the first active one)
+                        if ($active_count === 1) {
+                            $session = reset($active_sessions);
+                            $session_room_key = key($active_sessions);
+                            $allocated_rooms[] = $room_config[$session_room_key]['name'];
+                        } else {
+                            // For plenary/lunch, check all rooms with same title
+                            $session = $room1_session;
+                            foreach ($slot['rooms'] as $room_key => $room_session) {
+                                if (
+                                    $room_session &&
+                                    !empty($room_session['title']) &&
+                                    $room_session['title'] === $room1_session['title'] &&
+                                    $room_session['title'] !== '' &&
+                                    $room_session['lead'] !== 'BOOKED' &&
+                                    $room_session['lead'] !== 'TBA'
+                                ) {
+                                    $allocated_rooms[] = $room_config[$room_key]['name'];
+                                }
                             }
+                        }
+                    }
+
+                    if ($is_full_width):
+                        // RENDER FULL-WIDTH SESSION
+                        $type = strtolower($session['type']);
+
+                        if (strpos($type, 'plenary') !== false) $badgeClass = 'badge-plenary';
+                        elseif (strpos($type, 'workshop') !== false) $badgeClass = 'badge-workshop';
+                        elseif (strpos($type, 'lunch') !== false) $badgeClass = 'badge-workshop';
+                        elseif (strpos($type, 'parallel') !== false) $badgeClass = 'badge-parallel';
+                        elseif (strpos($type, 'ideation') !== false) $badgeClass = 'badge-ideation';
+                        elseif (strpos($type, 'dialogue') !== false) $badgeClass = 'badge-dialogue';
+                        elseif (strpos($type, 'roundtable') !== false) $badgeClass = 'badge-roundtable';
+                        else $badgeClass = 'badge-workshop';
+
+                        $displayType = $session['type'];
+                        if (trim($type) == 'workshop') {
+                            $displayType = 'Interactive Workshop';
+                        }
+
+                        // Add lunch-break class if it's a lunch session
+                        $lunchClass = $is_lunch ? ' lunch-break' : '';
                     ?>
-                            <div class="session-card static-card reveal-on-scroll">
-                                <div class="mobile-room-label <?php echo $room_key; ?>"><?php echo $room_info['name']; ?></div>
-                                <div class="mobile-time-badge"><?php echo $slot['time']; ?></div>
+                        <div class="full-width-session<?php echo $lunchClass; ?>">
+                            <div class="session-card reveal-on-scroll">
+                                <?php if (!$is_lunch && !empty($allocated_rooms)): ?>
+                                    <!-- Show only allocated room badges for non-lunch full-width sessions (Desktop only) -->
+                                    <div class="room-badges">
+                                        <?php foreach ($allocated_rooms as $room_name): ?>
+                                            <span class="room-badge"><?php echo $room_name; ?></span>
+                                        <?php endforeach; ?>
+                                    </div>
+                                <?php endif; ?>
+
                                 <div class="card-header">
                                     <div class="header-content">
                                         <h3 class="card-title"><?php echo $session['title']; ?></h3>
                                         <p class="session-org"><?php echo $session['org']; ?></p>
                                     </div>
-                                    <div class="header-meta"><span class="card-badge <?php echo $badgeClass; ?>"><?php echo $displayType; ?></span></div>
-                                </div>
-                                <div class="card-details">
-                                    <div class="detail-row"><span class="detail-icon icon-user">👤</span> <?php echo $session['lead']; ?></div>
-                                </div>
-                                <div class="card-description-area">
-                                    <div class="desc-content collapsed">
-                                        <p class="card-description"><?php echo $session['desc']; ?></p>
+                                    <div class="header-meta">
+                                        <span class="card-badge <?php echo $badgeClass; ?>"><?php echo $displayType; ?></span>
                                     </div>
-                                    <button class="desc-toggle-btn" onclick="toggleDescription(this)">Read More ▼</button>
                                 </div>
+
+                                <div class="card-details">
+                                    <div class="detail-row"><span>⏰</span> <?php echo $slot['time']; ?></div>
+                                    <?php if (!empty($session['lead']) && $session['lead'] !== 'Lunch Break'): ?>
+                                        <div class="detail-row"><span>👤</span> <?php echo $session['lead']; ?></div>
+                                    <?php endif; ?>
+                                </div>
+
+                                <?php if (!empty($session['desc'])): ?>
+                                    <div class="card-description-area">
+                                        <div class="desc-content collapsed">
+                                            <p class="card-description"><?php echo $session['desc']; ?></p>
+                                        </div>
+                                        <button class="desc-toggle-btn" onclick="toggleDescription(this)">Read More ▼</button>
+                                    </div>
+                                <?php endif; ?>
                             </div>
-                        <?php else: ?>
-                            <div class="empty-slot"></div>
-                        <?php endif; ?>
-                    <?php endforeach; ?>
+                        </div>
+                        <?php else:
+                        // RENDER NORMAL GRID SESSIONS (one per room)
+                        foreach ($room_config as $room_key => $room_info):
+                            $session = $slot['rooms'][$room_key];
+                            if ($session):
+                                $type = strtolower($session['type']);
+
+                                if (strpos($type, 'plenary') !== false) $badgeClass = 'badge-plenary';
+                                elseif (strpos($type, 'workshop') !== false) $badgeClass = 'badge-workshop';
+                                elseif (strpos($type, 'ideation') !== false) $badgeClass = 'badge-ideation';
+                                elseif (strpos($type, 'dialogue') !== false) $badgeClass = 'badge-dialogue';
+                                elseif (strpos($type, 'roundtable') !== false) $badgeClass = 'badge-roundtable';
+                                elseif (strpos($type, 'parallel') !== false) $badgeClass = 'badge-parallel';
+                                else $badgeClass = 'badge-workshop';
+
+                                $displayType = $session['type'];
+                                if (trim($type) == 'workshop') {
+                                    $displayType = 'Interactive Workshop';
+                                }
+                        ?>
+                                <div class="session-card static-card reveal-on-scroll">
+                                    <div class="mobile-room-label <?php echo $room_key; ?>"><?php echo $room_info['name']; ?></div>
+                                    <div class="mobile-time-badge"><?php echo $slot['time']; ?></div>
+                                    <div class="card-header">
+                                        <div class="header-content">
+                                            <h3 class="card-title"><?php echo $session['title']; ?></h3>
+                                            <p class="session-org"><?php echo $session['org']; ?></p>
+                                        </div>
+                                        <div class="header-meta"><span class="card-badge <?php echo $badgeClass; ?>"><?php echo $displayType; ?></span></div>
+                                    </div>
+                                    <div class="card-details">
+                                        <div class="detail-row"><span class="detail-icon icon-user">👤</span> <?php echo $session['lead']; ?></div>
+                                    </div>
+                                    <div class="card-description-area">
+                                        <div class="desc-content collapsed">
+                                            <p class="card-description"><?php echo $session['desc']; ?></p>
+                                        </div>
+                                        <button class="desc-toggle-btn" onclick="toggleDescription(this)">Read More ▼</button>
+                                    </div>
+                                </div>
+                            <?php else: ?>
+                                <div class="empty-slot"></div>
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
                 <?php endforeach; ?>
             </div>
         </div>
@@ -2494,9 +2882,18 @@ Template Name: Sessions Page
 
                 const title = card.querySelector('.card-title')?.textContent || '';
                 const org = card.querySelector('.session-org')?.textContent || '';
-                const lead = card.querySelector('.detail-row')?.textContent || '';
 
-                if (title) {
+                // Get lead from detail-row - look for the one with 👤 icon
+                let lead = '';
+                const detailRows = card.querySelectorAll('.detail-row');
+                detailRows.forEach(row => {
+                    const rowText = row.textContent || '';
+                    if (rowText.includes('👤')) {
+                        lead = rowText.replace('👤', '').trim();
+                    }
+                });
+
+                if (title && title.trim() !== '') {
                     allSessions.push({
                         title: title.trim(),
                         org: org.trim(),
@@ -2531,7 +2928,7 @@ Template Name: Sessions Page
                     searchResults.innerHTML = matches.map(s => `
                 <div class="search-result-item" data-target="${s.id}">
                     <div class="result-title">${s.title}</div>
-                    <div class="result-meta">${s.org}</div>
+                    <div class="result-meta">${s.org}${s.lead ? ' • ' + s.lead : ''}</div>
                 </div>
             `).join('');
                 }
